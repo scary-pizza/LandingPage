@@ -1,0 +1,131 @@
+.hostel-list-section {
+  padding: 2rem 19rem;
+  /* max-width: 1200px; */
+  margin: auto;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hostel-filters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Filter Buttons */
+.hostel-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #002B5B1A;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: #002f66;
+  color: #fff;
+}
+
+/* Card Grid */
+.hostel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.hostel-card {
+  background-color: #002B5B1A;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.hostel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hostel-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.hostel-type {
+  font-size: 13px;
+  color: #555;
+  display: block;
+}
+
+.hostel-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+@media  screen and (max-width: 768px) {
+    .hostel-list-section {
+    padding: 2rem 3rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .hostel-name {
+    font-size: 15px;
+  }
+  .hostel-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+
+@media (max-width: 480px) {
+  .hostel-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hostel-filters {
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+}
+
+    .hostel-list-section {
+        padding: 2rem 1rem;
+    }
+
+    .hostel-filters-container {
+    justify-content: start;
+    overflow-x: scroll;
+    }
+}

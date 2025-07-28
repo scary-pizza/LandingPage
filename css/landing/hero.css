@@ -1,0 +1,142 @@
+.hero-section {
+  padding: 2rem 1rem;
+  font-family: var(--ff-poppins);
+}
+
+.hero-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 450px;
+  border-bottom-right-radius: 30rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.hero-content .tag {
+  background-color: #ffa800;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-register {
+  background-color: white;
+  color: var(--primary-clr);
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: none;
+}
+
+.nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-arrows button {
+  background-color: var(--primary-clr);
+  color: white;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: static;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-content {
+    left: 5%;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+
+  .hero-container {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .btn-register {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .hero-btns {
+    align-items: start;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.hero-container {
+    border-bottom-right-radius: 21rem;
+}
+}

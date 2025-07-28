@@ -1,0 +1,38 @@
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr);
+    padding: 3rem 0;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width:20rem;
+    z-index: 1;
+}
+
+.footer-section p {
+    margin: 0;
+    color: white;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-section p {
+        font-size: 1rem;
+    }
+    .footer-img {
+        display: none;
+    }
+    .footer-section {
+        border-top-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+    }
+}
