@@ -186,7 +186,7 @@ ol {
 /* header css */
 
 .nav-link {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--primary-black);
   font-weight: 500;
   margin: 0 1rem;
@@ -197,8 +197,8 @@ ol {
 }
 
 .btn-custom {
-  font-size: 1.4rem;
-  padding: 0.6rem 1.4rem;
+  font-size: 1.6rem;
+  padding: 1.6rem 2.4rem;
   border-radius: 2rem;
   font-weight: 500;
 }
@@ -212,6 +212,11 @@ ol {
   background-color: #031b3d;
   color: white;
   margin-right: 1rem;
+}
+
+.btn-register a{
+  font-size: 1.6rem;
+  color: var(--primary-clr);
 }
 
 .navbar-brand img {

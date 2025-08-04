@@ -1,0 +1,307 @@
+.modal-content{
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--white);
+    position: relative;
+    
+}
+
+.modal-content .modal-header{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border: none;
+    background: var(--primary-red);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.modal-content .modal-header button.btn-close{
+    margin: auto;
+    padding: 0;
+    opacity: 1;
+    background-image: url(../public/dashboard/min.png);
+}
+
+.modal-content .modal-body{
+    padding: 2rem;
+    position: relative;
+    min-height: 20rem;
+}
+
+.modal-content .top .pop-title{
+    background: var(--primary-clr);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.modal-content .top .pop-title-remove{
+    background: var(--primary-red);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.modal-content .middle{
+    margin: 7rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.modal-content .middle-content{
+    margin: 7rem 0 0;
+    padding: 0 2rem;
+}
+
+.modal-content .middle-content p{
+    font-size: 1.5rem;
+    color: var(--primary-red);
+    
+}
+
+.modal-content .middle span.input-set{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .middle span.input-set label{
+    font-size: 1.4rem;
+    line-height: 140%;
+    font-family: Helvetica;
+    color: #2d3748;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+/* Placeholder color */
+::placeholder{
+    color: #a0aec0;
+}
+/* Placeholder color */
+
+.modal-content .middle span.input-set input, select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+}
+
+.modal-content .middle span.input-set input:focus{
+    outline: none;
+}
+
+.modal-content .middle span.input-set select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    background-image: url(../public/dashboard/drop\ arrow.png);
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+    background-size: 1rem;
+}
+
+.modal-content .bottom-btn {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.modal-content .bottom-btn button.red{
+    min-width: 16rem;
+    background-color: var(--primary-red);
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-content .bottom-btn button.green{
+    min-width: 16rem;
+    background-color: #149D52;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-content .bottom-btn button.blue{
+    min-width: 16rem;
+    background-color: var(--primary-clr);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+/* Tabs Start*/
+
+/* Tabs Input css */
+
+.modal-content .tabs-middle{
+
+    margin: 7rem 0 0;
+    display: grid;
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.modal-content .tabs-middle .tabset .tab-panels section.tab-panel .row{
+    margin-top: 1rem;
+}
+
+.modal-content .tabs-middle span.input-set{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .tabs-middle span.input-set label{
+    font-size: 1.4rem;
+    line-height: 140%;
+    font-family: Helvetica;
+    color: #2d3748;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+/* Placeholder color */
+::placeholder{
+    color: #a0aec0;
+}
+/* Placeholder color */
+
+.modal-content .tabs-middle span.input-set input, select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+}
+
+.modal-content .tabs-middle span.input-set input:focus{
+    outline: none;
+}
+
+.modal-content .tabs-middle span.input-set select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    background-image: url(../public/dashboard/drop\ arrow.png);
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+    background-size: 1rem;
+}
+
+.modal-content .bottom-btn button.blue{
+    min-width: 16rem;
+    background-color: var(--primary-clr);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+/* Input css */
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.tabset > label {
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding: 2rem 3.5rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+  background-color: var(--primary-clr);
+  color: var(--white);
+  border-radius: 1rem;
+}
+
+
+.tab-panel {
+  padding: 1rem 0;
+}
+
+/* (max-width: 700px) and (min-width: 200px)*/
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .modal-content .middle{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .modal-content .bottom-btn{
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+}

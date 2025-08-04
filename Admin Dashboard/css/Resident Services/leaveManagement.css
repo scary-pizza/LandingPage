@@ -1,0 +1,52 @@
+.breadcrumbs{
+  padding: 2rem 0rem 0rem 0rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.breadcrumbs a{
+  color: var(--primary-clr);
+  font-family: var(--ff-jakarta);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 1rem 1rem 2rem 0rem;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 2rem 1.5rem;;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .card-content p {
+    color: #A0AEC0;
+    font-size: 1rem;
+}
+
+.card .card-content h3 {
+    font-size: 1.5rem;
+}
+
+.card .card-image {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    background-color: var(--primary-clr);
+}
+
+.bed-status-section {
+    margin: 0 !important;
+        padding: 1rem 0rem 2rem !important;
+}

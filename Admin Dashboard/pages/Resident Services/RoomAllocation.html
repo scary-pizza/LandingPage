@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/table.css">
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+<body >
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li ><a href="../../index.html" class="nav-animation"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard </a></li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li ><a href="HostelManagement.html" ><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
+          <li><a href="RoomManagement.html"><span><img src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
+          <li><a href="BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
+          <li><a href="BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
+          <li><a href="CampusCheck In-Out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
+          <li><a href="MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+          <li ><a href="UserManagement.html"><span><img src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
+          <li><a href="StaffManagement.html"><span><img src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li><a href="ResidentsManagement.html"><span><img src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
+          <li><a href="LeaveManagement.html"><span><img src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
+          <li><a href="GuestManagement.html"><span><img src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
+          <li><a href="GrievancesManagement.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
+          <li class="active"><a href="RoomAllocation.html"><span><img src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
+          <li><a href="FinalCheckout.html"><span><img src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+          <li><a href="Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li><a href=""><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li><a href=""><span><img src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
+          <li><a href=""><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments & Translations</a></li>
+          <li><a href=""><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a></li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li><a href=""><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Notification & Alerts</a></li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png" > Log Out</button></li>
+        </ul>
+
+      </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+            <button id="toggle-btn">&#9776;</button>
+            <div class="topbar-right">
+                <input type="text" class="search-bar" placeholder="Search" />
+
+                <div class="user-section">
+                    <span class="user-initial">A</span>
+                </div>
+
+                <div class="dropdown">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Admin
+                </button>
+                <ul class="dropdown-menu custom-style-ul">
+                    <li><a class="dropdown-item custom-style-li" href="#">Admin Profile</a></li>
+                    <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                    <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                </ul>
+                </div>
+
+
+            </div>
+            </header>
+
+            <div class="bed-status-section">
+            <div class="table-controls">
+              <h3 class="table-title">Room Allocation Request List</h3>
+              <div>
+                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AllocationDetails">Allocation Details</button>
+              </div>
+            </div>
+            <div class="table-container">
+              <div class="table-download-button">
+                <button onclick="downloadTableAsExcel('roomAllocation', 'room_allocation.xls')">Download Excel</button>
+              </div>
+              <table class="status-table" id="roomAllocation">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Student Name</th>
+                  <th>Scholar Number</th>
+                  <th>Date</th>
+                  <th>Hostel</th>
+                  <th>Current Room</th>
+                  <th>Change To</th>
+                  <th>Problem or Reason</th>
+                  <th>Priority</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bedTableBody"></tbody>
+            </table>
+            </div>
+            <div class="table-footer">
+              <div>
+                <label>List</label>
+                <select id="rowsPerPageSelect">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+                <span id="totalPagesText"></span>
+              </div>
+              <div class="pagination" id="bedPaginationControls"></div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="AllocationDetails" tabindex="-1" aria-labelledby="#AllocationDetails" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Allocation Details</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="StudentName">Student Name</label>
+                  <input type="text" id="StudentName" name="StudentName">
+                </span>
+                <span class="input-set">
+                  <label for="ScholarNumber">Scholar Number</label>
+                  <input type="number" id="ScholarNumber" name="ScholarNumber">
+                </span>
+                <span class="input-set">
+                  <label for="Date">Date</label>
+                  <input type="date" id="Date" name="Date">
+                </span>
+                <span class="input-set">
+                  <label for="HostelName">Hostel Name</label>
+                  <input type="text" id="HostelName" name="HostelName">
+                </span>
+                <span class="input-set">
+                  <label for="CurrentRoomNumber">Current Room Number</label>
+                  <input type="text" id="CurrentRoomNumber" name="CurrentRoomNumber">
+                </span>
+                <span class="input-set">
+                  <label for="ChangeToRoomNumber">Change To Room Number</label>
+                  <input type="text" id="ChangeToRoomNumber" name="ChangeToRoomNumber">
+                </span>
+                <span class="input-set">
+                  <label for="ProblemOrReason">Problem Or Reason</label>
+                  <input type="text" id="ProblemOrReason" name="ProblemOrReason">
+                </span>
+                <span class="input-set">
+                  <label for="Priority">Priority</label>
+                  <input type="text" id="Priority" name="Priority">
+                </span>
+                <span class="input-set">
+                  <label for="ReasonInDetail">Reason In Detail</label>
+                  <input type="text" id="ReasonInDetail" name="ReasonInDetail">
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Reject Allocation </button>
+                <button type="button" class="green"> Approve Allocation </button>
+                <button type="button" class="blue"> Assign To Staff </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+        </main>
+
+    </div>
+
+    <script>
+      (function setupBedTable() {
+  const bedData = [
+    { hostel: "Hostel One", floor: 42, room: 5465, type: 5, bedNum: 4542, status: "Occupied" },
+    { hostel: "Hostel Two", floor: 465, room: 4565, type: 12, bedNum: 45545, status: "Available" },
+    { hostel: "Hostel Three", floor: 4, room: 400, type: 2, bedNum: 410, status: "Occupied" },
+    { hostel: "Hostel Four", floor: 7, room: 789, type: 1, bedNum: 800, status: "Available" },
+    { hostel: "Hostel Five", floor: 10, room: 900, type: 4, bedNum: 901, status: "Occupied" },
+    { hostel: "Hostel Six", floor: 6, room: 321, type: 3, bedNum: 322, status: "Available" },
+    { hostel: "Hostel Seven", floor: 5, room: 123, type: 6, bedNum: 124, status: "Occupied" },
+    { hostel: "Hostel Eight", floor: 3, room: 111, type: 5, bedNum: 112, status: "Available" },
+    { hostel: "Hostel Nine", floor: 8, room: 876, type: 4, bedNum: 877, status: "Occupied" },
+    { hostel: "Hostel Ten", floor: 2, room: 101, type: 2, bedNum: 102, status: "Available" },
+  ];
+
+  const tableBody = document.getElementById("bedTableBody");
+  const paginationControls = document.getElementById("bedPaginationControls");
+  const searchInput = document.getElementById("searchInput"); // may be null
+  const totalPagesText = document.getElementById("totalPagesText");
+  const rowsPerPageSelect = document.getElementById("rowsPerPageSelect");
+
+  let activePage = 1;
+  let entriesPerPage = parseInt(rowsPerPageSelect?.value || 5);
+
+  function filterData() {
+    const query = searchInput?.value?.toLowerCase() || "";
+    return bedData.filter((b) =>
+      Object.values(b).some((val) =>
+        val.toString().toLowerCase().includes(query)
+      )
+    );
+  }
+
+  function renderTable(data, page = 1) {
+    const start = (page - 1) * entriesPerPage;
+    const end = start + entriesPerPage;
+    const paginated = data.slice(start, end);
+
+    tableBody.innerHTML = "";
+    paginated.forEach((item, index) => {
+      tableBody.innerHTML += `
+        <tr>
+          <td>${start + index + 1}.</td>
+          <td>${item.hostel}</td>
+          <td>${item.floor}</td>
+          <td>${item.room}</td>
+          <td>${item.type}</td>
+          <td>${item.bedNum}</td>
+          <td>${item.status}</td>
+          <td>${item.status}</td>
+          <td>${item.status}</td>
+          <td class="actions">
+            <button class="edit-btn">view</button>
+          </td>
+        </tr>`;
+    });
+
+    const totalPages = Math.ceil(data.length / entriesPerPage);
+    totalPagesText.innerText = `of ${totalPages}`;
+    renderPagination(data, totalPages);
+  }
+
+  function renderPagination(data, totalPages) {
+    paginationControls.innerHTML = "";
+
+    if (activePage > 1) {
+      const prev = document.createElement("button");
+      prev.textContent = "‹";
+      prev.addEventListener("click", () => changePage(activePage - 1));
+      paginationControls.appendChild(prev);
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      const pageBtn = document.createElement("button");
+      pageBtn.textContent = i;
+      if (i === activePage) pageBtn.classList.add("active");
+      pageBtn.addEventListener("click", () => changePage(i));
+      paginationControls.appendChild(pageBtn);
+    }
+
+    if (activePage < totalPages) {
+      const next = document.createElement("button");
+      next.textContent = "›";
+      next.addEventListener("click", () => changePage(activePage + 1));
+      paginationControls.appendChild(next);
+    }
+  }
+
+  function changePage(page) {
+    activePage = page;
+    const filtered = filterData();
+    renderTable(filtered, activePage);
+  }
+
+  // Attach search input listener only if input exists
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      activePage = 1;
+      const filtered = filterData();
+      renderTable(filtered, activePage);
+    });
+  }
+
+  rowsPerPageSelect.addEventListener("change", (e) => {
+    entriesPerPage = parseInt(e.target.value);
+    activePage = 1;
+    const filtered = filterData();
+    renderTable(filtered, activePage);
+  });
+
+  // Initial render
+  const filtered = filterData();
+  renderTable(filtered, activePage);
+})();
+    </script>
+
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- chart js -->
+    <script src="../../js/apexcharts.min.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/downloadExcel.js"></script>
+</body>
+
+</html>

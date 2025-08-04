@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="./css/Boostrap/bootstrap.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/mainStyle.css" />
+    <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
+    <title>Hostel Management Dashboard</title>
+  </head>
+  <body>
+    <div class="main-container">
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+          <!-- <button id="toggle-btn">&#9776;</button> -->
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li class="active"><a href="index.html"><span><img src="public/dashboard/side menu/dashboard.png"></span> Dashboard</a></li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li><a href="pages/Hostel Operations/HostelManagement.html"><span><img src="public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
+          <li><a href="pages/Hostel Operations/RoomManagement.html"><span><img src="public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
+          <li><a href="pages/Hostel Operations/BedManagement.html"><span><img src="public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
+          <li><a href="pages/Hostel Operations/BedAssignment.html"><span><img src="public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
+          <li><a href="pages/Hostel Operations/CampusCheck In-Out.html"><span><img src="public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
+          <li><a href="pages/Hostel Operations/MessAttendance.html"><span><img src="public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+          <li><a href="pages/Hostel Operations/UserManagement.html"><span><img src="public/dashboard/side menu/User Management.png"></span>User Management</a></li>
+          <li><a href="pages/Hostel Operations/StaffManagement.html"><span><img src="public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li><a href="pages/Resident Services/ResidentsManagement.html"><span><img src="public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
+          <li><a href="pages/Resident Services/LeaveManagement.html"><span><img src="public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
+          <li><a href="pages/Resident Services/GuestManagement.html"><span><img src="public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
+          <li><a href="pages/Resident Services/GrievancesManagement.html"><span><img src="public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
+          <li><a href="pages/Resident Services/RoomAllocation.html"><span><img src="public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
+          <li><a href="pages/Resident Services/FinalCheckout.html"><span><img src="public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+          <li><a href="pages/Resident Services/Feedback.html"><span><img src="public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li><a href="pages/Inventory and Logistics/InventoryManagement.html"><span><img src="public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li><a href=""><span><img src="public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
+          <li><a href=""><span><img src="public/dashboard/side menu/Payments & Translations.png"></span>Payments & Translations</a></li>
+          <li><a href=""><span><img src="public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a></li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li><a href=""><span><img src="public/dashboard/side menu/Notification & Alerts.png"></span>Notification & Alerts</a></li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li><button class="logout"> <img src="public/dashboard/side menu/logout.png" > Log Out</button></li>
+        </ul>
+
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+            <button id="toggle-btn">&#9776;</button>
+            <div class="topbar-right">
+                <input type="text" class="search-bar" placeholder="Search" />
+
+                <div class="user-section">
+                    <span class="user-initial">A</span>
+                </div>
+
+                <div class="dropdown">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Admin
+                </button>
+                <ul class="dropdown-menu custom-style-ul">
+                    <li><a class="dropdown-item custom-style-li" href="#">Admin Profile</a></li>
+                    <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                    <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                </ul>
+                </div>
+
+
+            </div>
+            </header>
+
+        <!-- Dashboard content -->
+        <section class="dashboard"> 
+          <div class="dashboard-content-top-wrapper">
+            <div class="hostel-overview">
+
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Overview</a></div> 
+
+              <!-- Hostel Overview -->
+              <div class="cards">
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Students</p>
+                    <h3>53,000</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="./public/dashboard/student 1.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>In Hostel</p>
+                    <h3>49,280</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="./public/dashboard/bunk-bed.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>Outside Hostel</p>
+                    <h3>3,720</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="./public/dashboard/walk.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>New Register</p>
+                    <h3>1,000</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="./public/dashboard/add.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Graph Placeholder -->
+              <div class="chart">
+                <h4>New Student Registration</h4>
+                <div class="graph-placeholder">
+                  <div
+                    id="student-registration-chart"
+                    class="graph-container"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Requests and Updates -->
+            <div class="student-info">
+              <div class="pending-requests">
+                <div class="pending-requests-header">
+                  <h4>Student Pending Request</h4>
+                  <button>View</button>
+                </div>
+                <p class="pending-requests-text">New Registration Request</p>
+                <div class="card-box">
+                  <table>
+                    <thead class="table-header">
+                      <tr>
+                        <th>Sr No</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <div class="student-name">
+                            <img
+                              src="./public/dashboard/Avatar 1.png"
+                              alt="Rajat"
+                            />
+                            Rajat
+                          </div>
+                        </td>
+                        <td>
+                          <button class="edit-btn">View</button>
+                          <button class="reject">Reject</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <div class="student-name">
+                            <img
+                              src="./public/dashboard/Avatar 2.png"
+                              alt="Amresh"
+                            />
+                            Amresh
+                          </div>
+                        </td>
+                        <td>
+                          <button class="edit-btn">View</button>
+                          <button class="reject">Reject</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="student-updates">
+                <div class="pending-requests-header">
+                  <h4>Student Updates</h4>
+                  <button>View</button>
+                </div>
+                <p class="pending-requests-text">
+                  Student In and Out Status from Campus
+                </p>
+                <div class="card-box">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Sr No</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <div class="student-name">
+                            <img
+                              src="./public/dashboard/Avatar 1.png"
+                              alt="Rajat"
+                            />
+                            Rajat
+                          </div>
+                        </td>
+                        <td>In 08:30 - Out 12:30</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <div class="student-name">
+                            <img
+                              src="./public/dashboard/Avatar 2.png"
+                              alt="Amresh"
+                            />
+                            Amresh
+                          </div>
+                        </td>
+                        <td>In 08:30 - Out 12:30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hostel-status-section">
+            <h3 class="hostel-status-title">Hostel Status</h3>
+            <div class="hostel-status-container">
+              <!-- Hostel Name and Progress -->
+              <div class="hostel-progress-card">
+                <div class="progress-circle">
+                  <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle cx="60" cy="60" r="50"></circle>
+                  </svg>
+                  <div class="progress-value">50%</div>
+                </div>
+                <div class="hostel-name">Hostel 1</div>
+              </div>
+
+              <!-- Fee Collection -->
+              <div class="fee-details">
+                <h4>Fee Collection Details</h4>
+                <ul>
+                  <li><span>Expected</span> ₹ 15,65,852</li>
+                  <li><span>Collected</span> ₹ 3,91,463</li>
+                  <li><span>Remaining</span> ₹ 7,51,608</li>
+                  <li><span>Others</span> ₹ 1,65,852</li>
+                  <li><span>Overdue</span> ₹ 4,85,414</li>
+                </ul>
+              </div>
+
+              <!-- Assets -->
+              <div class="assets">
+                <h4>Assets</h4>
+                <ul>
+                  <li><span>Ceiling Fan</span> 50</li>
+                  <li><span>Center Table</span> 12</li>
+                  <li><span>Chairs</span> 30</li>
+                  <li><span>Refrigerator</span> 44</li>
+                  <li><span>Kettle</span> 33</li>
+                </ul>
+              </div>
+
+              <!-- Hostel Stats -->
+              <div class="hostel-stats">
+                <div class="stat-card"> <span> <p>Total Bed</p> <strong>550</strong></span></div>
+                <div class="stat-card"> <span> <p>Total Bathroom</p> <strong>58</strong></span> </div>
+                <div class="stat-card"> <span> <p>Total Floors</p> <strong>3</strong></span> </div>
+                <div class="stat-card"> <span> <p>Total Rooms</p> <strong>458</strong></span> </div>
+                <div class="stat-card"> <span> <p>Occupied</p> <strong>58</strong></span> </div>
+                <div class="stat-card"> <span> <p>Students</p> <strong>500</strong></span> </div>
+                <div class="stat-card"> <span> <p>In Hostel</p> <strong>290</strong></span> </div>
+                <div class="stat-card"> <span> <p>Outside Hostel</p> <strong>210</strong></span> </div>
+
+              <!-- Action Buttons -->
+              <div class="hostel-actions">
+                <button class="edit"><span><img src="public/dashboard/edit icon.png"></span> Edit Hostel</button>
+              </div>
+
+               <div class="hostel-actions">
+                <button class="delete"><span><img src="public/dashboard/delete icon.png"></span> Delete Hostel</button>
+              </div>
+
+               <div class="hostel-actions">
+                <button class="remove"><span><img src="public/dashboard/min icon.png"></span> Remove Room</button>
+              </div>
+
+               <div class="hostel-actions">
+                <button class="add"><span><img src="public/dashboard/Plus icon.png"></span> Add Room</button>
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div id="hostelListSection">
+            <div>
+              <label for="rowsPerPage">List </label>
+              <select id="rowsPerPage">
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <div class="table-container">
+              <table id="hostelTable">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Hostel Name</th>
+                  <th>Hostel Code</th>
+                  <th>Number of Floor</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            </div>
+
+            <div class="pagination">
+              <div id="totalCount"></div>
+              <div class="pagination-controls" id="hostelPaginationControls"></div>
+            </div>
+          </div>
+          <div class="bed-status-section">
+            <div class="table-controls">
+              <h3 class="table-title">Bed Status</h3>
+              <div>
+                <input type="text" id="searchInput" placeholder="Search" class="search-input"/>
+                <button class="add-btn" id="add-bed">Add Bed +</button>
+                <button class="view-btn">View All</button>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="status-table">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Hostel Name</th>
+                  <th>Floor</th>
+                  <th>Room Number</th>
+                  <th>Bed Type</th>
+                  <th>Bed Number</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bedTableBody"></tbody>
+            </table>
+            </div>
+            <div class="table-footer">
+              <div>
+                <label>List</label>
+                <select id="rowsPerPageSelect">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+                <span id="totalPagesText"></span>
+              </div>
+              <div class="pagination" id="bedPaginationControls"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- chart js -->
+    <script src="js/apexcharts.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+    <script src="js/table.js"></script>
+
+  </body>
+</html>
