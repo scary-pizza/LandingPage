@@ -1,5 +1,6 @@
 .main-container {
   display: flex;
+  width: 100%;
 }
 
 .sidebar {
@@ -127,6 +128,7 @@
 }
 
 .main-content {
+  width: 100%;
   flex: 1;
 }
 
@@ -185,6 +187,7 @@
 
 .dashboard {
     font-size: 1rem;
+    width: 100%;
 }
 
 .dashboard .breadcrumbs{
