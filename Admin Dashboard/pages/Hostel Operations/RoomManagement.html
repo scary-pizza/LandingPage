@@ -7,6 +7,9 @@
     <!-- Boostrp 5 css -->
     <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
 
+    <!-- Current css -->
+    <link rel="stylesheet" href="../../css/Hostel Operations/RoomManagement.css" />
+
     <link rel="stylesheet" href="../../css/sidebar.css" />
     <link rel="stylesheet" href="../../css/mainStyle.css" />
     <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
@@ -112,11 +115,62 @@
             </div>
             </header>
 
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Room Management</a></div>
+              <!-- Popup Btn -->
+               <span>
+                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddRoom">+ Add Room</button>
+              </span>
+              
+            </div>
+
+              <!-- Overview -->
+              <div class="cards">
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Room</p>
+                    <h3>500</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Occupied Room</p>
+                    <h3>400</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Available Room</p>
+                    <h3>50</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>In Maintaince Room</p>
+                    <h3>50</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
               <div class="bed-status-section">
             <div class="table-controls">
               <h3 class="table-title">Room List</h3>
               <div>
-                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddRoom">Add Room +</button>
+                <!-- for add button -->
               </div>
             </div>
             <div class="table-container">
@@ -206,11 +260,21 @@
                 </span>
 
                 <span class="input-set">
+                  <label for="RoomFacility">Room Facility</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Status</option>
+                    <option value="AC">AC</option>
+                    <option value="Non Ac">Non Ac</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
                   <label for="RoomStatus">Room Status</label>
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select Status</option>
                     <option value="Available">Available</option>
                     <option value="Occupied">Occupied</option>
+                    <option value="Maintaince">Maintaince</option>
                   </select>
                 </span>
 

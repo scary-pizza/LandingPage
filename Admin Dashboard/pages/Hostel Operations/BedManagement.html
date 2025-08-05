@@ -112,11 +112,62 @@
             </div>
             </header>
 
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Bed Management</a></div>
+              <!-- Popup Btn -->
+               <span>
+                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddBed">+ Add Bed</button>
+              </span>
+              
+            </div>
+
+              <!-- Overview -->
+              <div class="cards">
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Bed</p>
+                    <h3>500</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/1.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Occupied Bed</p>
+                    <h3>400</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Room Management/2.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>Total Available Bed</p>
+                    <h3>50</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Bed/3.png" alt="" />
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <p>In Damage Bed</p>
+                    <h3>50</h3>
+                  </div>
+                  <div class="card-image">
+                    <img src="../../public/Bed/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+
             <div class="bed-status-section">
             <div class="table-controls">
               <h3 class="table-title">Bed List</h3>
               <div>
-                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddBed">Add Bed +</button>
+                <!-- empty for button -->
               </div>
             </div>
             <div class="table-container">
@@ -191,12 +242,12 @@
                 </span>
 
                 <span class="input-set">
-                  <label for="RoomType">Room Type</label>
+                  <label for="RoomType">Select Room</label>
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select Floor</option>
-                    <option value="Single Bed">Single Bed</option>
-                    <option value="Double Bed">Double Bed</option>
-                    <option value="Triple Bed">Triple Bed</option>
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
                   </select>
                 </span>
                 
@@ -221,6 +272,7 @@
                     <option selected>Select Status</option>
                     <option value="Available">Available</option>
                     <option value="Occupied">Occupied</option>
+                    <option value="Occupied">Damage</option>
                   </select>
                 </span>
 

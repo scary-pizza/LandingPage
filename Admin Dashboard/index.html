@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/dashboard.css" />
     <link rel="stylesheet" href="./css/mainStyle.css" />
     <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="css/popup&tabs.css">
     <title>Hostel Management Dashboard</title>
   </head>
   <body>
@@ -324,19 +325,19 @@
 
               <!-- Action Buttons -->
               <div class="hostel-actions">
-                <button class="edit"><span><img src="public/dashboard/edit icon.png"></span> Edit Hostel</button>
+                <button class="edit" data-bs-toggle="modal" data-bs-target="#EditHostel"><span><img src="public/dashboard/edit icon.png"></span> Edit Hostel</button>
               </div>
 
                <div class="hostel-actions">
-                <button class="delete"><span><img src="public/dashboard/delete icon.png"></span> Delete Hostel</button>
+                <button class="delete" data-bs-toggle="modal" data-bs-target="#ConfirmationPopup"><span><img src="public/dashboard/delete icon.png"></span> Delete Hostel</button>
               </div>
 
                <div class="hostel-actions">
-                <button class="remove"><span><img src="public/dashboard/min icon.png"></span> Remove Room</button>
+                <button class="remove" data-bs-toggle="modal" data-bs-target="#RemoveRoom"><span><img src="public/dashboard/min icon.png"></span> Remove Room</button>
               </div>
 
                <div class="hostel-actions">
-                <button class="add"><span><img src="public/dashboard/Plus icon.png"></span> Add Room</button>
+                <button class="add" data-bs-toggle="modal" data-bs-target="#AddRoom"><span><img src="public/dashboard/Plus icon.png"></span> Add Room</button>
               </div>
 
               </div>
@@ -378,7 +379,7 @@
               <h3 class="table-title">Bed Status</h3>
               <div>
                 <input type="text" id="searchInput" placeholder="Search" class="search-input"/>
-                <button class="add-btn" id="add-bed">Add Bed +</button>
+                <button class="add-btn" data-bs-toggle="modal" data-bs-target="#AddRoom">Add Bed +</button>
                 <button class="view-btn">View All</button>
               </div>
             </div>
@@ -412,6 +413,571 @@
             </div>
           </div>
         </section>
+
+
+      <!-- All Popup -->
+
+
+      <!-- Add Hostel -->
+      <div class="modal fade" id="AddHostel" tabindex="-1" aria-labelledby="AddHostelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Add Hostel</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="hostelName">Select University</label>
+                  <input type="text" id="SelectUniversity" name="SelectUniversity" placeholder="Select University">
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Hostel Name</label>
+                  <input type="text" id="hostelName" name="hostelName" placeholder="Enter Hostel Name">
+                </span>
+                
+                <span class="input-set">
+                  <label for="hostelName">Hostel Code</label>
+                  <input type="text" id="hostelCode" name="hostelCode" placeholder="Enter Hostel Code">
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Numbers of Floors</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Hostel Status</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Status</option>
+                    <option value="Open">Open</option>
+                    <option value="Close">Close</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Add hostel </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ConfirmationPopup -->
+      <div class="modal fade" id="ConfirmationPopup" tabindex="-1" aria-labelledby="ConfirmationPopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Confirm Deletion</div>
+              </div>
+
+              <div class="middle-content">
+                <p>Deleting this record will permanently remove it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Delete </button>
+                <button type="button" class="blue"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Room -->
+      <div class="modal fade" id="AddRoom" tabindex="-1" aria-labelledby="AddRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Add Room</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="SelectHostel">Select Hostel</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Hostel</option>
+                    <option value="Hostel 1">Hostel 1</option>
+                    <option value="Hostel 2">Hostel 2</option>
+                    <option value="Hostel 3">Hostel 3</option>
+                    <option value="Hostel 4">Hostel 4</option>
+                    <option value="Hostel 5">Hostel 5</option>
+                  </select>
+                </span>
+                
+                <span class="input-set">
+                  <label for="SelectFloor">Select Floor</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="CreateRoomNumber">Create Room Number</label>
+                  <input type="text" id="CreateRoomNumber" name="CreateRoomNumber" placeholder="Enter Create Room Number">
+                </span>
+
+                <span class="input-set">
+                  <label for="RoomType">Room Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="Single Bed">Single Bed</option>
+                    <option value="Double Bed">Double Bed</option>
+                    <option value="Triple Bed">Triple Bed</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="RoomStatus">Room Status</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Occupied">Occupied</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Add Room </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Remove Room -->
+      <div class="modal fade" id="RemoveRoom" tabindex="-1" aria-labelledby="RemoveRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Remove Room</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="SelectHostel">Select Hostel</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Hostel</option>
+                    <option value="Hostel 1">Hostel 1</option>
+                    <option value="Hostel 2">Hostel 2</option>
+                    <option value="Hostel 3">Hostel 3</option>
+                    <option value="Hostel 4">Hostel 4</option>
+                    <option value="Hostel 5">Hostel 5</option>
+                  </select>
+                </span>
+                
+                <span class="input-set">
+                  <label for="SelectFloor">Select Floor</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="SelectRoom">Select Room</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Room</option>
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Remove Room </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- EditHostel -->
+      <div class="modal fade" id="EditHostel" tabindex="-1" aria-labelledby="EditHostelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Edit Hostel</div>
+              </div>
+
+              <div class="tabs-middle">
+
+                <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="HostelDetails" checked>
+                <label for="tab1">Hostel Details</label>
+
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="Fee Collection Details  ">
+                <label for="tab2">Fee Collection Details </label>
+
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="Assests">
+                <label for="tab3">Assests</label>
+
+                <div class="tab-panels">
+                  <!-- Tab 1 -->
+                  <section id="HostelDetails" class="tab-panel">
+
+                      <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="TotalBed">Total Bed</label>
+                          <input type="text" id="TotalBed" name="TotalBed" placeholder="Total Bed">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="TotalBathroom">Total Bathroom</label>
+                          <input type="text" id="TotalBathroom" name="TotalBathroom" placeholder="Total Bathroom">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="TotalFloors">Total Floors</label>
+                          <input type="text" id="TotalFloors" name="TotalFloors" placeholder="Total Floors">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="TotalRooms">Total Rooms</label>
+                          <input type="text" id="TotalRooms" name="TotalRooms" placeholder="Total Rooms">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Occupied">Occupied</label>
+                          <input type="text" id="Occupied" name="Occupied" placeholder="Occupied">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Students">Students</label>
+                          <input type="text" id="Students" name="Students" placeholder="Students">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="In Hostel">In Hostel</label>
+                          <input type="text" id="In Hostel" name="In Hostel" placeholder="In Hostel">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="OutsideHostel">Outside Hostel</label>
+                          <input type="text" id="OutsideHostel" name="OutsideHostel" placeholder="Outside Hostel">
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </section>
+
+                  <!-- Tab 2 -->
+                  <section id="Fee Collection Details " class="tab-panel">
+
+                      <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Expected">Expected</label>
+                          <input type="text" id="Expected" name="Expected" placeholder="₹ 15,65,852">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="col col-sm-6lected">col col-sm-6lected</label>
+                          <input type="text" id="col col-sm-6lected" name="col col-sm-6lected" placeholder="₹ 3,91,463">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Remaining">Remaining</label>
+                          <input type="text" id="Remaining" name="Remaining" placeholder="₹ 7,51,608">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Others">Others</label>
+                          <input type="text" id="Others" name="Others" placeholder="₹ 1,65,852">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Overdue">Overdue</label>
+                          <input type="text" id="Overdue" name="Overdue" placeholder="₹ 4,85,414">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                      </div>
+
+                    </div>
+
+                  </section>
+
+                  <!-- Tab 3 -->
+                  <section id="Assests" class="tab-panel">
+                   
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Ceiling Fan">Ceiling Fan</label>
+                          <input type="text" id="Ceiling Fan" name="Ceiling Fan" placeholder="33">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="CenterTable">Center Table</label>
+                          <input type="text" id="CenterTable" name="CenterTable" placeholder="12">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Chairs">Chairs</label>
+                          <input type="text" id="Chairs" name="Chairs" placeholder="51">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Refrigerator">Refrigerator</label>
+                          <input type="text" id="Refrigerator" name="Refrigerator" placeholder="65">
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <div class="row ">
+
+                      <div class=" col-sm-6">
+                        <span class="input-set">
+                          <label for="Kettle">Kettle</label>
+                          <input type="text" id="Kettle" name="Kettle" placeholder="85">
+                        </span>
+                      </div>
+
+                      <div class=" col-sm-6">
+                      </div>
+
+                  </section>
+                </div>
+
+              </div>
+
+
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Save Changes </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Room -->
+      <div class="modal fade" id="AddBed" tabindex="-1" aria-labelledby="AddBedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Add Bed</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="SelectHostel">Select Hostel</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Hostel</option>
+                    <option value="Hostel 1">Hostel 1</option>
+                    <option value="Hostel 2">Hostel 2</option>
+                    <option value="Hostel 3">Hostel 3</option>
+                    <option value="Hostel 4">Hostel 4</option>
+                    <option value="Hostel 5">Hostel 5</option>
+                  </select>
+                </span>
+                
+                <span class="input-set">
+                  <label for="SelectFloor">Select Floor</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="RoomType">Room Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="Single Bed">Single Bed</option>
+                    <option value="Double Bed">Double Bed</option>
+                    <option value="Triple Bed">Triple Bed</option>
+                  </select>
+                </span>
+                
+                <span class="input-set">
+                  <label for="BedType">Bed Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="Single Bed">Single Bed</option>
+                    <option value="Double Bed">Double Bed</option>
+                    <option value="Triple Bed">Triple Bed</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="CreateRoomNumber">Create Bed Number</label>
+                  <input type="text" id="CreateBedNumber" name="CreateBedNumber" placeholder="Enter Create Bed Number">
+                </span>
+
+                <span class="input-set">
+                  <label for="BedStatus">Bed Status</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Occupied">Occupied</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Creat Bed </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       </main>
     </div>
 
