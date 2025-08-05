@@ -112,11 +112,19 @@
             </div>
             </header>
 
-            <div class="main-content-container">
-                <!-- breadcrumbs -->
-              <div class="breadcrumbs"><a href="">Leave Management</a></div> 
 
-              <!-- Hostel Overview -->
+             <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Leave Management</a></div>
+              <!-- Popup Btn -->
+               <span>
+                <button class="add-btn" type="button" >Download Excel</button>
+              </span>
+              
+            </div>
+
+              <!-- Overview -->
               <div class="cards">
                 <div class="card">
                   <div class="card-content">
@@ -147,7 +155,7 @@
                 </div>
                 <div class="card">
                   <div class="card-content">
-                    <p>New Register</p>
+                    <p>On Leave</p>
                     <h3>1,000</h3>
                   </div>
                   <div class="card-image">
@@ -155,43 +163,193 @@
                   </div>
                 </div>
               </div>
-              <div class="bed-status-section">
-            <div class="table-controls">
-              <h3 class="table-title">Bed Status</h3>
-              <div>
-                <button class="add-btn">Download Excel</button>
-                <button class="view-btn">View All</button>
+
+
+            <div class="main-content-container">
+
+
+              <!-- Pending Request -->
+
+              <div class="table-controls">
+                <h3 class="table-title">Pending Leave Request List</h3>
+                <div>
+                  <button class="add-btn">Download Excel</button>
+                  <button class="view-btn-top">View All</button>
+                </div>
               </div>
-            </div>
-            <div class="table-container">
-              <table class="status-table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Hostel Name</th>
-                  <th>Floor</th>
-                  <th>Room Number</th>
-                  <th>Bed Type</th>
-                  <th>Bed Number</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="bedTableBody"></tbody>
-            </table>
-            </div>
-            <div class="table-footer">
-              <div>
-                <label>List</label>
-                <select id="rowsPerPageSelect">
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                </select>
-                <span id="totalPagesText"></span>
+
+              <div class="table-container">
+                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Student Name</th>
+                      <th>Scholar Number</th>
+                      <th>Room Number</th>
+                      <th>Hostel</th>
+                      <th>Leave Taken on</th>
+                      <th>Duration</th>
+                      <th>Expected Arrival</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Rajat Pradhan</td>
+                      <td>20213045</td>
+                      <td>304</td>
+                      <td>Hostel One</td>
+                      <td>01-Aug-2025</td>
+                      <td>3 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td>
+                        <button class="green-btn">Approve</button>
+                        <button class="delete-btn">Reject</button>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Sangeeta Kumari</td>
+                      <td>20213456</td>
+                      <td>102</td>
+                      <td>Hostel Two</td>
+                      <td>02-Aug-2025</td>
+                      <td>2 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td>
+                        <button class="green-btn">Approve</button>
+                        <button class="delete-btn">Reject</button>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="pagination" id="bedPaginationControls"></div>
-            </div>
-          </div>
+
+              <hr>
+
+              <!-- Approve Leave Request List -->
+
+              <div class="table-controls">
+                <h3 class="table-title">Approve Leave Request List</h3>
+                <div>
+                  <button class="add-btn">Download Excel</button>
+                  <button class="view-btn-top">View All</button>
+                </div>
+              </div>
+
+              <div class="table-container">
+                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Student Name</th>
+                      <th>Scholar Number</th>
+                      <th>Room Number</th>
+                      <th>Hostel</th>
+                      <th>Leave Taken on</th>
+                      <th>Duration</th>
+                      <th>Expected Arrival</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Rajat Pradhan</td>
+                      <td>20213045</td>
+                      <td>304</td>
+                      <td>Hostel One</td>
+                      <td>01-Aug-2025</td>
+                      <td>3 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td><button class="green-btn">Approve</button></td>
+                      <td>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Sangeeta Kumari</td>
+                      <td>20213456</td>
+                      <td>102</td>
+                      <td>Hostel Two</td>
+                      <td>02-Aug-2025</td>
+                      <td>2 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td><button class="green-btn">Approve</button></td>
+                      <td>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <hr>
+
+              <!-- Reject Leave Request List -->
+
+              <div class="table-controls">
+                <h3 class="table-title">Reject Leave Request List</h3>
+                <div>
+                  <button class="add-btn">Download Excel</button>
+                  <button class="view-btn-top">View All</button>
+                </div>
+              </div>
+
+              <div class="table-container">
+                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Student Name</th>
+                      <th>Scholar Number</th>
+                      <th>Room Number</th>
+                      <th>Hostel</th>
+                      <th>Leave Taken on</th>
+                      <th>Duration</th>
+                      <th>Expected Arrival</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Rajat Pradhan</td>
+                      <td>20213045</td>
+                      <td>304</td>
+                      <td>Hostel One</td>
+                      <td>01-Aug-2025</td>
+                      <td>3 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td><button class="green-btn">Approve</button></td>
+                      <td>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Sangeeta Kumari</td>
+                      <td>20213456</td>
+                      <td>102</td>
+                      <td>Hostel Two</td>
+                      <td>02-Aug-2025</td>
+                      <td>2 Days</td>
+                      <td>04-Aug-2025</td>
+                      <td><button class="green-btn">Approve</button></td>
+                      <td>
+                        <button class="view-btn">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
             </div>
 
         </main>
@@ -201,12 +359,9 @@
 
     <!-- Boostrp 5 js -->
     <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
-    <!-- chart js -->
-    <script src="../../js/apexcharts.min.js"></script>
+
     <!-- main js -->
     <script src="../../js/main.js"></script>
-
-    <script src="../../js/table.js"></script>
 </body>
 
 </html>

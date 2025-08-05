@@ -1,0 +1,75 @@
+/* messAttendance.css */
+
+/* Attendance Chart Section */
+.attendance-chart {
+  margin: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-chart .day-box {
+  display: inline-block;
+  width: 5rem;
+  /* height: 35px; */
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+}
+
+.attendance-chart .legend {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+
+.attendance-chart .legend-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Attendance Status Colors */
+.day-thump {
+  background-color: #28a745;
+}
+
+.day-not-thump {
+  background-color: #dc3545;
+}
+
+.day-holiday {
+  background-color: #fd7e14;
+}
+
+/* Top Controls */
+.attendance-top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.attendance-top-controls .btn {
+  margin-left: 10px;
+}
+
+.attendance-title {
+  font-weight: 600;
+  font-size: 18px;
+}

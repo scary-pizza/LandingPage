@@ -5,10 +5,15 @@
 }
 
 .table-controls {
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.75rem;
+}
+
+.table-controls:first-child{
+  margin-top: 0;
 }
 
 .table-controls .table-title {
@@ -26,7 +31,7 @@
   width: 250px;
 }
 .add-btn,
-.view-btn {
+.view-btn-top {
   background-color: #0a2f63;
   color: #fff;
   border: none;
@@ -81,25 +86,28 @@
   color: #fff;
 }
 .edit-btn,
-.delete-btn {
+.delete-btn,
+.view-btn,
+.table-view-btn,
+.green-btn {
   padding: 5px 10px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-}
-.edit-btn {
-  background-color: #153162;
   color: #fff;
   margin-right: 6px;
 }
+.edit-btn, .view-btn , .table-view-btn{
+  background-color: #153162;
+}
 .delete-btn {
   background-color: #f54444;
-  color: #fff;
+}
+.green-btn{
+  background-color: var(--nature-green);
+  
 }
 
-#toggle-btn-small-screen {
-  display: none;
-}
 
 .table-container {
   overflow-x: auto;

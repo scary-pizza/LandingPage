@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
   <link rel="stylesheet" href="../../css/table.css" />
   <link rel="stylesheet" href="../../css/popup&tabs.css" />
-  <link rel="stylesheet" href="../../css/Hostel Operations/messAttendance.css" />
+  <link rel="stylesheet" href="../../css/Hostel Operations/AttendanceDetailPage.css" />
   <title>Hostel Management Dashboard</title>
 </head>
 
@@ -184,184 +184,216 @@
       <!-- top-breadcrumbs -->
       <div class="top-breadcrumbs">
         <!-- breadcrumbs -->
-        <div class="breadcrumbs"><a href="">Live Attendance</a></div>
+        <div class="breadcrumbs"><a href="MessAttendance.html">Live Attendance</a>/<a href="">Attendance of Unnati
+            (Scholar - 45465)</a></div>
         <!-- Popup Btn -->
         <span>
-          <button class="add-btn" type="button">Download Excel</button>
+          <button class="add-btn" type="button"> <span><img src="../../public/Attendance Detail/notificaion.png"></span>
+            Send Notification</button>
+          <button class="add-btn" type="button"> <span><img src="../../public/Attendance Detail/date.png"></span> 29
+            July 2025</button>
+          <button class="add-btn" type="button"
+            onclick="downloadTableAsExcel('attendanceDays', 'Attendance_Days.xls')">Download Excel</button>
         </span>
       </div>
-      <!--  Overview -->
-      <div class="cards">
-        <div class="card">
-          <div class="card-content">
-            <p>Total Students</p>
-            <h3>53,000</h3>
+
+      <!-- Attendance Summary Section -->
+      <div class="attendance-chart">
+
+        <!-- Attendance Days -->
+        <div id="attendanceDays"></div>
+
+        <!-- Legend -->
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-box" style="background-color: #28a745;"></span> 20 Thump
           </div>
-          <div class="card-image">
-            <img src="../../public/dashboard/student 1.png" alt="" />
+          <div class="legend-item">
+            <span class="legend-box" style="background-color: #dc3545;"></span> 33 Not Thump
           </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <p>In Hostel</p>
-            <h3>49,280</h3>
-          </div>
-          <div class="card-image">
-            <img src="../../public/dashboard/bunk-bed.png" alt="" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <p>Outside Hostel</p>
-            <h3>3,720</h3>
-          </div>
-          <div class="card-image">
-            <img src="../../public/dashboard/walk.png" alt="" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <p>New Register</p>
-            <h3>1,000</h3>
-          </div>
-          <div class="card-image">
-            <img src="../../public/dashboard/add.png" alt="" />
+          <div class="legend-item">
+            <span class="legend-box" style="background-color: #fd7e14;"></span> 02 Holidays
           </div>
         </div>
       </div>
-
-      <section class="attendance-section">
-        <div class="attendance-comparison">
-          <div class="attendance-comparison-header">
-            <h4>Attendance Comparison Chart</h4>
-            <div class="attendance-toggle">
-              <label><input type="radio" name="attendanceToggle" checked />
-                Daily</label>
-              <label><input type="radio" name="attendanceToggle" /> Weekly</label>
-              <label><input type="radio" name="attendanceToggle" /> Monthly</label>
-            </div>
-          </div>
-          <div id="dailyAttendanceChart"></div>
-        </div>
-
-        <div class="weekly-attendance">
-          <div class="header">
-            <h4>Weekly Attendance</h4>
-            <div class="date-box">29 July 2025</div>
-          </div>
-          <div id="weeklyAttendanceChart"></div>
-        </div>
-      </section>
 
       <div class="bed-status-section">
+        <!-- Thumb Time -->
 
-              <!-- Morning Thumb Time -->
-              
-              <div class="table-controls">
-                <h3 class="table-title">Morning Thumb Time</h3>
-                <div>
-                  <button class="add-btn" onclick="downloadTableAsExcel('morningThumbTable', 'Morning_Thumb_Table.xls')">Download Excel</button>
-                  <button class="view-btn-top">View All</button>
-                </div>
-              </div>
-              
-              <div class="table-container">
-                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
-                  <thead>
-                    <tr>
-                      <th>S.No</th>
-                      <th>Student Name</th>
-                      <th>Scholar Number</th>
-                      <th>Hostel</th>
-                      <th>Room Number</th>
-                      <th>Thump Time</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Rajat Pradhan</td>
-                      <td>20213045</td>
-                      <td>Hostel One</td>
-                      <td>304</td>
-                      <td>01-Aug-2025</td>
-                      <td>
-                        <a type="button" href="AttendanceDetailPage.html" class="table-view-btn">View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Sangeeta</td>
-                      <td>20213045</td>
-                      <td>Hostel One</td>
-                      <td>304</td>
-                      <td>01-Aug-2025</td>
-                      <td>
-                        <a type="button" href="AttendanceDetailPage.html" class="table-view-btn">View</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <hr>
+        <div class="table-controls">
+          <h3 class="table-title">Thumb Time</h3>
+          <div>
+            <button class="view-btn-top ">Download Excel</button>
+          </div>
+        </div>
 
-              <!-- Night Thump Time -->
-              
-              <div class="table-controls">
-                <h3 class="table-title">Night Thump Time</h3>
-                <div>
-                  <button class="add-btn" onclick="downloadTableAsExcel('morningThumbTable', 'Morning_Thumb_Table.xls')">Download
-                    Excel</button>
-                  <button class="view-btn-top">View All</button>
-                </div>
-              </div>
-              
-              <div class="table-container">
-                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
-                  <thead>
-                    <tr>
-                      <th>S.No</th>
-                      <th>Student Name</th>
-                      <th>Scholar Number</th>
-                      <th>Hostel</th>
-                      <th>Room Number</th>
-                      <th>Thump Time</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Rajat Pradhan</td>
-                      <td>20213045</td>
-                      <td>Hostel One</td>
-                      <td>304</td>
-                      <td>01-Aug-2025</td>
-                      <td>
-                        <a type="button" href="AttendanceDetailPage.html" class="table-view-btn">View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Sangeeta</td>
-                      <td>20213045</td>
-                      <td>Hostel One</td>
-                      <td>304</td>
-                      <td>01-Aug-2025</td>
-                      <td>
-                        <a type="button" href="AttendanceDetailPage.html" class="table-view-btn">View</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-
+        <div class="table-container">
+          <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Student Name</th>
+                <th>Scholar Number</th>
+                <th>Hostel</th>
+                <th>Room Number</th>
+                <th>Thump Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rajat Pradhan</td>
+                <td>20213045</td>
+                <td>Hostel One</td>
+                <td>304</td>
+                <td>01-Aug-2025</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sangeeta</td>
+                <td>20213045</td>
+                <td>Hostel One</td>
+                <td>304</td>
+                <td>01-Aug-2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
     </main>
   </div>
+
+  <script>
+    const attendanceDaysContainer = document.getElementById("attendanceDays");
+
+    const classes = ["day-thump", "day-not-thump", "day-holiday"];
+
+    for (let day = 1; day <= 31; day++) {
+      const span = document.createElement("span");
+      span.classList.add("day-box");
+
+      // Assign a class cyclically: thump → not-thump → holiday
+      const className = classes[(day - 1) % classes.length];
+      span.classList.add(className);
+
+      span.textContent = day;
+      attendanceDaysContainer.appendChild(span);
+    }
+    const bedData = [
+      { hostel: "Hostel One", floor: 42, room: 5465, type: 5, bedNum: 4542 },
+      { hostel: "Hostel Two", floor: 465, room: 4565, type: 12, bedNum: 45545 },
+      { hostel: "Hostel Three", floor: 4, room: 400, type: 2, bedNum: 410 },
+      { hostel: "Hostel Four", floor: 7, room: 789, type: 1, bedNum: 800 },
+      { hostel: "Hostel Five", floor: 10, room: 900, type: 4, bedNum: 901 },
+      { hostel: "Hostel Six", floor: 6, room: 321, type: 3, bedNum: 322 },
+      { hostel: "Hostel Seven", floor: 5, room: 123, type: 6, bedNum: 124 },
+      { hostel: "Hostel Eight", floor: 3, room: 111, type: 5, bedNum: 112 },
+      { hostel: "Hostel Nine", floor: 8, room: 876, type: 4, bedNum: 877 },
+      { hostel: "Hostel Ten", floor: 2, room: 101, type: 2, bedNum: 102 }
+    ];
+
+    function setupBedTable({
+      tableBodyId,
+      paginationControlsId,
+      rowsPerPageSelectId,
+      totalPagesTextId
+    }) {
+      const tableBody = document.getElementById(tableBodyId);
+      const paginationControls = document.getElementById(paginationControlsId);
+      const rowsPerPageSelect = document.getElementById(rowsPerPageSelectId);
+      const totalPagesText = document.getElementById(totalPagesTextId);
+
+      let activePage = 1;
+      let entriesPerPage = parseInt(rowsPerPageSelect?.value || 5);
+
+      function filterData() {
+        return bedData;
+      }
+
+      function renderTable(data, page = 1) {
+        const start = (page - 1) * entriesPerPage;
+        const end = start + entriesPerPage;
+        const paginated = data.slice(start, end);
+
+        tableBody.innerHTML = "";
+        paginated.forEach((item, index) => {
+          tableBody.innerHTML += `
+        <tr>
+          <td>${start + index + 1}.</td>
+          <td>Student ${start + index + 1}</td>
+          <td>SN${item.bedNum}</td>
+          <td>${new Date().toLocaleTimeString()}</td>
+          <td>${item.room}</td>
+          <td>${item.hostel}</td>
+          <td class="actions"><button class="edit-btn">view</button></td>
+        </tr>`;
+        });
+
+        const totalPages = Math.ceil(data.length / entriesPerPage);
+        totalPagesText.innerText = `of ${totalPages}`;
+        renderPagination(data, totalPages);
+      }
+
+      function renderPagination(data, totalPages) {
+        paginationControls.innerHTML = "";
+
+        if (activePage > 1) {
+          const prev = document.createElement("button");
+          prev.textContent = "‹";
+          prev.addEventListener("click", () => changePage(activePage - 1));
+          paginationControls.appendChild(prev);
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+          const pageBtn = document.createElement("button");
+          pageBtn.textContent = i;
+          if (i === activePage) pageBtn.classList.add("active");
+          pageBtn.addEventListener("click", () => changePage(i));
+          paginationControls.appendChild(pageBtn);
+        }
+
+        if (activePage < totalPages) {
+          const next = document.createElement("button");
+          next.textContent = "›";
+          next.addEventListener("click", () => changePage(activePage + 1));
+          paginationControls.appendChild(next);
+        }
+      }
+
+      function changePage(page) {
+        activePage = page;
+        const filtered = filterData();
+        renderTable(filtered, activePage);
+      }
+
+      rowsPerPageSelect.addEventListener("change", (e) => {
+        entriesPerPage = parseInt(e.target.value);
+        activePage = 1;
+        const filtered = filterData();
+        renderTable(filtered, activePage);
+      });
+
+      const filtered = filterData();
+      renderTable(filtered, activePage);
+    }
+
+    // Setup for Morning Table
+    setupBedTable({
+      tableBodyId: "morningBedTableBody",
+      paginationControlsId: "morningBedPaginationControls",
+      rowsPerPageSelectId: "morningRowsPerPageSelect",
+      totalPagesTextId: "morningTotalPagesText"
+    });
+
+    // Setup for Night Table
+    setupBedTable({
+      tableBodyId: "nightBedTableBody",
+      paginationControlsId: "nightBedPaginationControls",
+      rowsPerPageSelectId: "nightRowsPerPageSelect",
+      totalPagesTextId: "nightTotalPagesText"
+    });
+  </script>
 
 
   <!-- Boostrp 5 js -->
@@ -369,7 +401,6 @@
   <!-- chart js -->
   <script src="../../js/apexcharts.min.js"></script>
   <!-- main js -->
-  <script src="../../js/attendanceChart.js"></script>
   <script src="../../js/main.js"></script>
 </body>
 

@@ -1,0 +1,67 @@
+.attendance-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.attendance-comparison,
+.weekly-attendance {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-comparison-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.attendance-comparison {
+  flex: 2;
+  width: 100%;
+}
+
+.weekly-attendance {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.attendance-comparison h4,
+.weekly-attendance h4 {
+  font-weight: 600;
+  color: var(--primary-clr);
+}
+
+.attendance-toggle {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.attendance-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.weekly-attendance .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekly-attendance .date-box {
+  background-color: var(--primary-clr);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}

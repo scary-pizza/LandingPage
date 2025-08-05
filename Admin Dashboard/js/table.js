@@ -124,6 +124,7 @@ if(document.querySelector("#hostelListSection")){
           <td>${item.room}</td>
           <td>${item.type}</td>
           <td>${item.bedNum}</td>
+          <td>${item.bedNum}</td>
           <td>${item.status}</td>
           <td class="actions">
             <button class="edit-btn">Edit</button>
@@ -189,4 +190,3 @@ if(document.querySelector("#hostelListSection")){
   const filtered = filterData();
   renderTable(filtered, activePage);
 })();
-
