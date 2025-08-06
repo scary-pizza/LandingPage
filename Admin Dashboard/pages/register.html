@@ -1,555 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Hostel Registration</title>
-    <link rel="stylesheet" href="../css/register.css" />
-    <link rel="stylesheet" href="../css/mainStyle.css" />
-    <link rel="stylesheet" href="../css/Boostrap/bootstrap.css" />
-    <link rel="stylesheet" href="../css/popup&tabs.css" />
-  </head>
-  <body>
-    <section class="register-main-section">
-      <header class="register-header">
-        <div class="register-header-logo">
-          <img src="../public/dashboard/register-logo.png" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Hostel Registration</title>
+  <link rel="stylesheet" href="../css/register.css" />
+  <link rel="stylesheet" href="../css/mainStyle.css" />
+  <link rel="stylesheet" href="../css/Boostrap/bootstrap.css" />
+  <link rel="stylesheet" href="../css/popup&tabs.css" />
+</head>
+
+<body>
+  <section class="register-main-section">
+    <header class="register-header">
+      <div class="register-header-logo">
+        <img src="../public/dashboard/register-logo.png" alt="" />
+      </div>
+      <div class="register-header-buttons-container">
+        <button type="button" class="register-header-button" id="btn-regitser">
+          Check Registration Status
+        </button>
+        <button type="button" class="register-header-button" id="btn-login">
+          Login Here
+        </button>
+      </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="login-popup-overlay" id="registerPopup">
+      <div class="login-popup">
+        <div class="popup-left">
+          <img src="../public/dashboard/login-popup-img.png" alt="Login Visual" />
         </div>
-        <div class="register-header-buttons-container">
-          <button type="button" class="register-header-button" id="btn-regitser">
-            Check Registration Status
-          </button>
-          <button type="button" class="register-header-button" id="btn-login">
-            Login Here
-          </button>
-        </div>
-      </header>
+        <div class="popup-right">
+          <button class="close-btn" id="rclosePopup">&times;</button>
+
+          <div class="xfw-form-wrapper-container center-line">
+            <p class="title">Registration Status Check</p>
+            <div class="xfw-form-wrapper-register">
+              <div class="xfw-form-panel xfw-student-form xfw-active-form">
+                <form id="studentLoginForm">
+                  <label for="loginInput">Mobile Number</label>
+                  <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
+
+                  <label for="loginInput">Email Address</label>
+                  <input type="text" id="loginInput" placeholder="Enter Email Address" maxlength="10" required />
 
 
-
-
-
-
-
-      <div class="login-popup-overlay" id="registerPopup">
-        <div class="login-popup">
-          <div class="popup-left">
-            <img
-              src="../public/dashboard/login-popup-img.png"
-              alt="Login Visual"
-            />
-          </div>
-          <div class="popup-right">
-            <button class="close-btn" id="rclosePopup">&times;</button>
-            
-            <div class="xfw-form-wrapper-container center-line">
-              <p class="title">Registration Status Check</p>
-              <div class="xfw-form-wrapper-register">
-                <div class="xfw-form-panel xfw-student-form xfw-active-form">
-                  <form id="studentLoginForm">
-                    <label for="loginInput">Mobile Number</label>
-                    <input
-                      type="text"
-                      id="loginInput"
-                      placeholder="Enter Mobile Number"
-                      maxlength="10"
-                      required
-                    />
-
-                    <label for="loginInput">Email Address</label>
-                    <input
-                      type="text"
-                      id="loginInput"
-                      placeholder="Enter Email Address"
-                      maxlength="10"
-                      required
-                    />
-
-
-                    <button class="btn-login-submit" type="submit" >
-                      Login
-                    </button>
-                    <p class="register-link">
-                      Don’t have an account? <a href="#">Register Here</a>
-                    </p>
-                  </form>
-                </div>
-
+                  <button class="btn-login-submit" type="submit">
+                    Login
+                  </button>
+                  <p class="register-link">
+                    Don’t have an account? <a href="#">Register Here</a>
+                  </p>
+                </form>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="login-popup-overlay" id="loginPopup">
-        <div class="login-popup">
-          <div class="popup-left">
-            <img
-              src="../public/dashboard/login-popup-img.png"
-              alt="Login Visual"
-            />
+    <div class="login-popup-overlay" id="loginPopup">
+      <div class="login-popup">
+        <div class="popup-left">
+          <img src="../public/dashboard/login-popup-img.png" alt="Login Visual" />
+        </div>
+        <div class="popup-right">
+          <button class="close-btn" id="closePopup">&times;</button>
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="student">
+              Student Login
+            </button>
+            <button class="tab-btn" data-tab="staff">Staff Login</button>
           </div>
-          <div class="popup-right">
-            <button class="close-btn" id="closePopup">&times;</button>
-            <div class="tab-buttons">
-              <button class="tab-btn active" data-tab="student">
-                Student Login
-              </button>
-              <button class="tab-btn" data-tab="staff">Staff Login</button>
-            </div>
-            <div class="xfw-form-wrapper-container">
-              <div class="xfw-form-wrapper">
-                <div class="xfw-form-panel xfw-student-form xfw-active-form">
-                  <form id="studentLoginForm">
-                    <label for="loginInput">Mobile Number</label>
-                    <input
-                      type="text"
-                      id="loginInput"
-                      placeholder="Enter Mobile Number"
-                      maxlength="10"
-                      required
-                    />
+          <div class="xfw-form-wrapper-container">
+            <div class="xfw-form-wrapper">
+              <div class="xfw-form-panel xfw-student-form xfw-active-form">
+                <form id="studentLoginForm">
+                  <label for="loginInput">Mobile Number</label>
+                  <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
 
-                    <div class="otp-container">
-                      <label>OTP</label>
-                      <div class="otp-inputs">
-                        <input type="text" maxlength="1" />
-                        <input type="text" maxlength="1" />
-                        <input type="text" maxlength="1" />
-                        <input type="text" maxlength="1" />
-                        <input type="text" maxlength="1" />
-                        <input type="text" maxlength="1" />
-                      </div>
-                      <small
-                        >Didn't receive the OTP?
-                        <a href="#">Resend OTP</a></small
-                      >
+                  <div class="otp-container">
+                    <label>OTP</label>
+                    <div class="otp-inputs">
+                      <input type="text" maxlength="1" />
+                      <input type="text" maxlength="1" />
+                      <input type="text" maxlength="1" />
+                      <input type="text" maxlength="1" />
+                      <input type="text" maxlength="1" />
+                      <input type="text" maxlength="1" />
                     </div>
+                    <small>Didn't receive the OTP?
+                      <a href="#">Resend OTP</a></small>
+                  </div>
 
-                    <button class="btn-login-submit" type="submit">
-                      Login
-                    </button>
-                    <p class="register-link">
-                      Don’t have an account? <a href="#">Register Here</a>
-                    </p>
-                  </form>
-                </div>
+                  <button class="btn-login-submit" type="submit">
+                    Login
+                  </button>
+                  <p class="register-link">
+                    Don’t have an account? <a href="#">Register Here</a>
+                  </p>
+                </form>
+              </div>
 
-                <div class="xfw-form-panel xfw-staff-form">
-                  <form id="staffLoginForm">
-                    <label for="staffEmail">Email</label>
-                    <input
-                      type="email"
-                      id="staffEmail"
-                      placeholder="Enter Email"
-                      required
-                    />
+              <div class="xfw-form-panel xfw-staff-form">
+                <form id="staffLoginForm">
+                  <label for="staffEmail">Email</label>
+                  <input type="email" id="staffEmail" placeholder="Enter Email" required />
 
-                    <label for="staffPassword">Password</label>
-                    <input
-                      type="password"
-                      id="staffPassword"
-                      placeholder="Enter Password"
-                      required
-                    />
+                  <label for="staffPassword">Password</label>
+                  <input type="password" id="staffPassword" placeholder="Enter Password" required />
 
-                    <button class="btn-login-submit" type="submit">
-                      Login
-                    </button>
-                    <p class="register-link">
-                      Forgot password? <a href="../index.html">Reset Here</a>
-                    </p>
-                  </form>
-                </div>
+                  <button class="btn-login-submit" type="submit">
+                    Login
+                  </button>
+                  <p class="register-link">
+                    Forgot password? <a href="../index.html">Reset Here</a>
+                  </p>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="right-blue-section">
-        <div class="right-blue-content-section">
-          <img
-            src="../public/dashboard/register-img-1.png"
-            class="right-blue-img-1"
-            alt=""
-          />
-          <img
-            src="../public/dashboard/register-img-2.png"
-            class="right-blue-img-2"
-            alt=""
-          />
-        </div>
+    <div class="right-blue-section">
+      <div class="right-blue-content-section">
+        <img src="../public/dashboard/register-img-1.png" class="right-blue-img-1" alt="" />
+        <img src="../public/dashboard/register-img-2.png" class="right-blue-img-2" alt="" />
       </div>
-      <div class="container">
-        <div class="left-section">
-          <h2 class="register-title">Register Here</h2>
-          <div class="tabs">
-            <button class="tab active" data-step="0">Personal Details</button>
-            <button class="tab" data-step="1">Family Details</button>
-            <button class="tab" data-step="2">Preferences</button>
-            <button class="tab" data-step="3">Fee Waiver</button>
-          </div>
-          <form id="registrationForm">
-            <div class="form-content">
-              <div class="form-step active" data-step="0">
-                <div class="form-group">
-                  <label>Student Type</label>
-                  <select required name="studentType">
-                    <option value="">Select</option>
-                    <option>Regular</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Full Name</label
-                  ><input type="text" name="fullName" required />
-                </div>
-                <div class="form-group">
-                  <label>Email Address</label
-                  ><input type="email" name="email" required />
-                </div>
-                <div class="form-group">
-                  <label>Mobile No</label
-                  ><input type="tel" name="mobile" required />
-                </div>
-                <div class="form-group">
-                  <label>Gender</label
-                  ><select required name="gender">
-                    <option value="">Select Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Enrollment / Scholar ID</label
-                  ><input type="text" name="scholarId" required />
-                </div>
-                <div class="form-group"></div>
-
-                <div class="nav-buttons">
-                  <button type="button" class="next-btn">Next</button>
-                </div>
+    </div>
+    <div class="container">
+      <div class="left-section">
+        <h2 class="register-title">Register Here</h2>
+        <div class="tabs">
+          <button class="tab active" data-step="0">Personal Details</button>
+          <button class="tab" data-step="1">Family Details</button>
+          <button class="tab" data-step="2">Preferences</button>
+          <button class="tab" data-step="3">Fee Waiver</button>
+        </div>
+        <form id="registrationForm">
+          <div class="form-content">
+            <div class="form-step active" data-step="0">
+              <div class="form-group">
+                <label>Student Type</label>
+                <select required name="studentType">
+                  <option value="">Select</option>
+                  <option>Regular</option>
+                </select>
               </div>
+              <div class="form-group">
+                <label>Full Name</label><input type="text" name="fullName" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address</label><input type="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label>Mobile No</label><input type="tel" name="mobile" required />
+              </div>
+              <div class="form-group">
+                <label>Gender</label><select required name="gender">
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Enrollment / Scholar ID</label><input type="text" name="scholarId" required />
+              </div>
+              <div class="form-group"></div>
 
-              <div class="form-step" data-step="1">
+              <div class="nav-buttons">
+                <button type="button" class="next-btn">Next</button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="1">
 
               <!-- empty -->
 
-                <div class="form-group">
-                  <label class="heading">Parent's Details</label>
-                </div>
-                <div class="form-group"></div>
+              <div class="form-group">
+                <label class="heading">Parent's Details</label>
+              </div>
+              <div class="form-group"></div>
 
-                <div class="form-group">
-                  <label>Father's Name</label
-                  ><input type="text" name="fatherName" required />
-                </div>
-                <div class="form-group">
-                  <label>Mother's Name</label
-                  ><input type="text" name="motherName" required />
-                </div>
-                <div class="form-group">
-                  <label>Primary Contact Number</label
-                  ><input type="tel" name="primaryContact" required />
-                </div>
-                
-                <div class="form-group">
-                  <label>Secondary Contact Number</label
-                  ><input type="tel" name="secondaryContact" required />
-                </div>
-                
-                <!-- empty -->
-
-                <div class="form-group">
-                  <label class="heading">Emergency or Local Guardian Details</label>
-                </div>
-                <div class="form-group"></div>
-                
-
-                <div class="form-group">
-                  <label>Full Name</label
-                  ><input type="tel" name="secondaryContact" required />
-                </div>
-
-                <div class="form-group">
-                  <label>Contact Number</label
-                  ><input type="tel" name="secondaryContact" required />
-                </div>
-
-                <div class="nav-buttons">
-                  <button type="button" class="back-btn">Back</button>
-                  <button type="button" class="next-btn">Next</button>
-                </div>
+              <div class="form-group">
+                <label>Father's Name</label><input type="text" name="fatherName" required />
+              </div>
+              <div class="form-group">
+                <label>Mother's Name</label><input type="text" name="motherName" required />
+              </div>
+              <div class="form-group">
+                <label>Primary Contact Number</label><input type="tel" name="primaryContact" required />
               </div>
 
-              <div class="form-step" data-step="2">
-                <div class="form-group">
-                  <label>Dietary Preference</label
-                  ><select required name="diet">
-                    <option value="">Select</option>
-                    <option>Veg</option>
-                    <option>Non-Veg</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Room Preference</label
-                  ><select required name="room">
-                    <option value="">Select</option>
-                    <option>AC</option>
-                    <option>Non-AC</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Duration of Stay</label
-                  ><select required name="stay">
-                    <option value="">Select Duration</option>
-                    <option>6 Months</option>
-                    <option>1 Year</option>
-                  </select>
-                </div>
-
-
-                <div class="form-group">
-                  <label>Optional Add-ons</label
-                  ><input type="text" name="addons" placeholder="Extra Chair" />
-                </div>
-
-                <div class="form-group">
-                <label>Complimentary Items Provided</label>
-                <div class="checkbox-group">
-                  <label><input type="checkbox" class="one-line"/> Bucket</label>
-                  <label><input type="checkbox" class="one-line"/> Mug</label>
-                  <label><input type="checkbox" class="one-line"/> Bedding Set</label>
-                  <label><input type="checkbox" class="one-line"/> Curtains</label>
-                  <label><input type="checkbox" class="one-line"/> Dustbin</label>
-                  <label><input type="checkbox" class="one-line"/> Cleaning Kit</label>
-                  <label><input type="checkbox" class="one-line"/> Wall Hooks</label>
-                  <label><input type="checkbox" class="one-line"/> Drinking Water</label>
-                  <label><input type="checkbox" class="one-line"/> Study Table & Chair</label>
-                </div>
-
-                </div>
-
-
-                <div class="nav-buttons">
-                  <button type="button" class="back-btn">Back</button>
-                  <button type="button" class="next-btn">Next</button>
-                </div>
+              <div class="form-group">
+                <label>Secondary Contact Number</label><input type="tel" name="secondaryContact" required />
               </div>
 
-              <div class="form-step" data-step="3">
-                <div class="form-group">
-                  <label>Request Fee Waiver</label
-                  ><select name="feeWaiver" required>
-                    <option value="">Select</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Upload Supporting Document</label>
-                        <div class="form-group">
-                          <label for="fileField" class="attachment">
-                            <div class="row btn-file">
-                              <div class="btn-file__preview"></div>
-                              <div class="btn-file__actions">
-                                <div class="btn-file__actions__item col-xs-12 text-center">
-                                  <div class="btn-file__actions__item--shadow">
-                                    <i class="fa fa-plus fa-lg fa-fw" aria-hidden="true"></i>
-                                    <div class="visible-xs-block"></div>
-                                    Select file
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <input name="file" type="file" id="fileField">
-                          </label>
-                        </div>
-                  <!-- <input type="file" name="supportingDoc" required /> -->
-                </div>
-                <div class="form-group">
-                  <label>Additional Notes</label
-                  ><textarea name="notes" required></textarea>
-                </div>
+              <!-- empty -->
 
-                <div class="form-group form-step-group-checkbox-bottom">
-                  <label class="form-group-label"
-                    ><input type="checkbox" required /> I hereby confirm that
-                    the information provided is true and I agree to the terms
-                    and conditions.</label
-                  >
-                </div>
+              <div class="form-group">
+                <label class="heading">Emergency or Local Guardian Details</label>
+              </div>
+              <div class="form-group"></div>
 
-                <div class="nav-buttons">
-                  <button type="button" class="back-btn">Back</button>
-                  <button type="submit" class="submit-btn">Submit</button>
-                </div>
+
+              <div class="form-group">
+                <label>Full Name</label><input type="tel" name="secondaryContact" required />
+              </div>
+
+              <div class="form-group">
+                <label>Contact Number</label><input type="tel" name="secondaryContact" required />
+              </div>
+
+              <div class="nav-buttons">
+                <button type="button" class="back-btn">Back</button>
+                <button type="button" class="next-btn">Next</button>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="right-section">
-          <h2>
-            Student Hostel<br />
-            Portal
-          </h2>
-        </div>
+
+            <div class="form-step" data-step="2">
+              <div class="form-group">
+                <label>Dietary Preference</label><select required name="diet">
+                  <option value="">Select</option>
+                  <option>Veg</option>
+                  <option>Non-Veg</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Room Preference</label><select required name="room">
+                  <option value="">Select</option>
+                  <option>AC</option>
+                  <option>Non-AC</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Duration of Stay</label><select required name="stay">
+                  <option value="">Select Duration</option>
+                  <option>6 Months</option>
+                  <option>1 Year</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label>Optional Add-ons</label><input type="text" name="addons" placeholder="Extra Chair" />
+              </div>
+
+              <div class="form-group">
+                <label>Complimentary Items Provided</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" class="one-line" /> Bucket</label>
+                  <label><input type="checkbox" class="one-line" /> Mug</label>
+                  <label><input type="checkbox" class="one-line" /> Bedding Set</label>
+                  <label><input type="checkbox" class="one-line" /> Curtains</label>
+                  <label><input type="checkbox" class="one-line" /> Dustbin</label>
+                  <label><input type="checkbox" class="one-line" /> Cleaning Kit</label>
+                  <label><input type="checkbox" class="one-line" /> Wall Hooks</label>
+                  <label><input type="checkbox" class="one-line" /> Drinking Water</label>
+                  <label><input type="checkbox" class="one-line" /> Study Table & Chair</label>
+                </div>
+
+              </div>
+
+
+              <div class="nav-buttons">
+                <button type="button" class="back-btn">Back</button>
+                <button type="button" class="next-btn">Next</button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <div class="form-group">
+                <label>Request Fee Waiver</label><select name="feeWaiver" required>
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Upload Supporting Document</label>
+                <div class="form-group">
+                  <label for="fileField" class="attachment">
+                    <div class="row btn-file">
+                      <div class="btn-file__preview"></div>
+                      <div class="btn-file__actions">
+                        <div class="btn-file__actions__item col-xs-12 text-center">
+                          <div class="btn-file__actions__item--shadow">
+                            <i class="fa fa-plus fa-lg fa-fw" aria-hidden="true"></i>
+                            <div class="visible-xs-block"></div>
+                            Select file
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <input name="file" type="file" id="fileField">
+                  </label>
+                </div>
+                <!-- <input type="file" name="supportingDoc" required /> -->
+              </div>
+              <div class="form-group">
+                <label>Additional Notes</label><textarea name="notes" required></textarea>
+              </div>
+
+              <div class="form-group form-step-group-checkbox-bottom">
+                <label class="form-group-label"><input type="checkbox" required /> I hereby confirm that
+                  the information provided is true and I agree to the terms
+                  and conditions.</label>
+              </div>
+
+              <div class="nav-buttons">
+                <button type="button" class="back-btn">Back</button>
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-    </section>
+      <div class="right-section">
+        <h2>
+          Student Hostel<br />
+          Portal
+        </h2>
+      </div>
+    </div>
+  </section>
 
-    <script src="../js/register.js"></script>
-    <script src="../js/Boostrap/bootstrap.bundle.js"></script>
-    <script>
-      // JavaScript for tab functionality (can be merged with register.js)
-      document.addEventListener("DOMContentLoaded", () => {
-        const tabs = document.querySelectorAll(".tab");
-        const formSteps = document.querySelectorAll(".form-step");
-        const nextBtns = document.querySelectorAll(".next-btn");
-        const backBtns = document.querySelectorAll(".back-btn");
+  <!-- <script src="../js/register.js"></script> -->
+  <script src="../js/Boostrap/bootstrap.bundle.js"></script>
+  
+  <script>
+    // JavaScript for tab functionality (can be merged with register.js)
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".tab");
+      const formSteps = document.querySelectorAll(".form-step");
+      const nextBtns = document.querySelectorAll(".next-btn");
+      const backBtns = document.querySelectorAll(".back-btn");
 
-        let currentStep = 0;
+      let currentStep = 0;
 
-        function showStep(stepIndex) {
-          formSteps.forEach((step, index) => {
-            if (index === stepIndex) {
-              step.classList.add("active");
-            } else {
-              step.classList.remove("active");
-            }
-          });
-
-          tabs.forEach((tab, index) => {
-            if (index === stepIndex) {
-              tab.classList.add("active");
-            } else {
-              tab.classList.remove("active");
-            }
-          });
-          currentStep = stepIndex;
-        }
-
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", (e) => {
-            const stepIndex = parseInt(e.target.dataset.step);
-            showStep(stepIndex);
-          });
+      function showStep(stepIndex) {
+        formSteps.forEach((step, index) => {
+          if (index === stepIndex) {
+            step.classList.add("active");
+          } else {
+            step.classList.remove("active");
+          }
         });
 
-        nextBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            if (currentStep < formSteps.length - 1) {
-              showStep(currentStep + 1);
-            }
-          });
+        tabs.forEach((tab, index) => {
+          if (index === stepIndex) {
+            tab.classList.add("active");
+          } else {
+            tab.classList.remove("active");
+          }
         });
+        currentStep = stepIndex;
+      }
 
-        backBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            if (currentStep > 0) {
-              showStep(currentStep - 1);
-            }
-          });
-        });
-
-        // Initialize first step
-        showStep(0);
-
-        // Login Popup functionality (existing from your original HTML)
-        const loginBtn = document.getElementById("btn-login");
-        const loginPopup = document.getElementById("loginPopup");
-        const closePopupBtn = document.getElementById("closePopup");
-        const tabBtns = document.querySelectorAll(".tab-btn");
-        const formPanels = document.querySelectorAll(".xfw-form-panel");
-
-        loginBtn.addEventListener("click", () => {
-          loginPopup.style.display = "flex";
-        });
-
-        closePopupBtn.addEventListener("click", () => {
-          loginPopup.style.display = "none";
-        });
-
-        tabBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            tabBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const targetTab = btn.dataset.tab;
-
-            formPanels.forEach((panel) => {
-              panel.classList.remove("xfw-active-form");
-            });
-
-            if (targetTab === "student") {
-              document
-                .querySelector(".xfw-student-form")
-                .classList.add("xfw-active-form");
-            } else if (targetTab === "staff") {
-              document
-                .querySelector(".xfw-staff-form")
-                .classList.add("xfw-active-form");
-            }
-            // Logic to slide the form wrapper container
-            const formWrapper = document.querySelector(".xfw-form-wrapper");
-            if (targetTab === "staff") {
-              formWrapper.style.transform = "translateX(-50%)";
-            } else {
-              formWrapper.style.transform = "translateX(0)";
-            }
-          });
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          const stepIndex = parseInt(e.target.dataset.step);
+          showStep(stepIndex);
         });
       });
 
-      
-
-    </script>
-
-    <script>
-       // Login Popup functionality (existing from your original HTML)
-        const loginBtn = document.getElementById("btn-regitser");
-        const loginPopup = document.getElementById("registerPopup");
-        const closePopupBtn = document.getElementById("rclosePopup");
-        const tabBtns = document.querySelectorAll(".tab-btn");
-        const formPanels = document.querySelectorAll(".xfw-form-panel");
-
-        loginBtn.addEventListener("click", () => {
-          loginPopup.style.display = "flex";
+      nextBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep < formSteps.length - 1) {
+            showStep(currentStep + 1);
+          }
         });
+      });
 
-        closePopupBtn.addEventListener("click", () => {
-          loginPopup.style.display = "none";
+      backBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep > 0) {
+            showStep(currentStep - 1);
+          }
         });
+      });
 
-        tabBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            tabBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
+      // Initialize first step
+      showStep(0);
 
-            const targetTab = btn.dataset.tab;
+      // Login Popup functionality (existing from your original HTML)
+      const loginBtn = document.getElementById("btn-login");
+      const loginPopup = document.getElementById("loginPopup");
+      const closePopupBtn = document.getElementById("closePopup");
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const formPanels = document.querySelectorAll(".xfw-form-panel");
 
-            formPanels.forEach((panel) => {
-              panel.classList.remove("xfw-active-form");
-            });
+      loginBtn.addEventListener("click", () => {
+        loginPopup.style.display = "flex";
+      });
 
-            if (targetTab === "student") {
-              document
-                .querySelector(".xfw-student-form")
-                .classList.add("xfw-active-form");
-            } else if (targetTab === "staff") {
-              document
-                .querySelector(".xfw-staff-form")
-                .classList.add("xfw-active-form");
-            }
-            // Logic to slide the form wrapper container
-            const formWrapper = document.querySelector(".xfw-form-wrapper");
-            if (targetTab === "staff") {
-              formWrapper.style.transform = "translateX(-50%)";
-            } else {
-              formWrapper.style.transform = "translateX(0)";
-            }
+      closePopupBtn.addEventListener("click", () => {
+        loginPopup.style.display = "none";
+      });
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const targetTab = btn.dataset.tab;
+
+          formPanels.forEach((panel) => {
+            panel.classList.remove("xfw-active-form");
           });
+
+          if (targetTab === "student") {
+            document
+              .querySelector(".xfw-student-form")
+              .classList.add("xfw-active-form");
+          } else if (targetTab === "staff") {
+            document
+              .querySelector(".xfw-staff-form")
+              .classList.add("xfw-active-form");
+          }
+          // Logic to slide the form wrapper container
+          const formWrapper = document.querySelector(".xfw-form-wrapper");
+          if (targetTab === "staff") {
+            formWrapper.style.transform = "translateX(-50%)";
+          } else {
+            formWrapper.style.transform = "translateX(0)";
+          }
         });
-      
-    </script>
-  </body>
+      });
+    });
+
+
+
+  </script>
+
+  <script>
+    // Login Popup functionality (existing from your original HTML)
+    const loginBtn = document.getElementById("btn-regitser");
+    const loginPopup = document.getElementById("registerPopup");
+    const closePopupBtn = document.getElementById("rclosePopup");
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const formPanels = document.querySelectorAll(".xfw-form-panel");
+
+    loginBtn.addEventListener("click", () => {
+      loginPopup.style.display = "flex";
+    });
+
+    closePopupBtn.addEventListener("click", () => {
+      loginPopup.style.display = "none";
+    });
+
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const targetTab = btn.dataset.tab;
+
+        formPanels.forEach((panel) => {
+          panel.classList.remove("xfw-active-form");
+        });
+
+        if (targetTab === "student") {
+          document
+            .querySelector(".xfw-student-form")
+            .classList.add("xfw-active-form");
+        } else if (targetTab === "staff") {
+          document
+            .querySelector(".xfw-staff-form")
+            .classList.add("xfw-active-form");
+        }
+        // Logic to slide the form wrapper container
+        const formWrapper = document.querySelector(".xfw-form-wrapper");
+        if (targetTab === "staff") {
+          formWrapper.style.transform = "translateX(-50%)";
+        } else {
+          formWrapper.style.transform = "translateX(0)";
+        }
+      });
+    });
+
+  </script>
+</body>
+
 </html>

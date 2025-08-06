@@ -1,389 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Common css for navbar and footer -->
-    <link rel="stylesheet" href="./css/mainStyle.css" />
-    <link rel="stylesheet" href="./css/landing/header.css" />
-    <link rel="stylesheet" href="./css/landing/hero.css" />
-    <link rel="stylesheet" href="./css/landing/supportCard.css" />
-    <link rel="stylesheet" href="./css/landing/faq.css" />
-    <link rel="stylesheet" href="./css/landing/hostelList.css" />
-    <link rel="stylesheet" href="./css/landing/contactus.css" />
-    <link rel="stylesheet" href="./css/landing/footer.css" />
-    <link rel="stylesheet" href="./css/landing/loginPopup.css" />
-    <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
-    <title>Shodh Shikhar</title>
-  </head>
-  <body>
-    <!-- header section  -->
 
-    <header class="main-header">
-      <nav class="nav-container">
-        <div class="nav-container-left">
-          <div class="navbar-brand">
-            <img src="./public/main-logo.png" alt="RNTU Logo" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Common css for navbar and footer -->
+  <link rel="stylesheet" href="./css/mainStyle.css" />
+  <link rel="stylesheet" href="./css/landing/header.css" />
+  <link rel="stylesheet" href="./css/landing/hero.css" />
+  <link rel="stylesheet" href="./css/landing/supportCard.css" />
+  <link rel="stylesheet" href="./css/landing/faq.css" />
+  <link rel="stylesheet" href="./css/landing/hostelList.css" />
+  <link rel="stylesheet" href="./css/landing/contactus.css" />
+  <link rel="stylesheet" href="./css/landing/footer.css" />
+  <link rel="stylesheet" href="./css/landing/loginPopup.css" />
+  <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
+  <title>Shodh Shikhar</title>
+</head>
 
-          <div class="search-bar">
-            <input type="text" placeholder="Type Something" />
-            <button>
-              <img
-                src="https://img.icons8.com/ios-filled/20/000000/search--v1.png"
-                alt="Search"
-              />
-            </button>
-          </div>
+<body>
+  <!-- header section  -->
+
+  <header class="main-header">
+    <nav class="nav-container">
+      <div class="nav-container-left">
+        <div class="navbar-brand">
+          <img src="./public/main-logo.png" alt="RNTU Logo" />
         </div>
 
-        <div class="nav-container-right">
-          <ul class="nav-links">
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">Services</a></li>
-            <li><a href="#" class="nav-link">Hostels</a></li>
-          </ul>
-
-          <div class="nav-btns">
-            <button class="btn-custom btn-register"> <a href="Admin Dashboard/pages/register.html">Register Now</a></button>
-            <button class="btn-custom btn-login">Login</button>
-          </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Type Something" />
+          <button>
+            <img src="https://img.icons8.com/ios-filled/20/000000/search--v1.png" alt="Search" />
+          </button>
         </div>
-
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div class="mobile-menu hidden" id="mobileMenu">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Services</a>
-        <a href="#" class="nav-link">Hostels</a>
-        <button class="btn-custom btn-register">Register Now</button>
-        <button class="btn-custom btn-login">Login</button>
       </div>
-    </header>
 
-    <!-- login popup -->
+      <div class="nav-container-right">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Hostels</a></li>
+        </ul>
 
-    <!-- Login Popup -->
-<div class="login-popup-overlay" id="loginPopup">
-  <div class="login-popup">
-    <div class="popup-left">
-      <img src="./public/login-popup-img.png" alt="Login Visual" />
+        <div class="nav-btns">
+          <button class="btn-custom btn-register"> <a href="Admin Dashboard/pages/register.html">Register
+              Now</a></button>
+          <button class="btn-custom btn-login">Login</button>
+        </div>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">Hostels</a>
+      <button class="btn-custom btn-register">Register Now</button>
+      <button class="btn-custom btn-login">Login</button>
     </div>
-    <div class="popup-right">
-      <button class="close-btn" id="closePopup">&times;</button>
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="student">Student Login</button>
-        <button class="tab-btn" data-tab="staff">Staff Login</button>
+  </header>
+
+  <div class="login-popup-overlay" id="loginPopup">
+    <div class="login-popup">
+      <div class="popup-left">
+        <img src="Admin Dashboard/public/dashboard/login-popup-img.png" alt="Login Visual" />
       </div>
-      <form id="loginForm">
-        <label for="loginInput">Mobile Number</label>
-        <input
-          type="text"
-          id="loginInput"
-          placeholder="Enter Mobile Number"
-          maxlength="10"
-          required
-        />
-
-        <div class="otp-container">
-          <label>OTP</label>
-          <div class="otp-inputs">
-            <input type="text" maxlength="1" />
-            <input type="text" maxlength="1" />
-            <input type="text" maxlength="1" />
-            <input type="text" maxlength="1" />
-            <input type="text" maxlength="1" />
-            <input type="text" maxlength="1" />
-          </div>
-          <small>Didn't receive the OTP? <a href="#">Resend OTP</a></small>
+      <div class="popup-right">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="student">
+            Student Login
+          </button>
+          <button class="tab-btn" data-tab="staff">Staff Login</button>
         </div>
+        <div class="xfw-form-wrapper-container">
+          <div class="xfw-form-wrapper">
+            <div class="xfw-form-panel xfw-student-form xfw-active-form">
+              <form id="studentLoginForm">
+                <label for="loginInput">Mobile Number</label>
+                <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
 
-        <button class="btn-login-submit" type="submit">Login</button>
-        <p class="register-link">
-          Don’t have an account? <a href="#">Register Here</a>
-        </p>
-      </form>
+                <div class="otp-container">
+                  <label>OTP</label>
+                  <div class="otp-inputs">
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                  </div>
+                  <small>Didn't receive the OTP?
+                    <a href="#">Resend OTP</a></small>
+                </div>
+
+                <button class="btn-login-submit" type="submit">
+                  Login
+                </button>
+                <p class="register-link">
+                  Don’t have an account? <a href="#">Register Here</a>
+                </p>
+              </form>
+            </div>
+
+            <div class="xfw-form-panel xfw-staff-form">
+              <form id="staffLoginForm">
+                <label for="staffEmail">Email</label>
+                <input type="email" id="staffEmail" placeholder="Enter Email" required />
+
+                <label for="staffPassword">Password</label>
+                <input type="password" id="staffPassword" placeholder="Enter Password" required />
+
+                <button class="btn-login-submit" type="submit">
+                  Login
+                </button>
+                <p class="register-link">
+                  Forgot password? <a href="../index.html">Reset Here</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <!-- hero section -->
 
+  <section class="hero-section">
+    <div class="hero-container swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./public/hero-img-1.jpg" alt="Hostel 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./public/hero-img-1.jpg" alt="Hostel 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./public/hero-img-1.jpg" alt="Hostel 3" />
+        </div>
+      </div>
 
-    <!-- hero section -->
-
-    <section class="hero-section">
-      <div class="hero-container swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./public/hero-img-1.jpg" alt="Hostel 1" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./public/hero-img-1.jpg" alt="Hostel 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./public/hero-img-1.jpg" alt="Hostel 3" />
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <span class="tag">HOSTEL</span>
+        <h1>Find Your Perfect<br />Hostel or PG with Ease</h1>
+        <p>
+          Trusted options near universities with verified listings, secure
+          bookings, and transparent pricing.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-register">Register Now</button>
+          <div class="nav-arrows">
+            <button class="swiper-button-prev">&#10094;</button>
+            <button class="swiper-button-next">&#10095;</button>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Hero Content -->
-        <div class="hero-content">
-          <span class="tag">HOSTEL</span>
-          <h1>Find Your Perfect<br />Hostel or PG with Ease</h1>
-          <p>
-            Trusted options near universities with verified listings, secure
-            bookings, and transparent pricing.
-          </p>
-          <div class="hero-btns">
-            <button class="btn-register">Register Now</button>
-            <div class="nav-arrows">
-              <button class="swiper-button-prev">&#10094;</button>
-              <button class="swiper-button-next">&#10095;</button>
+  <!-- support card section -->
+
+  <section class="support-section">
+    <div class="support-grid">
+      <!-- Card 1 -->
+      <div class="support-card">
+        <div class="support-icon">
+          <img src="./public/support-img-1.png" alt="Verified Listings" />
+        </div>
+        <h3>Verified Listings</h3>
+        <p>
+          Access fully verified hostels and PGs near your university for a
+          safe and reliable stay.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="support-card">
+        <div class="support-icon">
+          <img src="./public/support-img-2.png" alt="Flexible Stay" />
+        </div>
+        <h3>Flexible Stay Options</h3>
+        <p>
+          Choose flexible stay plans — daily, monthly, or yearly — to suit
+          your lifestyle and budget.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="support-card">
+        <div class="support-icon">
+          <img src="./public/support-img-3.png" alt="Secure & Trusted" />
+        </div>
+        <h3>Secure & Trusted</h3>
+        <p>
+          Security-checked accommodations with genuine reviews and safety
+          ratings.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="support-card">
+        <div class="support-icon">
+          <img src="./public/support-img-4.png" alt="Maintenance Support" />
+        </div>
+        <h3>Maintenance Support</h3>
+        <p>
+          Quick maintenance for plumbing, electrical, or hygiene issues via
+          our trusted partners.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq section  -->
+
+  <section class="faq-section">
+    <!-- <div class="faq-left-container"></div> -->
+    <div class="faq-container">
+      <div class="faq-left">
+        <div class="accordion">
+          <div class="accordion-item active">
+            <button class="accordion-header">How to Register ?</button>
+            <div class="accordion-body">
+              <p>
+                Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Quis ipsum suspendisse ultrices gravida.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">How we work ?</button>
+            <div class="accordion-body">
+              <p>
+                We work through verified processes and clear communication
+                with all users.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">Why HOSTEL is the best?</button>
+            <div class="accordion-body">
+              <p>
+                Because we provide verified listings, great support, and
+                flexible stay options.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Do we get the best support?
+            </button>
+            <div class="accordion-body">
+              <p>Yes, with 24/7 maintenance and communication support.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- support card section -->
+      <div class="faq-right">
+        <span>ABOUT US</span>
+        <h2>What Make Us The Best Hostel ?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ipsum
+          suspendisse ultrices gravida risus commodo.
+        </p>
+        <button>Discover More</button>
+      </div>
+    </div>
+  </section>
 
-    <section class="support-section">
-      <div class="support-grid">
-        <!-- Card 1 -->
-        <div class="support-card">
-          <div class="support-icon">
-            <img src="./public/support-img-1.png" alt="Verified Listings" />
-          </div>
-          <h3>Verified Listings</h3>
-          <p>
-            Access fully verified hostels and PGs near your university for a
-            safe and reliable stay.
-          </p>
-          <button class="read-more-btn">Read More</button>
-        </div>
+  <!-- hostel list section  -->
 
-        <!-- Card 2 -->
-        <div class="support-card">
-          <div class="support-icon">
-            <img src="./public/support-img-2.png" alt="Flexible Stay" />
-          </div>
-          <h3>Flexible Stay Options</h3>
-          <p>
-            Choose flexible stay plans — daily, monthly, or yearly — to suit
-            your lifestyle and budget.
-          </p>
-          <button class="read-more-btn">Read More</button>
-        </div>
+  <section class="hostel-list-section">
+    <h2 class="section-title">Hostel Lists</h2>
+    <div class="hostel-filters-container hide-Scrollbar">
+      <div class="hostel-filters">
+        <button class="filter-btn active" data-type="all">All Hostel</button>
+        <button class="filter-btn" data-type="boys">Boys Hostel</button>
+        <button class="filter-btn" data-type="girls">Girls Hostel</button>
+        <button class="filter-btn" data-type="guest">Guest Hostel</button>
+      </div>
+    </div>
 
-        <!-- Card 3 -->
-        <div class="support-card">
-          <div class="support-icon">
-            <img src="./public/support-img-3.png" alt="Secure & Trusted" />
-          </div>
-          <h3>Secure & Trusted</h3>
-          <p>
-            Security-checked accommodations with genuine reviews and safety
-            ratings.
-          </p>
-          <button class="read-more-btn">Read More</button>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="support-card">
-          <div class="support-icon">
-            <img src="./public/support-img-4.png" alt="Maintenance Support" />
-          </div>
-          <h3>Maintenance Support</h3>
-          <p>
-            Quick maintenance for plumbing, electrical, or hygiene issues via
-            our trusted partners.
-          </p>
-          <button class="read-more-btn">Read More</button>
+    <div class="hostel-grid">
+      <!-- Example Card -->
+      <div class="hostel-card" data-type="boys">
+        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <div class="hostel-info">
+          <span class="hostel-type">Boys Hostel</span>
+          <h3 class="hostel-name">Hostel Name</h3>
         </div>
       </div>
-    </section>
 
-    <!-- faq section  -->
+      <div class="hostel-card" data-type="girls">
+        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <div class="hostel-info">
+          <span class="hostel-type">Girls Hostel</span>
+          <h3 class="hostel-name">Hostel Name</h3>
+        </div>
+      </div>
 
-    <section class="faq-section">
+      <div class="hostel-card" data-type="guest">
+        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <div class="hostel-info">
+          <span class="hostel-type">Guest Hostel</span>
+          <h3 class="hostel-name">Hostel Name</h3>
+        </div>
+      </div>
+
+      <!-- Add more cards with appropriate `data-type` -->
+    </div>
+  </section>
+
+  <!-- testimonial section  -->
+
+  <section class="main-page-padding">
+    <section class="testimonial-section">
       <!-- <div class="faq-left-container"></div> -->
       <div class="faq-container">
-        <div class="faq-left">
-          <div class="accordion">
-            <div class="accordion-item active">
-              <button class="accordion-header">How to Register ?</button>
-              <div class="accordion-body">
+        <div class="faq-left-testimonial">
+          <div class="testimonial-slider">
+            <div class="testimonial-wrapper">
+              <div class="testimonial-item active">
                 <p>
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                  “I found a clean and safe PG near my college within minutes.
+                  The process was smooth, and the support team was very
+                  helpful throughout.”
                 </p>
+                <div class="testimonial-user">
+                  <img src="https://i.pravatar.cc/100?img=1" alt="Anjali Sharma" />
+                  <div>
+                    <small>Student at RNTU Bhopal</small>
+                    <h4>Anjali Sharma</h4>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header">How we work ?</button>
-              <div class="accordion-body">
+              <div class="testimonial-item">
                 <p>
-                  We work through verified processes and clear communication
-                  with all users.
+                  “HOSTEL helped me compare PGs easily. The reviews were
+                  really helpful, and I made my decision within an hour.”
                 </p>
+                <div class="testimonial-user">
+                  <img src="https://i.pravatar.cc/100?img=2" alt="Rahul Mehra" />
+                  <div>
+                    <small>Student at Amity</small>
+                    <h4>Rahul Mehra</h4>
+                  </div>
+                </div>
               </div>
+              <!-- Add more testimonials here -->
             </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header">Why HOSTEL is the best?</button>
-              <div class="accordion-body">
-                <p>
-                  Because we provide verified listings, great support, and
-                  flexible stay options.
-                </p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <button class="accordion-header">
-                Do we get the best support?
-              </button>
-              <div class="accordion-body">
-                <p>Yes, with 24/7 maintenance and communication support.</p>
-              </div>
+            <div class="slider-controls">
+              <button class="slider-btn prev">&#8249;</button>
+              <button class="slider-btn next">&#8250;</button>
             </div>
           </div>
         </div>
 
         <div class="faq-right">
-          <span>ABOUT US</span>
-          <h2>What Make Us The Best Hostel ?</h2>
+          <span>TESTIMONIALS</span>
+          <h2>What they say about us?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ipsum
-            suspendisse ultrices gravida risus commodo.
+            I found a clean and safe PG near my college within minutes. The
+            process was smooth, and the support team was very helpful
+            throughout
           </p>
           <button>Discover More</button>
         </div>
       </div>
     </section>
+  </section>
 
-    <!-- hostel list section  -->
+  <!-- contact us section  -->
 
-    <section class="hostel-list-section">
-      <h2 class="section-title">Hostel Lists</h2>
-      <div class="hostel-filters-container hide-Scrollbar">
-        <div class="hostel-filters">
-          <button class="filter-btn active" data-type="all">All Hostel</button>
-          <button class="filter-btn" data-type="boys">Boys Hostel</button>
-          <button class="filter-btn" data-type="girls">Girls Hostel</button>
-          <button class="filter-btn" data-type="guest">Guest Hostel</button>
-        </div>
-      </div>
-
-      <div class="hostel-grid">
-        <!-- Example Card -->
-        <div class="hostel-card" data-type="boys">
-          <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
-          <div class="hostel-info">
-            <span class="hostel-type">Boys Hostel</span>
-            <h3 class="hostel-name">Hostel Name</h3>
-          </div>
-        </div>
-
-        <div class="hostel-card" data-type="girls">
-          <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
-          <div class="hostel-info">
-            <span class="hostel-type">Girls Hostel</span>
-            <h3 class="hostel-name">Hostel Name</h3>
-          </div>
-        </div>
-
-        <div class="hostel-card" data-type="guest">
-          <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
-          <div class="hostel-info">
-            <span class="hostel-type">Guest Hostel</span>
-            <h3 class="hostel-name">Hostel Name</h3>
-          </div>
-        </div>
-
-        <!-- Add more cards with appropriate `data-type` -->
-      </div>
-    </section>
-
-    <!-- testimonial section  -->
-
-    <section class="main-page-padding">
-      <section class="testimonial-section">
-        <!-- <div class="faq-left-container"></div> -->
-        <div class="faq-container">
-          <div class="faq-left-testimonial">
-            <div class="testimonial-slider">
-              <div class="testimonial-wrapper">
-                <div class="testimonial-item active">
-                  <p>
-                    “I found a clean and safe PG near my college within minutes.
-                    The process was smooth, and the support team was very
-                    helpful throughout.”
-                  </p>
-                  <div class="testimonial-user">
-                    <img
-                      src="https://i.pravatar.cc/100?img=1"
-                      alt="Anjali Sharma"
-                    />
-                    <div>
-                      <small>Student at RNTU Bhopal</small>
-                      <h4>Anjali Sharma</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-item">
-                  <p>
-                    “HOSTEL helped me compare PGs easily. The reviews were
-                    really helpful, and I made my decision within an hour.”
-                  </p>
-                  <div class="testimonial-user">
-                    <img
-                      src="https://i.pravatar.cc/100?img=2"
-                      alt="Rahul Mehra"
-                    />
-                    <div>
-                      <small>Student at Amity</small>
-                      <h4>Rahul Mehra</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- Add more testimonials here -->
-              </div>
-              <div class="slider-controls">
-                <button class="slider-btn prev">&#8249;</button>
-                <button class="slider-btn next">&#8250;</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-right">
-            <span>TESTIMONIALS</span>
-            <h2>What they say about us?</h2>
-            <p>
-              I found a clean and safe PG near my college within minutes. The
-              process was smooth, and the support team was very helpful
-              throughout
-            </p>
-            <button>Discover More</button>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- contact us section  -->
-
-    <section class="main-page-padding">
-        <section class="contact-section">
+  <section class="main-page-padding">
+    <section class="contact-section">
       <div class="contact-container">
         <!-- Left Content -->
         <div class="contact-info">
@@ -403,9 +414,7 @@
                 <small>VALID: <strong>24 SEP 2025</strong></small>
               </p>
               <p>
-                <strong
-                  >Special Offer <span class="highlight">50%</span> OFF!</strong
-                >
+                <strong>Special Offer <span class="highlight">50%</span> OFF!</strong>
               </p>
             </div>
             <button class="offer-btn">→</button>
@@ -414,8 +423,8 @@
 
         <!-- Right Form -->
         <div class="contact-form">
-            <img class="contact-form-img-1" src="./public/contact-img-1.png" alt="">
-            <img class="contact-form-img-2" src="./public/contact-img-2.png" alt="">
+          <img class="contact-form-img-1" src="./public/contact-img-1.png" alt="">
+          <img class="contact-form-img-2" src="./public/contact-img-2.png" alt="">
           <form id="contactForm">
             <input type="text" placeholder="Your Name..." required />
             <input type="email" placeholder="Your E-mail..." required />
@@ -425,15 +434,75 @@
         </div>
       </div>
     </section>
-    </section>
+  </section>
 
-    <!-- footer section  -->
+  <!-- footer section  -->
 
-    <section class="footer-section">
-        <p>Copyright © 2025 RNTU University. All rights reserved.</p>
-        <img src="./public/footer-img.png" class="footer-img" alt="">
-    </section>
+  <section class="footer-section">
+    <p>Copyright © 2025 RNTU University. All rights reserved.</p>
+    <img src="./public/footer-img.png" class="footer-img" alt="">
+  </section>
 
-    <script src="./js/main.js"></script>
-  </body>
+
+  <script src="./js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Login Popup functionality
+        const loginBtn = document.getElementById("btn-login");
+      const loginPopup = document.getElementById("loginPopup");
+      const closePopupBtn = document.getElementById("closePopup");
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const formPanels = document.querySelectorAll(".xfw-form-panel");
+      const formWrapper = document.querySelector(".xfw-form-wrapper");
+
+      // Note: The login button is not in the provided HTML, so this might not work
+      // if you don't have an element with id="btn-login" to open the popup.
+      if (loginBtn) {
+        loginBtn.addEventListener("click", () => {
+          loginPopup.style.display = "flex";
+        });
+        }
+
+        closePopupBtn.addEventListener("click", () => {
+        loginPopup.style.display = "none";
+        });
+
+        tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove 'active' from all buttons and add to the clicked one
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const targetTab = btn.dataset.tab;
+
+          // Remove 'xfw-active-form' from all panels
+          formPanels.forEach((panel) => {
+            panel.classList.remove("xfw-active-form");
+          });
+
+          // Add 'xfw-active-form' to the target panel
+          if (targetTab === "student") {
+            document.querySelector(".xfw-student-form").classList.add("xfw-active-form");
+          } else if (targetTab === "staff") {
+            document.querySelector(".xfw-staff-form").classList.add("xfw-active-form");
+          }
+
+          // Slide the form wrapper container
+          if (targetTab === "staff") {
+            formWrapper.style.transform = "translateX(-50%)";
+          } else {
+            formWrapper.style.transform = "translateX(0)";
+          }
+        });
+        });
+
+      // Initialize by ensuring the student form is visible by default
+      document.querySelector(".xfw-student-form").classList.add("xfw-active-form");
+      formWrapper.style.transform = "translateX(0)";
+    });
+  </script>
+
+</body>
+
 </html>
