@@ -2,366 +2,543 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Boostrp 5 css -->
-    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boostrp 5 css -->
+  <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
 
-    <link rel="stylesheet" href="../../css/sidebar.css" />
-    <link rel="stylesheet" href="../../css/Resident Services/leaveManagement.css">
-    <link rel="stylesheet" href="../../css/mainStyle.css" />
-    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
-    <link rel="stylesheet" href="../../css/table.css">
-    <title>Hostel Management Dashboard</title>
+  <link rel="stylesheet" href="../../css/sidebar.css" />
+  <link rel="stylesheet" href="../../css/Resident Services/leaveManagement.css">
+  <link rel="stylesheet" href="../../css/mainStyle.css" />
+  <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+  <link rel="stylesheet" href="../../css/table.css">
+  <link rel="stylesheet" href="../../css/popup&tabs.css">
+
+  <title>Hostel Management Dashboard</title>
 </head>
-<body >
 
-    <div class="main-container">
+<body>
 
-        <!-- Sidebar -->
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-          <button id="toggle-btn-small-screen">&#9776;</button>
-          <h2>Hostel Management</h2>
+  <div class="main-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button id="toggle-btn-small-screen">&#9776;</button>
+        <h2>Hostel Management</h2>
+      </div>
+      <input type="text" placeholder="Search" class="search-box" />
+
+      <!-- Overview -->
+      <p>Overview</p>
+      <ul class="nav">
+        <li><a href="../../index.html" class="nav-animation"><span><img
+                src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard </a></li>
+      </ul>
+
+      <!-- Hostel Operations -->
+      <p>Hostel Operations</p>
+      <ul class="nav">
+        <li><a href="HostelManagement.html"><span><img
+                src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
+        <li><a href="RoomManagement.html"><span><img
+                src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
+        <li><a href="BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed
+            Management</a></li>
+        <li><a href="BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed
+            Assignment</a></li>
+        <li><a href="CampusCheck In-Out.html"><span><img
+                src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
+        <li><a href="MessAttendance.html"><span><img
+                src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+        <li><a href="UserManagement.html"><span><img
+                src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
+        <li><a href="StaffManagement.html"><span><img
+                src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
+      </ul>
+
+      <!-- Resident Services -->
+      <p>Resident Services</p>
+      <ul class="nav">
+        <li><a href="ResidentsManagement.html"><span><img
+                src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
+        <li class="active"><a href="LeaveManagement.html"><span><img
+                src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
+        <li><a href="GuestManagement.html"><span><img
+                src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
+        <li><a href="GrievancesManagement.html"><span><img
+                src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
+        <li><a href="RoomAllocation.html"><span><img
+                src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
+        <li><a href="FinalCheckout.html"><span><img
+                src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+        <li><a href="Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a>
+        </li>
+      </ul>
+
+      <!-- Inventory & Logistics -->
+      <p>Inventory & Logistics</p>
+      <ul class="nav">
+        <li><a href=""><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory
+            Management</a></li>
+      </ul>
+
+      <!-- Finance & Subscription -->
+      <p>Finance & Subscription</p>
+      <ul class="nav">
+        <li><a href=""><span><img src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
+        <li><a href=""><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments &
+            Translations</a></li>
+        <li><a href=""><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a></li>
+      </ul>
+
+      <!-- Communication & Alerts -->
+      <p>Communication & Alerts</p>
+      <ul class="nav">
+        <li><a href=""><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Notification &
+            Alerts</a></li>
+      </ul>
+
+      <!-- Logout Btn -->
+      <ul class="nav">
+        <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button></li>
+      </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="topbar">
+        <button id="toggle-btn">&#9776;</button>
+        <div class="topbar-right">
+          <input type="text" class="search-bar" placeholder="Search" />
+
+          <div class="user-section">
+            <span class="user-initial">A</span>
+          </div>
+
+          <div class="dropdown">
+            <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin
+            </button>
+            <ul class="dropdown-menu custom-style-ul">
+              <li><a class="dropdown-item custom-style-li" href="#">Admin Profile</a></li>
+              <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+              <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+            </ul>
+          </div>
+
+
         </div>
-        <input type="text" placeholder="Search" class="search-box" />
-
-        <!-- Overview -->
-        <p>Overview</p>
-        <ul class="nav">
-          <li ><a href="../../index.html" class="nav-animation"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard </a></li>
-        </ul>
-
-        <!-- Hostel Operations -->
-        <p>Hostel Operations</p>
-        <ul class="nav">
-          <li ><a href="HostelManagement.html" ><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
-          <li><a href="RoomManagement.html"><span><img src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
-          <li><a href="BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
-          <li><a href="BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
-          <li><a href="CampusCheck In-Out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
-          <li><a href="MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
-          <li ><a href="UserManagement.html"><span><img src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
-          <li><a href="StaffManagement.html"><span><img src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
-        </ul>
-
-        <!-- Resident Services -->
-        <p>Resident Services</p>
-        <ul class="nav">
-          <li><a href="ResidentsManagement.html"><span><img src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
-          <li class="active"><a href="LeaveManagement.html"><span><img src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
-          <li><a href="GuestManagement.html"><span><img src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
-          <li><a href="GrievancesManagement.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
-          <li><a href="RoomAllocation.html"><span><img src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
-          <li><a href="FinalCheckout.html"><span><img src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
-          <li><a href="Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
-        </ul>
-
-        <!-- Inventory & Logistics -->
-        <p>Inventory & Logistics</p>
-        <ul class="nav">
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
-        </ul>
-
-        <!-- Finance & Subscription -->
-        <p>Finance & Subscription</p>
-        <ul class="nav">
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments & Translations</a></li>
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a></li>
-        </ul>
-
-        <!-- Communication & Alerts -->
-        <p>Communication & Alerts</p>
-        <ul class="nav">
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Notification & Alerts</a></li>
-        </ul>
-
-        <!-- Logout Btn -->
-        <ul class="nav">
-          <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png" > Log Out</button></li>
-        </ul>
-
-      </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-
-            <!-- Header -->
-            <header class="topbar">
-            <button id="toggle-btn">&#9776;</button>
-            <div class="topbar-right">
-                <input type="text" class="search-bar" placeholder="Search" />
-
-                <div class="user-section">
-                    <span class="user-initial">A</span>
-                </div>
-
-                <div class="dropdown">
-                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Admin
-                </button>
-                <ul class="dropdown-menu custom-style-ul">
-                    <li><a class="dropdown-item custom-style-li" href="#">Admin Profile</a></li>
-                    <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
-                    <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
-                </ul>
-                </div>
+      </header>
 
 
+      <!-- top-breadcrumbs -->
+      <div class="top-breadcrumbs">
+        <!-- breadcrumbs -->
+        <div class="breadcrumbs"><a href="">Leave Management</a></div>
+        <!-- Popup Btn -->
+        <span>
+          <button class="add-btn" type="button">Download Excel</button>
+        </span>
+
+      </div>
+
+      <!-- Overview -->
+      <div class="cards">
+        <div class="card">
+          <div class="card-content">
+            <p>Total Students</p>
+            <h3>53,000</h3>
+          </div>
+          <div class="card-image">
+            <img src="../../public/dashboard/student 1.png" alt="" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <p>In Hostel</p>
+            <h3>49,280</h3>
+          </div>
+          <div class="card-image">
+            <img src="../../public/dashboard/bunk-bed.png" alt="" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <p>Outside Hostel</p>
+            <h3>3,720</h3>
+          </div>
+          <div class="card-image">
+            <img src="../../public/dashboard/walk.png" alt="" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <p>On Leave</p>
+            <h3>1,000</h3>
+          </div>
+          <div class="card-image">
+            <img src="../../public/dashboard/add.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main-content-container">
+
+
+        <!-- Pending Request -->
+
+        <div class="table-controls">
+          <h3 class="table-title">Pending Leave Request List</h3>
+          <div>
+            <button class="add-btn">Download Excel</button>
+            <button class="view-btn-top">View All</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Student Name</th>
+                <th>Scholar Number</th>
+                <th>Room Number</th>
+                <th>Hostel</th>
+                <th>Leave Taken on</th>
+                <th>Duration</th>
+                <th>Expected Arrival</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rajat Pradhan</td>
+                <td>20213045</td>
+                <td>304</td>
+                <td>Hostel One</td>
+                <td>01-Aug-2025</td>
+                <td>3 Days</td>
+                <td>04-Aug-2025</td>
+                <td>
+                  <button class="green-btn">Approve</button>
+                  <button class="delete-btn">Reject</button>
+                  <button class="view-btn" data-bs-toggle="modal" data-bs-target="#View">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sangeeta Kumari</td>
+                <td>20213456</td>
+                <td>102</td>
+                <td>Hostel Two</td>
+                <td>02-Aug-2025</td>
+                <td>2 Days</td>
+                <td>04-Aug-2025</td>
+                <td>
+                  <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                  <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                  <button class="view-btn" data-bs-toggle="modal" data-bs-target="#View">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr>
+
+        <!-- Approve / Reject Leave Request List -->
+
+        <div class="table-controls">
+          <h3 class="table-title">Approve / Reject Leave Request List</h3>
+          <div>
+            <button class="add-btn">Download Excel</button>
+            <button class="view-btn-top">View All</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Student Name</th>
+                <th>Scholar Number</th>
+                <th>Room Number</th>
+                <th>Hostel</th>
+                <th>Leave Taken on</th>
+                <th>Duration</th>
+                <th>Expected Arrival</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rajat Pradhan</td>
+                <td>20213045</td>
+                <td>304</td>
+                <td>Hostel One</td>
+                <td>01-Aug-2025</td>
+                <td>3 Days</td>
+                <td>04-Aug-2025</td>
+                <td><button class="green-btn">Approve</button></td>
+                <td>
+                  <button class="view-btn" data-bs-toggle="modal" data-bs-target="#Approveorreject">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sangeeta Kumari</td>
+                <td>20213456</td>
+                <td>102</td>
+                <td>Hostel Two</td>
+                <td>02-Aug-2025</td>
+                <td>2 Days</td>
+                <td>04-Aug-2025</td>
+                <td><button class="delete-btn">Reject</button></td>
+                <td>
+                  <button class="view-btn" data-bs-toggle="modal" data-bs-target="#Approveorreject">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Pending View-->
+      <div class="modal fade" id="View" tabindex="-1" aria-labelledby="ViewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            </header>
 
+            <div class="modal-body">
 
-             <!-- top-breadcrumbs -->
-            <div class="top-breadcrumbs">
-              <!-- breadcrumbs -->
-              <div class="breadcrumbs"><a href="">Leave Management</a></div>
-              <!-- Popup Btn -->
-               <span>
-                <button class="add-btn" type="button" >Download Excel</button>
-              </span>
-              
-            </div>
-
-              <!-- Overview -->
-              <div class="cards">
-                <div class="card">
-                  <div class="card-content">
-                    <p>Total Students</p>
-                    <h3>53,000</h3>
-                  </div>
-                  <div class="card-image">
-                    <img src="../../public/dashboard/student 1.png" alt="" />
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <p>In Hostel</p>
-                    <h3>49,280</h3>
-                  </div>
-                  <div class="card-image">
-                    <img src="../../public/dashboard/bunk-bed.png" alt="" />
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <p>Outside Hostel</p>
-                    <h3>3,720</h3>
-                  </div>
-                  <div class="card-image">
-                    <img src="../../public/dashboard/walk.png" alt="" />
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <p>On Leave</p>
-                    <h3>1,000</h3>
-                  </div>
-                  <div class="card-image">
-                    <img src="../../public/dashboard/add.png" alt="" />
-                  </div>
-                </div>
+              <div class="top">
+                <div class="pop-title">Pending Leave Request</div>
               </div>
 
+              <div class="middle">
 
-            <div class="main-content-container">
+                <span class="input-set">
+                  <label for="StudentName">Student Name</label>
+                  <input type="text" id="StudentName" name="StudentName" placeholder="Rajat Pradhan" disabled>
+                </span>
 
+                <span class="input-set">
+                  <label for="ScholarNumber ">Scholar Number</label>
+                  <input type="text" id="ScholarNumber" name="ScholarNumber" placeholder="4256865" disabled>
+                </span>
 
-              <!-- Pending Request -->
+                <span class="input-set">
+                  <label for="HostelName">Hostel Name</label>
+                  <input type="text" id="HostelName" name="HostelName" placeholder="Hostel One" disabled>
+                </span>
 
-              <div class="table-controls">
-                <h3 class="table-title">Pending Leave Request List</h3>
-                <div>
-                  <button class="add-btn">Download Excel</button>
-                  <button class="view-btn-top">View All</button>
-                </div>
+                <span class="input-set">
+                  <label for="RoomNumber">Room Number</label>
+                  <input type="text" id="RoomNumber" name="RoomNumber" placeholder="403" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="LeaveTakenon">Leave Taken on</label>
+                  <input type="text" id="LeaveTakenon" name="LeaveTakenon" placeholder="25/05/2025" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="DurationinDays">Duration in Days</label>
+                  <input type="text" id="DurationinDays" name="DurationinDays" placeholder="5" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="ExpectedArrival">Expected Arrival</label>
+                  <input type="text" id="ExpectedArrival" name="ExpectedArrival" placeholder="30/02/2025" disabled>
+                </span>
+
               </div>
 
-              <div class="table-container">
-                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
-                  <thead>
-                    <tr>
-                      <th>S.No</th>
-                      <th>Student Name</th>
-                      <th>Scholar Number</th>
-                      <th>Room Number</th>
-                      <th>Hostel</th>
-                      <th>Leave Taken on</th>
-                      <th>Duration</th>
-                      <th>Expected Arrival</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Rajat Pradhan</td>
-                      <td>20213045</td>
-                      <td>304</td>
-                      <td>Hostel One</td>
-                      <td>01-Aug-2025</td>
-                      <td>3 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td>
-                        <button class="green-btn">Approve</button>
-                        <button class="delete-btn">Reject</button>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Sangeeta Kumari</td>
-                      <td>20213456</td>
-                      <td>102</td>
-                      <td>Hostel Two</td>
-                      <td>02-Aug-2025</td>
-                      <td>2 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td>
-                        <button class="green-btn">Approve</button>
-                        <button class="delete-btn">Reject</button>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="full-width-i">
+                <span class="input-set">
+                  <label for="Reason">Reason</label>
+                  <input type="text" id="Reason" name="Reason"
+                    placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                    disabled>
+                </span>
               </div>
 
-              <hr>
-
-              <!-- Approve Leave Request List -->
-
-              <div class="table-controls">
-                <h3 class="table-title">Approve Leave Request List</h3>
-                <div>
-                  <button class="add-btn">Download Excel</button>
-                  <button class="view-btn-top">View All</button>
-                </div>
-              </div>
-
-              <div class="table-container">
-                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
-                  <thead>
-                    <tr>
-                      <th>S.No</th>
-                      <th>Student Name</th>
-                      <th>Scholar Number</th>
-                      <th>Room Number</th>
-                      <th>Hostel</th>
-                      <th>Leave Taken on</th>
-                      <th>Duration</th>
-                      <th>Expected Arrival</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Rajat Pradhan</td>
-                      <td>20213045</td>
-                      <td>304</td>
-                      <td>Hostel One</td>
-                      <td>01-Aug-2025</td>
-                      <td>3 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td><button class="green-btn">Approve</button></td>
-                      <td>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Sangeeta Kumari</td>
-                      <td>20213456</td>
-                      <td>102</td>
-                      <td>Hostel Two</td>
-                      <td>02-Aug-2025</td>
-                      <td>2 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td><button class="green-btn">Approve</button></td>
-                      <td>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <hr>
-
-              <!-- Reject Leave Request List -->
-
-              <div class="table-controls">
-                <h3 class="table-title">Reject Leave Request List</h3>
-                <div>
-                  <button class="add-btn">Download Excel</button>
-                  <button class="view-btn-top">View All</button>
-                </div>
-              </div>
-
-              <div class="table-container">
-                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
-                  <thead>
-                    <tr>
-                      <th>S.No</th>
-                      <th>Student Name</th>
-                      <th>Scholar Number</th>
-                      <th>Room Number</th>
-                      <th>Hostel</th>
-                      <th>Leave Taken on</th>
-                      <th>Duration</th>
-                      <th>Expected Arrival</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Rajat Pradhan</td>
-                      <td>20213045</td>
-                      <td>304</td>
-                      <td>Hostel One</td>
-                      <td>01-Aug-2025</td>
-                      <td>3 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td><button class="green-btn">Approve</button></td>
-                      <td>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Sangeeta Kumari</td>
-                      <td>20213456</td>
-                      <td>102</td>
-                      <td>Hostel Two</td>
-                      <td>02-Aug-2025</td>
-                      <td>2 Days</td>
-                      <td>04-Aug-2025</td>
-                      <td><button class="green-btn">Approve</button></td>
-                      <td>
-                        <button class="view-btn">View</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="bottom-btn">
+                <button type="button" class="red"> Reject Leave </button>
+                <button type="button" class="green"> Approve Leave </button>
               </div>
 
             </div>
 
-        </main>
+          </div>
+        </div>
+      </div>
 
-    </div>
+      <!-- Status View-->
+      <div class="modal fade" id="Approveorreject" tabindex="-1" aria-labelledby="ApproveorrejectLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Pending Leave Request</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="StudentName">Student Name</label>
+                  <input type="text" id="StudentName" name="StudentName" placeholder="Rajat Pradhan" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="ScholarNumber ">Scholar Number</label>
+                  <input type="text" id="ScholarNumber" name="ScholarNumber" placeholder="4256865" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="HostelName">Hostel Name</label>
+                  <input type="text" id="HostelName" name="HostelName" placeholder="Hostel One" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="RoomNumber">Room Number</label>
+                  <input type="text" id="RoomNumber" name="RoomNumber" placeholder="403" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="LeaveTakenon">Leave Taken on</label>
+                  <input type="text" id="LeaveTakenon" name="LeaveTakenon" placeholder="25/05/2025" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="DurationinDays">Duration in Days</label>
+                  <input type="text" id="DurationinDays" name="DurationinDays" placeholder="5" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="ExpectedArrival">Expected Arrival</label>
+                  <input type="text" id="ExpectedArrival" name="ExpectedArrival" placeholder="30/02/2025" disabled>
+                </span>
+
+                <span class="input-set">
+                  <label for="Status">Status</label>
+                  <input type="text" class="status-leave-approve" id="Status" name="Status" placeholder="Approve"
+                    disabled>
+                </span>
+
+              </div>
+
+              <div class="full-width-i">
+                <span class="input-set">
+                  <label for="Reason">Reason</label>
+                  <input type="text" id="Reason" name="Reason"
+                    placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                    disabled>
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Rejectpopup -->
+      <div class="modal fade" id="Rejectpopup" tabindex="-1" aria-labelledby="RejectpopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Confirm Reject</div>
+              </div>
+
+              <div class="middle-content">
+                <p class="red">Rejecting this will permanently show it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="reason">
+                <label for="Reason">Write Reason for Rejecting Leave</label>
+                <textarea
+                  type="text">We're sorry, but your leave request has been rejected by the management.</textarea>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Reject </button>
+                <button type="button" class="blue"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Approvepopup -->
+      <div class="modal fade" id="Approvepopup" tabindex="-1" aria-labelledby="ApprovepopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-green">Confirm Approve</div>
+              </div>
+
+              <div class="middle-content">
+                <p class="green">Rejecting this will permanently show it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="green"> Approve </button>
+                <button type="button" class="blue"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
 
 
-    <!-- Boostrp 5 js -->
-    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+  <!-- Boostrp 5 js -->
+  <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
 
-    <!-- main js -->
-    <script src="../../js/main.js"></script>
+  <!-- main js -->
+  <script src="../../js/main.js"></script>
 </body>
 
 </html>

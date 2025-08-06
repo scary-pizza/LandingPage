@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/Hostel Operations/StudentMess.css" />
+    <title>Hostel Management Dashboard</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li>
+            <a href="../../index.html" class="nav-animation"
+              ><span
+                ><img src="../../public/dashboard/side menu/dashboard.png"
+              /></span>
+              Dashboard
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li>
+            <a href="HostelManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Hostel Management.png" /></span
+              >Hostel Management</a
+            >
+          </li>
+          <li>
+            <a href="RoomManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Management.png" /></span
+              >Room Management</a
+            >
+          </li>
+          <li>
+            <a href="BedManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Management.png" /></span
+              >Bed Management</a
+            >
+          </li>
+          <li>
+            <a href="BedAssignment.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Assignment.png" /></span
+              >Bed Assignment</a
+            >
+          </li>
+          <li>
+            <a href="CampusCheck In-Out.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Campus Check In-Out.png" /></span
+              >Campus Check In-Out</a
+            >
+          </li>
+          <li>
+            <a href="MessAttendance.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Mess Attendance.png" /></span
+              >Mess Attendance</a
+            >
+          </li>
+          <li class="active">
+            <a href="UserManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/User Management.png" /></span
+              >User Management</a
+            >
+          </li>
+          <li>
+            <a href="StaffManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Staff Management.png" /></span
+              >Staff Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li>
+            <a href="../Resident Services/ResidentsManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Residents Management.png" /></span
+              >Residents Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/LeaveManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Leave Management.png" /></span
+              >Leave Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GuestManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Guest Management.png" /></span
+              >Guest Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GrievancesManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Grievances Management.png" /></span
+              >Grievances Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/RoomAllocation.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Allocation.png" /></span
+              >Room Allocation</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/FinalCheckout.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Final Checkout.png" /></span
+              >Final Checkout</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/Feedback.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Feedback.png" /></span
+              >Feedback</a
+            >
+          </li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Inventory Management.png" /></span
+              >Inventory Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Subscription.png" /></span
+              >Subscription</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Payments & Translations.png" /></span
+              >Payments & Translations</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Assign Fine.png" /></span
+              >Assign Fine</a
+            >
+          </li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Notification & Alerts.png" /></span
+              >Notification & Alerts</a
+            >
+          </li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li>
+            <button class="logout">
+              <img src="../../public/dashboard/side menu/logout.png" /> Log Out
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="topbar">
+          <button id="toggle-btn">&#9776;</button>
+          <div class="topbar-right">
+            <input type="text" class="search-bar" placeholder="Search" />
+
+            <div class="user-section">
+              <span class="user-initial">A</span>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Admin
+              </button>
+              <ul class="dropdown-menu custom-style-ul">
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Admin Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Notification</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <section class="attendance-section">
+          <header class="attendance-header">
+            <h2 class="heading">Unnati ( Scholar - 464655 ) Mess Attendance</h2>
+            <div class="header-actions">
+              <button class="primary-btn d-flex align-items-center gap-2 notification-button-student-mess">
+                <span
+                  ><img
+                    src="../../public/User Profile/walk 1.png"
+                    alt="" /></span
+                ><span>Send Notification</span>
+              </button>
+              <button class="primary-btn d-flex align-items-center gap-2 notification-button-student-mess">
+                <span
+                  ><img
+                    src="../../public/StudentMessAttendance/calander.png"
+                    alt="" /></span
+                ><span>Calander</span>
+              </button>
+              <button>Download Excel</button>
+            </div>
+          </header>
+
+          <div class="cards-grid">
+            <div class="meal-card">
+              <div class="meal-header">
+                <span class="meal-title">Breakfast</span>
+                
+              </div>
+
+              <div class="meal-summary">
+                <div class="meal-stat">
+                  <span class="label">Total</span>
+                  <span class="value">1,440</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Taken</span>
+                  <span class="value">700</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Missed</span>
+                  <span class="value">740</span>
+                </div>
+                <div class="meal-icon">
+                  <img
+                    src="../../public/StudentMessAttendance/breakfast.png"
+                    alt="Breakfast Icon"
+                  />
+                </div>
+              </div>
+
+              <table class="meal-duration-table">
+                <thead>
+                  <tr>
+                    <th>Duration</th>
+                    <th>Total</th>
+                    <th>Taken</th>
+                    <th>Missed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Weekly</td>
+                    <td>07</td>
+                    <td>05</td>
+                    <td>02</td>
+                  </tr>
+                  <tr>
+                    <td>Daily</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="meal-card">
+              <div class="meal-header">
+                <span class="meal-title">Lunch</span>
+                
+              </div>
+
+              <div class="meal-summary">
+                <div class="meal-stat">
+                  <span class="label">Total</span>
+                  <span class="value">1,440</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Taken</span>
+                  <span class="value">700</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Missed</span>
+                  <span class="value">740</span>
+                </div>
+                <div class="meal-icon">
+                  <img
+                    src="../../public/StudentMessAttendance/lunch.png"
+                    alt="Breakfast Icon"
+                  />
+                </div>
+              </div>
+
+              <table class="meal-duration-table">
+                <thead>
+                  <tr>
+                    <th>Duration</th>
+                    <th>Total</th>
+                    <th>Taken</th>
+                    <th>Missed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Weekly</td>
+                    <td>07</td>
+                    <td>05</td>
+                    <td>02</td>
+                  </tr>
+                  <tr>
+                    <td>Daily</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="meal-card">
+              <div class="meal-header">
+                <span class="meal-title">Snacks</span>
+                
+              </div>
+
+              <div class="meal-summary">
+                <div class="meal-stat">
+                  <span class="label">Total</span>
+                  <span class="value">1,440</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Taken</span>
+                  <span class="value">700</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Missed</span>
+                  <span class="value">740</span>
+                </div>
+                <div class="meal-icon">
+                  <img
+                    src="../../public/StudentMessAttendance/snacks.png"
+                    alt="Breakfast Icon"
+                  />
+                </div>
+              </div>
+
+              <table class="meal-duration-table">
+                <thead>
+                  <tr>
+                    <th>Duration</th>
+                    <th>Total</th>
+                    <th>Taken</th>
+                    <th>Missed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Weekly</td>
+                    <td>07</td>
+                    <td>05</td>
+                    <td>02</td>
+                  </tr>
+                  <tr>
+                    <td>Daily</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="meal-card">
+              <div class="meal-header">
+                <span class="meal-title">Dinner</span>
+                
+              </div>
+
+              <div class="meal-summary">
+                <div class="meal-stat">
+                  <span class="label">Total</span>
+                  <span class="value">1,440</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Taken</span>
+                  <span class="value">700</span>
+                </div>
+                <div class="meal-stat">
+                  <span class="label">Missed</span>
+                  <span class="value">740</span>
+                </div>
+                <div class="meal-icon">
+                  <img
+                    src="../../public/StudentMessAttendance/lunch.png"
+                    alt="Breakfast Icon"
+                  />
+                </div>
+              </div>
+
+              <table class="meal-duration-table">
+                <thead>
+                  <tr>
+                    <th>Duration</th>
+                    <th>Total</th>
+                    <th>Taken</th>
+                    <th>Missed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Weekly</td>
+                    <td>07</td>
+                    <td>05</td>
+                    <td>02</td>
+                  </tr>
+                  <tr>
+                    <td>Daily</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Leave List Table -->
+            <div class="table-container">
+
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="ListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Date</th>
+                      <th>Breakfast</th>
+                      <th>Lunch</th>
+                      <th>Snacks</th>
+                      <th>Dinner</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'List')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="ListPagination"></div>
+              </div>
+            </div>
+        </section>
+
+        <p
+          style="
+            text-align: center;
+            color: #a0aec0;
+            font-size: 1rem;
+            padding: 1rem 0;
+            font-weight: 400;
+          "
+        >
+          @ 2025,
+          <span style="color: var(--primary-clr); font-weight: bolder"
+            >RNTU University</span
+          >
+          All Copyright Reserve
+        </p>
+      </main>
+    </div>
+
+    <script>
+  const attendanceData = [
+    {
+      date: "25/02/2025",
+      breakfast: "Attend",
+      lunch: "Absence",
+      snacks: "Attend",
+      dinner: "Attend",
+    },
+    {
+      date: "07/23/2025",
+      breakfast: "Absence",
+      lunch: "Attend",
+      snacks: "Absence",
+      dinner: "Absence",
+    },
+    // Add more records if needed
+  ];
+
+  function paginate(data, page, rows) {
+    const start = (page - 1) * rows;
+    const end = start + rows;
+    return data.slice(start, end);
+  }
+
+  function renderLeaveListTable(page = 1, rows = 5) {
+    const tbody = document.getElementById("ListBody");
+    const pagination = document.getElementById("leaveListPagination");
+    const data = paginate(attendanceData, page, rows);
+
+    tbody.innerHTML = "";
+    data.forEach((entry, index) => {
+      tbody.innerHTML += `
+        <tr>
+          <td>${(page - 1) * rows + index + 1}</td>
+          <td>${entry.date}</td>
+          <td class="}"><span class="${entry.breakfast === "Attend" ? "attend" : "absense"}">${entry.breakfast}</span></td>
+          <td class=""><span class="${entry.lunch === "Attend" ? "attend" : "absense"}">${entry.lunch}</span></td>
+          <td class=""><span class="${entry.snacks === "Attend" ? "attend" : "absense"}">${entry.snacks}</span></td>
+          <td class=""><span class="${entry.dinner === "Attend" ? "attend" : "absense"}">${entry.dinner}</span></td>
+        </tr>
+      `;
+    });
+
+    generatePagination(attendanceData.length, page, rows);
+  }
+
+  function generatePagination(total, currentPage, rows) {
+    const totalPages = Math.ceil(total / rows);
+    const container = document.getElementById("leaveListPagination");
+    container.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+      btn.classList.toggle("active", i === currentPage);
+      btn.onclick = () => renderLeaveListTable(i, rows);
+      container.appendChild(btn);
+    }
+  }
+
+  function changeRows(selectEl) {
+    const rows = parseInt(selectEl.value);
+    renderLeaveListTable(1, rows);
+  }
+
+  // Initial render
+  window.onload = () => {
+    renderLeaveListTable();
+  };
+</script>
+
+
+    <script src="../../js/downloadExcel.js"></script>
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- chart js -->
+    <script src="../../js/apexcharts.min.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

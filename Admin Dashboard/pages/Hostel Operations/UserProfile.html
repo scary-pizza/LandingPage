@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/Hostel Operations/userProfile.css" />
+    <title>Hostel Management Dashboard</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li>
+            <a href="../../index.html" class="nav-animation"
+              ><span
+                ><img src="../../public/dashboard/side menu/dashboard.png"
+              /></span>
+              Dashboard
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li>
+            <a href="HostelManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Hostel Management.png" /></span
+              >Hostel Management</a
+            >
+          </li>
+          <li>
+            <a href="RoomManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Management.png" /></span
+              >Room Management</a
+            >
+          </li>
+          <li>
+            <a href="BedManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Management.png" /></span
+              >Bed Management</a
+            >
+          </li>
+          <li>
+            <a href="BedAssignment.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Assignment.png" /></span
+              >Bed Assignment</a
+            >
+          </li>
+          <li>
+            <a href="CampusCheck In-Out.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Campus Check In-Out.png" /></span
+              >Campus Check In-Out</a
+            >
+          </li>
+          <li>
+            <a href="MessAttendance.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Mess Attendance.png" /></span
+              >Mess Attendance</a
+            >
+          </li>
+          <li class="active">
+            <a href="UserManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/User Management.png" /></span
+              >User Management</a
+            >
+          </li>
+          <li>
+            <a href="StaffManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Staff Management.png" /></span
+              >Staff Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li>
+            <a href="../Resident Services/ResidentsManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Residents Management.png" /></span
+              >Residents Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/LeaveManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Leave Management.png" /></span
+              >Leave Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GuestManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Guest Management.png" /></span
+              >Guest Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GrievancesManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Grievances Management.png" /></span
+              >Grievances Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/RoomAllocation.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Allocation.png" /></span
+              >Room Allocation</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/FinalCheckout.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Final Checkout.png" /></span
+              >Final Checkout</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/Feedback.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Feedback.png" /></span
+              >Feedback</a
+            >
+          </li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Inventory Management.png" /></span
+              >Inventory Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Subscription.png" /></span
+              >Subscription</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Payments & Translations.png" /></span
+              >Payments & Translations</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Assign Fine.png" /></span
+              >Assign Fine</a
+            >
+          </li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Notification & Alerts.png" /></span
+              >Notification & Alerts</a
+            >
+          </li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li>
+            <button class="logout">
+              <img src="../../public/dashboard/side menu/logout.png" /> Log Out
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="topbar">
+          <button id="toggle-btn">&#9776;</button>
+          <div class="topbar-right">
+            <input type="text" class="search-bar" placeholder="Search" />
+
+            <div class="user-section">
+              <span class="user-initial">A</span>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Admin
+              </button>
+              <ul class="dropdown-menu custom-style-ul">
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Admin Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Notification</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <section class="user-management-container">
+          <!-- Header section -->
+          <div class="header-bar">
+            <div class="section-header">
+              <p>Resident list / Resident Details</p>
+              <h3>Resident Details</h3>
+            </div>
+            <div class="search-section">
+              <input type="text" placeholder="Type..." />
+              <img src="../../public/User Management/Icon.png" alt="" />
+            </div>
+            <!-- <img
+              src="../../public/dashboard/manage-user-bg.png"
+              alt="Add Member"
+            /> -->
+          </div>
+
+          <!-- Add member block -->
+          <div class="add-member">
+            <div class="user-details">
+              <div class="image-div">
+                <img
+                  src="../../public/User Details/user-details-profile.png"
+                  alt="Add Member"
+                  class="profile-photo"
+                />
+                <div class="icon-div">
+                  <img src="../../public/User Details/edit.png" alt="" />
+                </div>
+              </div>
+              <div class="info">
+                <h5>Rajat Pradhan (Scholar - 455465445)</h5>
+                <p>prajat917@gmail.com</p>
+              </div>
+            </div>
+            <div class="add-member-btn">
+              <button class="active-btn">Resident On Class</button>
+              <button class="primary-btn d-flex align-items-center gap-2">
+                <span
+                  ><img
+                    src="../../public/User Profile/walk 1.png"
+                    alt="" /></span
+                ><span>Send Notification</span>
+              </button>
+              <button class="primary-btn">Action</button>
+            </div>
+          </div>
+          <section class="profile-info-section">
+            <div class="profile-info-header">
+              <h3>Profile Information</h3>
+              <button class="edit-btn">Edit</button>
+            </div>
+
+            <div class="profile-grid">
+              <div class="profile-field">
+                <label>Student Type</label>
+                <input type="text" value="Regular" />
+              </div>
+              <div class="profile-field">
+                <label>Full Name</label>
+                <input type="text" value="Rajat Pradhan" />
+              </div>
+              <div class="profile-field">
+                <label>Email Address</label>
+                <input type="text" value="prajat917@gmail.com" />
+              </div>
+              <div class="profile-field">
+                <label>Mobile Number</label>
+                <input type="text" value="7204833168" />
+              </div>
+              <div class="profile-field">
+                <label>Gender</label>
+                <input type="text" value="Male" />
+              </div>
+              <div class="profile-field">
+                <label>Enrollment / Scholar ID</label>
+                <input type="text" value="4554654456" />
+              </div>
+              <div class="profile-field address-field">
+                <label>Address</label>
+                <input type="text" value="08 Gujar Pura" />
+              </div>
+            </div>
+          </section>
+          <!-- Family Details Section -->
+          <section class="info-section">
+            <div class="info-header">
+              <h3>Family Details</h3>
+              <button class="edit-btn">Edit</button>
+            </div>
+            <div class="info-grid">
+              <div class="field">
+                <label>Father's Name</label>
+                <input type="text" value="Mr. Hariom Shahay Pradhan" />
+              </div>
+              <div class="field">
+                <label>Mother's Name</label>
+                <input type="text" value="Kirti Pradhan" />
+              </div>
+              <div class="field">
+                <label>Primary Contact Number</label>
+                <input type="text" value="7879545752" />
+              </div>
+              <div class="field">
+                <label>Secondary Contact Number</label>
+                <input type="text" value="7024390158" />
+              </div>
+            </div>
+
+            <h4>Emergency Contact Details</h4>
+            <div class="info-grid">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" value="Kirti Pradhan" />
+              </div>
+              <div class="field">
+                <label>Relationship</label>
+                <input type="text" value="Mother" />
+              </div>
+              <div class="field">
+                <label>Contact Number</label>
+                <input type="text" value="7879545752" />
+              </div>
+            </div>
+
+            <h4>Local Guardian Details</h4>
+            <div class="info-grid">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" value="Kirti Pradhan" />
+              </div>
+              <div class="field">
+                <label>Relationship</label>
+                <input type="text" value="Mother" />
+              </div>
+              <div class="field">
+                <label>Contact Number</label>
+                <input type="text" value="7879545752" />
+              </div>
+            </div>
+          </section>
+
+          <!-- Hostel Information Section -->
+          <section class="info-section">
+            <div class="info-header">
+              <h3>Student Hostel Information</h3>
+              <button class="edit-btn">Edit</button>
+            </div>
+            <div class="info-grid">
+              <div class="field">
+                <label>Hostel Name</label>
+                <input type="text" value="Hostel One" />
+              </div>
+              <div class="field">
+                <label>Hostel Floor</label>
+                <input type="text" value="3" />
+              </div>
+              <div class="field">
+                <label>Room Number</label>
+                <input type="text" value="256" />
+              </div>
+              <div class="field">
+                <label>Bed Number</label>
+                <input type="text" value="8987" />
+              </div>
+              <div class="field">
+                <label>Duration of Stay</label>
+                <input type="text" value="Full Degree" />
+              </div>
+              <div class="field">
+                <label>Joining Date</label>
+                <input type="text" value="25/05/2025" />
+              </div>
+            </div>
+          </section>
+          <section class="attendance-leave-section">
+            <h3 class="section-title">Student Hostel Attendance</h3>
+
+            <!-- Morning & Night Thump Time Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Morning & Night Thump Time List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('thumpTimeTable', 'Thump_Time_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="thumpTimeTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Morning Thump Time</th>
+                      <th>Night Thump Time</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="thumpTimeBody"></tbody>
+                </table>
+              </div>
+
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'thumpTime')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="thumpTimePagination"></div>
+              </div>
+            </div>
+
+            <!-- Leave List Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Leave List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('leaveListTable', 'Leave_List_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="leaveListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Out Time</th>
+                      <th>Leave Taken on</th>
+                      <th>Duration</th>
+                      <th>Expected Arrival</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="leaveListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'leaveList')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="leaveListPagination"></div>
+              </div>
+            </div>
+
+            <!-- Attendace List Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Attendance List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('AttendanceListTable', 'Attendance_List_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="AttendanceListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Breakfast</th>
+                      <th>Lunch</th>
+                      <th>Snaks</th>
+                      <th>Dinner</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="AttendanceListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'attendanceList')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="AttendanceListPagination"></div>
+              </div>
+            </div>
+
+            <!-- Student Check Out List Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Student Check In-Out List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('StudentCheckOutListTable', 'Student_Check_Out_List_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="StudentCheckOutListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Date</th>
+                      <th>Check Out</th>
+                      <th>Check In</th>
+                      <th>Urgency</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="StudentCheckOutListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'studentCheckOutList')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div
+                  class="pagination"
+                  id="StudentCheckOutListPagination"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Fine List Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Fine List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('FineListTable', 'Fine_List_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="FineListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Reason</th>
+                      <th>Payment Amount</th>
+                      <th>Payment</th>
+                    </tr>
+                  </thead>
+                  <tbody id="FineListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'fineList')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="FineListPagination"></div>
+              </div>
+            </div>
+
+            <!-- Item List Table -->
+            <div class="table-container">
+              <div class="table-header">
+                <h4>Items List</h4>
+                <div class="btn-group">
+                  <button class="btn-primary" onclick="downloadTableAsExcel('ItemListTable', 'Item_List_Table.xls')">Download Excel</button>
+                  <button class="btn-primary">View All</button>
+                </div>
+              </div>
+              <div class="table-container-wrapper">
+                <table class="custom-table" id="ItemListTable">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Name</th>
+                      <th>Token</th>
+                      <th>Duration</th>
+                      <th>Return Item</th>
+                      <th>Price</th>
+                      <th>Payment</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ItemListBody"></tbody>
+                </table>
+              </div>
+              <div class="pagination-container">
+                <div class="pagination-controls">
+                  <label>
+                    List
+                    <select onchange="changeRows(this, 'itemList')">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+                  <span>of 10</span>
+                </div>
+                <div class="pagination" id="ItemListPagination"></div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <p
+          style="
+            text-align: center;
+            color: #a0aec0;
+            font-size: 1rem;
+            padding: 1rem 0;
+            font-weight: 400;
+          "
+        >
+          @ 2025,
+          <span style="color: var(--primary-clr); font-weight: bolder"
+            >RNTU University</span
+          >
+          All Copyright Reserve
+        </p>
+      </main>
+    </div>
+
+    <script src="../../js/userProfile.js"></script>
+    <script src="../../js/downloadExcel.js"></script>
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- chart js -->
+    <script src="../../js/apexcharts.min.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

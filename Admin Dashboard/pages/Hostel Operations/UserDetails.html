@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/Hostel Operations/userDetails.css" />
+    <title>Hostel Management Dashboard</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li>
+            <a href="../../index.html" class="nav-animation"
+              ><span
+                ><img src="../../public/dashboard/side menu/dashboard.png"
+              /></span>
+              Dashboard
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li>
+            <a href="HostelManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Hostel Management.png" /></span
+              >Hostel Management</a
+            >
+          </li>
+          <li>
+            <a href="RoomManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Management.png" /></span
+              >Room Management</a
+            >
+          </li>
+          <li>
+            <a href="BedManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Management.png" /></span
+              >Bed Management</a
+            >
+          </li>
+          <li>
+            <a href="BedAssignment.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Bed Assignment.png" /></span
+              >Bed Assignment</a
+            >
+          </li>
+          <li>
+            <a href="CampusCheck In-Out.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Campus Check In-Out.png" /></span
+              >Campus Check In-Out</a
+            >
+          </li>
+          <li>
+            <a href="MessAttendance.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Mess Attendance.png" /></span
+              >Mess Attendance</a
+            >
+          </li>
+          <li class="active">
+            <a href="UserManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/User Management.png" /></span
+              >User Management</a
+            >
+          </li>
+          <li>
+            <a href="StaffManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Staff Management.png" /></span
+              >Staff Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li>
+            <a href="../Resident Services/ResidentsManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Residents Management.png" /></span
+              >Residents Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/LeaveManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Leave Management.png" /></span
+              >Leave Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GuestManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Guest Management.png" /></span
+              >Guest Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/GrievancesManagement.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Grievances Management.png" /></span
+              >Grievances Management</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/RoomAllocation.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Room Allocation.png" /></span
+              >Room Allocation</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/FinalCheckout.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Final Checkout.png" /></span
+              >Final Checkout</a
+            >
+          </li>
+          <li>
+            <a href="../Resident Services/Feedback.html"
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Feedback.png" /></span
+              >Feedback</a
+            >
+          </li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Inventory Management.png" /></span
+              >Inventory Management</a
+            >
+          </li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Subscription.png" /></span
+              >Subscription</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Payments & Translations.png" /></span
+              >Payments & Translations</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Assign Fine.png" /></span
+              >Assign Fine</a
+            >
+          </li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li>
+            <a href=""
+              ><span
+                ><img
+                  src="../../public/dashboard/side menu/Notification & Alerts.png" /></span
+              >Notification & Alerts</a
+            >
+          </li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li>
+            <button class="logout">
+              <img src="../../public/dashboard/side menu/logout.png" /> Log Out
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="topbar">
+          <button id="toggle-btn">&#9776;</button>
+          <div class="topbar-right">
+            <input type="text" class="search-bar" placeholder="Search" />
+
+            <div class="user-section">
+              <span class="user-initial">A</span>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Admin
+              </button>
+              <ul class="dropdown-menu custom-style-ul">
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Admin Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#"
+                    >Notification</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item custom-style-li" href="#">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <section class="user-management-container">
+          <!-- Header section -->
+          <div class="header-bar">
+            <h3>Manage Users</h3>
+            <div class="search-section">
+              <input type="text" placeholder="Type..." />
+              <img src="../../public/User Management/Icon.png" alt="" />
+            </div>
+            <!-- <img
+              src="../../public/dashboard/manage-user-bg.png"
+              alt="Add Member"
+            /> -->
+          </div>
+
+          <!-- Add member block -->
+          <div class="add-member">
+            <div class="user-details">
+              <div class="image-div">
+                <img
+                  src="../../public/User Details/user-details-profile.png"
+                  alt="Add Member"
+                  class="profile-photo"
+                />
+                <div class="icon-div">
+                  <img src="../../public/User Details/edit.png" alt="" />
+                </div>
+              </div>
+              <div class="info">
+                <h5>Rajat Pradhan (Manager)</h5>
+                <p>prajat917@gmail.com</p>
+              </div>
+            </div>
+            <div class="add-member-btn">
+              <button class="active-btn">User Active</button>
+              <button class="primary-btn">Action</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portal Settings & Profile Info Section -->
+        <section class="settings-profile-wrapper">
+          <!-- Portal Settings -->
+          <div class="portal-settings">
+            <div class="section-header">
+              <h5>Portal Settings</h5>
+              <button class="edit-btn">Edit</button>
+            </div>
+            <div class="portal-settings-container">
+
+              <div class="portal-setting">
+                <h2 class="label">ACCOUNT</h2>
+                <div class="switch-container">
+                    <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone follows me</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone answers on my post</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone mentions me</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="portal-setting">
+                <h2 class="label">APPLICATION</h2>
+                <div class="switch-container">
+                    <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>New launches and projects</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Monthly product updates</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to newsletter</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="portal-setting">
+                <h2 class="label">ACCOUNT</h2>
+                <div class="switch-container">
+                    <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone follows me</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone answers on my post</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone mentions me</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="portal-setting">
+                <h2 class="label">APPLICATION</h2>
+                <div class="switch-container">
+                    <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>New launches and projects</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Monthly product updates</span>
+                    </div>
+                <div class="switch-container-label">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to newsletter</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Information -->
+          <div class="profile-info">
+            <div class="section-header">
+              <h5>Profile Information</h5>
+              <button class="edit-btn">Edit</button>
+            </div>
+            <div class="profile-details">
+              <div class="info-line">
+                <strong>Full Name:</strong><span>Rajat Pradhan</span>
+                <strong>Mobile:</strong><span>+91 7024393158</span>
+                <strong>Email:</strong><span>prajat917@gmail.com</span>
+                <strong>Joining Date:</strong><span>25/05/2025</span>
+                <strong>Role:</strong><span>Management</span>
+              </div>
+              <p class="bio">
+                Hi, I’m Rajat Pradhan, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <p style="text-align: center; color: #A0AEC0; font-size: 1rem; padding: 1rem 0; font-weight: 400;">@ 2025, <span style="color: var(--primary-clr); font-weight: bolder; ">RNTU University</span> All Copyright Reserve </p>
+      </main>
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- chart js -->
+    <script src="../../js/apexcharts.min.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

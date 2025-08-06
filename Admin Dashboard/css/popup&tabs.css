@@ -1,12 +1,12 @@
-.modal-content{
+.modal-content {
     border: none;
     border-radius: 1rem;
     background-color: var(--white);
     position: relative;
-    
+
 }
 
-.modal-content .modal-header{
+.modal-content .modal-header {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -20,66 +20,29 @@
 
 }
 
-.modal-content .modal-header button.btn-close{
+.modal-content .modal-header button.btn-close {
     margin: auto;
     padding: 0;
     opacity: 1;
     background-image: url(../public/dashboard/min.png);
 }
 
-.modal-content .modal-body{
+.modal-content .modal-body {
     padding: 2rem;
     position: relative;
     min-height: 20rem;
 }
 
-.modal-content .top .pop-title{
-    background: var(--primary-clr);
-    font-size: 1.5rem;
-    padding: 1.5rem 2rem;
-    color: var(--white);
-    border-radius: 0rem 1rem 1rem 0rem;
-    position: absolute;
-    left: 0;
-    top: 2rem;
-}
-
-.modal-content .top .pop-title-remove{
-    background: var(--primary-red);
-    font-size: 1.5rem;
-    padding: 1.5rem 2rem;
-    color: var(--white);
-    border-radius: 0rem 1rem 1rem 0rem;
-    position: absolute;
-    left: 0;
-    top: 2rem;
-}
-
-.modal-content .middle{
-    margin: 7rem 0 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+.modal-content .modal-body .full-width-i {
+    margin: 2rem 0 0;
     padding: 0 2rem;
 }
 
-.modal-content .middle-content{
-    margin: 7rem 0 0;
-    padding: 0 2rem;
-}
-
-.modal-content .middle-content p{
-    font-size: 1.5rem;
-    color: var(--primary-red);
-    
-}
-
-.modal-content .middle span.input-set{
+.modal-content .modal-body .full-width-i span.input-set {
     display: flex;
     flex-direction: column;
 }
-
-.modal-content .middle span.input-set label{
+.modal-content .modal-body .full-width-i span.input-set label {
     font-size: 1.4rem;
     line-height: 140%;
     font-family: Helvetica;
@@ -87,14 +50,7 @@
     text-align: left;
     margin-bottom: .5rem;
 }
-
-/* Placeholder color */
-::placeholder{
-    color: #a0aec0;
-}
-/* Placeholder color */
-
-.modal-content .middle span.input-set input, select {
+.modal-content .modal-body .full-width-i span.input-set input, textarea {
     border: none;
     width: 100%;
     border-radius: 6.77px;
@@ -108,7 +64,150 @@
     padding: 1rem;
 }
 
-.modal-content .middle span.input-set input:focus{
+.modal-content .top .pop-title {
+    background: var(--primary-clr);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.modal-content .top .pop-title-remove {
+    background: var(--primary-red);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.modal-content .top .pop-title-green {
+    background: var(--nature-green);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    color: var(--white);
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+}
+
+.modal-content .middle {
+    margin: 7rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.modal-content .middle-content {
+    margin: 7rem 0 0;
+    padding: 0 2rem;
+}
+
+.modal-content .middle-content p.red {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-red);
+}
+
+.modal-content .middle-content p.green {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.modal-content .reason{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.modal-content .reason label {
+    font-size: 1.4rem;
+    line-height: 140%;
+    font-family: Helvetica;
+    color: #2d3748;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+.modal-content .reason input,
+select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+}
+
+
+.modal-content .middle span.input-set {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .middle span.input-set label {
+    font-size: 1.4rem;
+    line-height: 140%;
+    font-family: Helvetica;
+    color: #2d3748;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: #a0aec0;
+}
+
+/* Placeholder color */
+
+.modal-content .middle span.input-set input,
+select {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: #F5F7FA;
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    font-family: Helvetica;
+    padding: 1rem;
+}
+
+.modal-content .middle span.input-set input.status-leave-approve {
+    border: none;
+    width: 100%;
+    border-radius: 6.77px;
+    background-color: var(--nature-green);
+    height: 49px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.4rem;
+    font-family: Helvetica;
+    padding: 1rem;
+}
+
+.modal-content .middle span.input-set input.status-leave-approve::placeholder{
+    text-align: center;
+    color: var(--white);
+}
+
+.modal-content .middle span.input-set input:focus {
     outline: none;
 }
 
@@ -138,7 +237,7 @@
     font-size: 1.5rem;
 }
 
-.modal-content .bottom-btn button.red{
+.modal-content .bottom-btn button.red {
     min-width: 16rem;
     background-color: var(--primary-red);
     padding: 1.5rem 2rem;
@@ -148,7 +247,7 @@
     font-size: 1.5rem;
 }
 
-.modal-content .bottom-btn button.green{
+.modal-content .bottom-btn button.green {
     min-width: 16rem;
     background-color: #149D52;
     padding: 1.5rem 2rem;
@@ -158,7 +257,7 @@
     font-size: 1.5rem;
 }
 
-.modal-content .bottom-btn button.blue{
+.modal-content .bottom-btn button.blue {
     min-width: 16rem;
     background-color: var(--primary-clr);
     padding: 1.5rem 2rem;
@@ -173,7 +272,7 @@
 
 /* Tabs Input css */
 
-.modal-content .tabs-middle{
+.modal-content .tabs-middle {
 
     margin: 7rem 0 0;
     display: grid;
@@ -181,16 +280,16 @@
     padding: 0 2rem;
 }
 
-.modal-content .tabs-middle .tabset .tab-panels section.tab-panel .row{
+.modal-content .tabs-middle .tabset .tab-panels section.tab-panel .row {
     margin-top: 1rem;
 }
 
-.modal-content .tabs-middle span.input-set{
+.modal-content .tabs-middle span.input-set {
     display: flex;
     flex-direction: column;
 }
 
-.modal-content .tabs-middle span.input-set label{
+.modal-content .tabs-middle span.input-set label {
     font-size: 1.4rem;
     line-height: 140%;
     font-family: Helvetica;
@@ -200,12 +299,14 @@
 }
 
 /* Placeholder color */
-::placeholder{
+::placeholder {
     color: #a0aec0;
 }
+
 /* Placeholder color */
 
-.modal-content .tabs-middle span.input-set input, select {
+.modal-content .tabs-middle span.input-set input,
+select {
     border: none;
     width: 100%;
     border-radius: 6.77px;
@@ -219,7 +320,9 @@
     padding: 1rem;
 }
 
-.modal-content .tabs-middle span.input-set input:focus{
+
+
+.modal-content .tabs-middle span.input-set input:focus {
     outline: none;
 }
 
@@ -239,9 +342,18 @@
     background-size: 1rem;
 }
 
-.modal-content .bottom-btn button.blue{
+.modal-content .bottom-btn button.blue {
     min-width: 16rem;
     background-color: var(--primary-clr);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.modal-content .bottom-btn button.green {
+    min-width: 16rem;
+    background-color: var(--nature-green);
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     color: var(--white);
@@ -252,25 +364,25 @@
 
 /* Input css */
 
-.tabset > input[type="radio"] {
-  position: absolute;
-  left: -200vw;
+.tabset>input[type="radio"] {
+    position: absolute;
+    left: -200vw;
 }
 
 .tabset .tab-panel {
-  display: none;
+    display: none;
 }
 
-.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-  display: block;
+.tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+.tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+.tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+.tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+.tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+.tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+    display: block;
 }
 
-.tabset > label {
+.tabset>label {
     font-size: 1.5rem;
     position: relative;
     display: inline-block;
@@ -279,27 +391,27 @@
     font-weight: 600;
 }
 
-.tabset > label:hover,
-.tabset > input:focus + label,
-.tabset > input:checked + label {
-  background-color: var(--primary-clr);
-  color: var(--white);
-  border-radius: 1rem;
+.tabset>label:hover,
+.tabset>input:focus+label,
+.tabset>input:checked+label {
+    background-color: var(--primary-clr);
+    color: var(--white);
+    border-radius: 1rem;
 }
 
 
 .tab-panel {
-  padding: 1rem 0;
+    padding: 1rem 0;
 }
 
 /* (max-width: 700px) and (min-width: 200px)*/
 
-@media screen and (max-width: 700px) and (min-width: 200px){
-    .modal-content .middle{
+@media screen and (max-width: 700px) and (min-width: 200px) {
+    .modal-content .middle {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .modal-content .bottom-btn{
+    .modal-content .bottom-btn {
         flex-direction: column;
         gap: 1.5rem;
         width: 100%;
