@@ -226,8 +226,8 @@
                 <td>3 Days</td>
                 <td>04-Aug-2025</td>
                 <td>
-                  <button class="green-btn">Approve</button>
-                  <button class="delete-btn">Reject</button>
+                  <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                  <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
                   <button class="view-btn" data-bs-toggle="modal" data-bs-target="#View">View</button>
                 </td>
               </tr>
@@ -377,8 +377,8 @@
               </div>
 
               <div class="bottom-btn">
-                <button type="button" class="red"> Reject Leave </button>
-                <button type="button" class="green"> Approve Leave </button>
+                <button type="button" class="red" data-bs-toggle="modal" data-bs-target="#Rejectpopup"> Reject Leave </button>
+                <button type="button" class="green" data-bs-toggle="modal" data-bs-target="#Approvepopup"> Approve Leave </button>
               </div>
 
             </div>
@@ -442,7 +442,7 @@
 
                 <span class="input-set">
                   <label for="Status">Status</label>
-                  <input type="text" class="status-leave-approve" id="Status" name="Status" placeholder="Approve"
+                  <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Approve"
                     disabled>
                 </span>
 
@@ -490,7 +490,7 @@
 
               <div class="bottom-btn">
                 <button type="button" class="red"> Reject </button>
-                <button type="button" class="blue"> Go Back </button>
+                <button type="button" class="blue" data-bs-dismiss="modal" aria-label="Close"> Go Back </button>
               </div>
 
             </div>
@@ -520,7 +520,7 @@
 
               <div class="bottom-btn">
                 <button type="button" class="green"> Approve </button>
-                <button type="button" class="blue"> Go Back </button>
+                <button type="button" class="blue" data-bs-dismiss="modal" aria-label="Close"> Go Back </button>
               </div>
 
             </div>

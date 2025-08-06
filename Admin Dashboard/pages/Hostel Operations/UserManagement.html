@@ -1,406 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Boostrp 5 css -->
-    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
 
-    <link rel="stylesheet" href="../../css/sidebar.css" />
-    <link rel="stylesheet" href="../../css/mainStyle.css" />
-    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
-    <link rel="stylesheet" href="../../css/popup&tabs.css" />
-    <link
-      rel="stylesheet"
-      href="../../css/Hostel Operations/userManagement.css"
-    />
-    <title>Hostel Management Dashboard</title>
-  </head>
-  <body>
-    <div class="main-container">
-      <!-- Sidebar -->
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-          <button id="toggle-btn-small-screen">&#9776;</button>
-          <h2>Hostel Management</h2>
-        </div>
-        <input type="text" placeholder="Search" class="search-box" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boostrp 5 css -->
+  <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
 
-        <!-- Overview -->
-        <p>Overview</p>
-        <ul class="nav">
-          <li>
-            <a href="../../index.html" class="nav-animation"
-              ><span
-                ><img src="../../public/dashboard/side menu/dashboard.png"
-              /></span>
-              Dashboard
-            </a>
-          </li>
-        </ul>
+  <link rel="stylesheet" href="../../css/sidebar.css" />
+  <link rel="stylesheet" href="../../css/mainStyle.css" />
+  <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+  <link rel="stylesheet" href="../../css/popup&tabs.css" />
+  <link rel="stylesheet" href="../../css/Hostel Operations/userManagement.css" />
+  <title>Hostel Management Dashboard</title>
+</head>
 
-        <!-- Hostel Operations -->
-        <p>Hostel Operations</p>
-        <ul class="nav">
-          <li>
-            <a href="HostelManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Hostel Management.png" /></span
-              >Hostel Management</a
-            >
-          </li>
-          <li>
-            <a href="RoomManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Room Management.png" /></span
-              >Room Management</a
-            >
-          </li>
-          <li>
-            <a href="BedManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Bed Management.png" /></span
-              >Bed Management</a
-            >
-          </li>
-          <li>
-            <a href="BedAssignment.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Bed Assignment.png" /></span
-              >Bed Assignment</a
-            >
-          </li>
-          <li>
-            <a href="CampusCheck In-Out.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Campus Check In-Out.png" /></span
-              >Campus Check In-Out</a
-            >
-          </li>
-          <li>
-            <a href="MessAttendance.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Mess Attendance.png" /></span
-              >Mess Attendance</a
-            >
-          </li>
-          <li class="active">
-            <a href="UserManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/User Management.png" /></span
-              >User Management</a
-            >
-          </li>
-          <li>
-            <a href="StaffManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Staff Management.png" /></span
-              >Staff Management</a
-            >
-          </li>
-        </ul>
+<body>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button id="toggle-btn-small-screen">&#9776;</button>
+        <h2>Hostel Management</h2>
+      </div>
+      <input type="text" placeholder="Search" class="search-box" />
 
-        <!-- Resident Services -->
-        <p>Resident Services</p>
-        <ul class="nav">
-          <li>
-            <a href="../Resident Services/ResidentsManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Residents Management.png" /></span
-              >Residents Management</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/LeaveManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Leave Management.png" /></span
-              >Leave Management</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/GuestManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Guest Management.png" /></span
-              >Guest Management</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/GrievancesManagement.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Grievances Management.png" /></span
-              >Grievances Management</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/RoomAllocation.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Room Allocation.png" /></span
-              >Room Allocation</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/FinalCheckout.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Final Checkout.png" /></span
-              >Final Checkout</a
-            >
-          </li>
-          <li>
-            <a href="../Resident Services/Feedback.html"
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Feedback.png" /></span
-              >Feedback</a
-            >
-          </li>
-        </ul>
+      <!-- Overview -->
+      <p>Overview</p>
+      <ul class="nav">
+        <li>
+          <a href="../../index.html" class="nav-animation"><span><img
+                src="../../public/dashboard/side menu/dashboard.png" /></span>
+            Dashboard
+          </a>
+        </li>
+      </ul>
 
-        <!-- Inventory & Logistics -->
-        <p>Inventory & Logistics</p>
-        <ul class="nav">
-          <li>
-            <a href=""
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Inventory Management.png" /></span
-              >Inventory Management</a
-            >
-          </li>
-        </ul>
+      <!-- Hostel Operations -->
+      <p>Hostel Operations</p>
+      <ul class="nav">
+        <li>
+          <a href="HostelManagement.html"><span><img
+                src="../../public/dashboard/side menu/Hostel Management.png" /></span>Hostel Management</a>
+        </li>
+        <li>
+          <a href="RoomManagement.html"><span><img
+                src="../../public/dashboard/side menu/Room Management.png" /></span>Room Management</a>
+        </li>
+        <li>
+          <a href="BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png" /></span>Bed
+            Management</a>
+        </li>
+        <li>
+          <a href="BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png" /></span>Bed
+            Assignment</a>
+        </li>
+        <li>
+          <a href="CampusCheck In-Out.html"><span><img
+                src="../../public/dashboard/side menu/Campus Check In-Out.png" /></span>Campus Check In-Out</a>
+        </li>
+        <li>
+          <a href="MessAttendance.html"><span><img
+                src="../../public/dashboard/side menu/Mess Attendance.png" /></span>Mess Attendance</a>
+        </li>
+        <li class="active">
+          <a href="UserManagement.html"><span><img
+                src="../../public/dashboard/side menu/User Management.png" /></span>User Management</a>
+        </li>
+        <li>
+          <a href="StaffManagement.html"><span><img
+                src="../../public/dashboard/side menu/Staff Management.png" /></span>Staff Management</a>
+        </li>
+      </ul>
 
-        <!-- Finance & Subscription -->
-        <p>Finance & Subscription</p>
-        <ul class="nav">
-          <li>
-            <a href=""
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Subscription.png" /></span
-              >Subscription</a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Payments & Translations.png" /></span
-              >Payments & Translations</a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Assign Fine.png" /></span
-              >Assign Fine</a
-            >
-          </li>
-        </ul>
+      <!-- Resident Services -->
+      <p>Resident Services</p>
+      <ul class="nav">
+        <li>
+          <a href="../Resident Services/ResidentsManagement.html"><span><img
+                src="../../public/dashboard/side menu/Residents Management.png" /></span>Residents Management</a>
+        </li>
+        <li>
+          <a href="../Resident Services/LeaveManagement.html"><span><img
+                src="../../public/dashboard/side menu/Leave Management.png" /></span>Leave Management</a>
+        </li>
+        <li>
+          <a href="../Resident Services/GuestManagement.html"><span><img
+                src="../../public/dashboard/side menu/Guest Management.png" /></span>Guest Management</a>
+        </li>
+        <li>
+          <a href="../Resident Services/GrievancesManagement.html"><span><img
+                src="../../public/dashboard/side menu/Grievances Management.png" /></span>Grievances Management</a>
+        </li>
+        <li>
+          <a href="../Resident Services/RoomAllocation.html"><span><img
+                src="../../public/dashboard/side menu/Room Allocation.png" /></span>Room Allocation</a>
+        </li>
+        <li>
+          <a href="../Resident Services/FinalCheckout.html"><span><img
+                src="../../public/dashboard/side menu/Final Checkout.png" /></span>Final Checkout</a>
+        </li>
+        <li>
+          <a href="../Resident Services/Feedback.html"><span><img
+                src="../../public/dashboard/side menu/Feedback.png" /></span>Feedback</a>
+        </li>
+      </ul>
 
-        <!-- Communication & Alerts -->
-        <p>Communication & Alerts</p>
-        <ul class="nav">
-          <li>
-            <a href=""
-              ><span
-                ><img
-                  src="../../public/dashboard/side menu/Notification & Alerts.png" /></span
-              >Notification & Alerts</a
-            >
-          </li>
-        </ul>
+      <!-- Inventory & Logistics -->
+      <p>Inventory & Logistics</p>
+      <ul class="nav">
+        <li>
+          <a href=""><span><img src="../../public/dashboard/side menu/Inventory Management.png" /></span>Inventory
+            Management</a>
+        </li>
+      </ul>
 
-        <!-- Logout Btn -->
-        <ul class="nav">
-          <li>
-            <button class="logout">
-              <img src="../../public/dashboard/side menu/logout.png" /> Log Out
+      <!-- Finance & Subscription -->
+      <p>Finance & Subscription</p>
+      <ul class="nav">
+        <li>
+          <a href=""><span><img src="../../public/dashboard/side menu/Subscription.png" /></span>Subscription</a>
+        </li>
+        <li>
+          <a href=""><span><img src="../../public/dashboard/side menu/Payments & Translations.png" /></span>Payments &
+            Translations</a>
+        </li>
+        <li>
+          <a href=""><span><img src="../../public/dashboard/side menu/Assign Fine.png" /></span>Assign Fine</a>
+        </li>
+      </ul>
+
+      <!-- Communication & Alerts -->
+      <p>Communication & Alerts</p>
+      <ul class="nav">
+        <li>
+          <a href=""><span><img src="../../public/dashboard/side menu/Notification & Alerts.png" /></span>Notification &
+            Alerts</a>
+        </li>
+      </ul>
+
+      <!-- Logout Btn -->
+      <ul class="nav">
+        <li>
+          <button class="logout">
+            <img src="../../public/dashboard/side menu/logout.png" /> Log Out
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="topbar">
+        <button id="toggle-btn">&#9776;</button>
+        <div class="topbar-right">
+          <input type="text" class="search-bar" placeholder="Search" />
+
+          <div class="user-section">
+            <span class="user-initial">A</span>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin
             </button>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="main-content">
-        <!-- Header -->
-        <header class="topbar">
-          <button id="toggle-btn">&#9776;</button>
-          <div class="topbar-right">
-            <input type="text" class="search-bar" placeholder="Search" />
-
-            <div class="user-section">
-              <span class="user-initial">A</span>
-            </div>
-
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Admin
-              </button>
-              <ul class="dropdown-menu custom-style-ul">
-                <li>
-                  <a class="dropdown-item custom-style-li" href="#"
-                    >Admin Profile</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item custom-style-li" href="#"
-                    >Notification</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item custom-style-li" href="#">Log Out</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="dropdown-menu custom-style-ul">
+              <li>
+                <a class="dropdown-item custom-style-li" href="#">Admin Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item custom-style-li" href="#">Notification</a>
+              </li>
+              <li>
+                <a class="dropdown-item custom-style-li" href="#">Log Out</a>
+              </li>
+            </ul>
           </div>
-        </header>
+        </div>
+      </header>
 
-        <section class="user-management-container">
-          <!-- Header section -->
-          <div class="header-bar">
-            <h3>Manage Users</h3>
-            <div class="search-section">
-              <input type="text" placeholder="Type..." />
-              <img src="../../public/User Management/Icon.png" alt="">
-            </div>
-            <!-- <img
-              src="../../public/dashboard/manage-user-bg.png"
-              alt="Add Member"
-            /> -->
+      <section class="user-management-container">
+        <!-- Header section -->
+        <div class="header-bar">
+          <div><a href="UserManagement.html">Manage Users</a> </div>
+          <div class="search-section">
+            <input type="text" placeholder="Type..." />
+            <img src="../../public/User Management/Icon.png" alt="">
           </div>
 
-          <!-- Add member block -->
-          <div class="add-member">
-            <img
-              src="../../public/User Management/user-management-dp.png"
-              alt="Add Member"
-            />
-            <div class="info">
-              <h5>Add Member</h5>
-            </div>
-            <button class="primary-btn add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddMember">Add Member</button>
-          </div>
+        </div>
 
-          <!-- Member Cards -->
-          <h5 class="section-title">Members Profile</h5>
-          <div class="cards-grid">
-            <!-- Card 1 -->
-            <div class="user-card">
-              <div class="card-img-wrapper">
-                <img
-                  src="../../public/User Management/user-management-dp.png"
-                  alt="User"
-                />
-                <span class="badge green">New Active</span>
+        <!-- Add member block -->
+        <div class="add-member">
+          <img src="../../public/User Management/user-management-dp.png" alt="Add Member" />
+          <div class="info">
+            <h5>Add Member</h5>
+          </div>
+          <button class="primary-btn add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddMember">Add
+            Member</button>
+        </div>
+
+        <!-- Member Cards -->
+        <h5 class="section-title">Members Profile</h5>
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div class="user-card">
+            <div class="card-img-wrapper">
+              <img src="../../public/User Management/user-management-dp.png" alt="User" />
+              <span class="badge green">New Active</span>
+            </div>
+            <div class="card-body">
+              <p class="role">Management</p>
+              <h6>Rajat Pradhan</h6>
+              <p class="desc">
+                As Uber works through a huge amount of internal management
+                turmoil.
+              </p>
+              <div class="card-actions">
+                <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
+
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Action
+                  </button>
+                  <ul class="dropdown-menu custom-user-ul">
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#EditUser">Edit</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li">Disable</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#Rejectpopup">Delete</a>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
-              <div class="card-body">
-                <p class="role">Management</p>
-                <h6>Rajat Pradhan</h6>
-                <p class="desc">
-                  As Uber works through a huge amount of internal management
-                  turmoil.
-                </p>
-                <div class="card-actions">
-                  <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
-                  <div class="dropdown">
-                    <button class="dropdown-toggle">Action</button>
-                    <ul class="dropdown-menu">
-                      <li>Edit</li>
-                      <li>Disable</li>
-                    </ul>
-                  </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="user-card">
+            <div class="card-img-wrapper">
+              <img src="../../public/User Management/user-management-dp.png" alt="User" />
+              <span class="badge red">User Ban</span>
+            </div>
+            <div class="card-body">
+              <p class="role">Sales</p>
+              <h6>Amresh Rajput</h6>
+              <p class="desc">
+                As Uber works through a huge amount of internal management
+                turmoil.
+              </p>
+              <div class="card-actions">
+                <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Action
+                  </button>
+                  <ul class="dropdown-menu custom-user-ul">
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#EditUser">Edit</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li">Disable</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#Rejectpopup">Delete</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Card 2 -->
-            <div class="user-card">
-              <div class="card-img-wrapper">
-                <img
-                  src="../../public/User Management/user-management-dp.png"
-                  alt="User"
-                />
-                <span class="badge red">User Ban</span>
-              </div>
-              <div class="card-body">
-                <p class="role">Sales</p>
-                <h6>Amresh Rajput</h6>
-                <p class="desc">
-                  As Uber works through a huge amount of internal management
-                  turmoil.
-                </p>
-                <div class="card-actions">
-                  <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
-                  <div class="dropdown">
-                    <button class="dropdown-toggle">Action</button>
-                    <ul class="dropdown-menu">
-                      <li>Edit</li>
-                      <li>Disable</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <!-- Card 3 -->
+          <div class="user-card">
+            <div class="card-img-wrapper">
+              <img src="../../public/User Management/user-management-dp.png" alt="User" />
+              <span class="badge green">New Active</span>
             </div>
-
-            <!-- Card 3 -->
-            <div class="user-card">
-              <div class="card-img-wrapper">
-                <img
-                  src="../../public/User Management/user-management-dp.png"
-                  alt="User"
-                />
-                <span class="badge green">New Active</span>
-              </div>
-              <div class="card-body">
-                <p class="role">Mess Management</p>
-                <h6>Unnati</h6>
-                <p class="desc">
-                  As Uber works through a huge amount of internal management
-                  turmoil.
-                </p>
-                <div class="card-actions">
-                  <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
-                  <div class="dropdown">
-                    <button class="dropdown-toggle">Action</button>
-                    <ul class="dropdown-menu">
-                      <li>Edit</li>
-                      <li>Disable</li>
-                    </ul>
-                  </div>
+            <div class="card-body">
+              <p class="role">Mess Management</p>
+              <h6>Unnati</h6>
+              <p class="desc">
+                As Uber works through a huge amount of internal management
+                turmoil.
+              </p>
+              <div class="card-actions">
+                <button class="outline-btn"><a href="../Hostel Operations/UserDetails.html">View User</a></button>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Action
+                  </button>
+                  <ul class="dropdown-menu custom-user-ul">
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#EditUser">Edit</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li">Disable</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-user-li" type="button" data-bs-toggle="modal"
+                        data-bs-target="#Rejectpopup">Delete</a>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-            </div>
-
-            <!-- New Project -->
-            <div class="new-project">
-              <div class="new-project-div">
-                <h2>+</h2>
-                <p>Create a New Project</p>
               </div>
             </div>
           </div>
-        </section>
-        <!-- add user popup  -->
-         <div class="modal fade" id="AddMember" tabindex="-1" aria-labelledby="AddMemberLabel" aria-hidden="true">
+
+          <!-- New User -->
+          <div class="new-project" data-bs-toggle="modal" data-bs-target="#AddMember">
+            <div class="new-project-div">
+              <h2>+</h2>
+              <p>Create a New User</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- All Popup -->
+
+      <!-- add user popup  -->
+      <div class="modal fade" id="AddMember" tabindex="-1" aria-labelledby="AddMemberLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
 
@@ -449,76 +377,105 @@
                   <input type="date" id="JoiningDate" name="JoiningDate" placeholder="DD/MM/YYYY">
                 </span>
 
-                
-                <span class="input-set">
-                  <label for="Comment">Comment</label>
-                  <input type="text" id="Comment" name="Comment" placeholder="EnterComment">
-                </span>
               </div>
 
-              <div style="margin-top: 1rem;">
-                <h2 style="font-size: 1rem;">Assign Permissions</h2>
+              <div class="reason">
+                <label for="Comment">Comment</label>
+                <textarea type="text">As Uber works through a huge amount of internal management turmoil.</textarea>
+              </div>
+
+              <div class="Assign-Permissions">
+                <h2>Assign Permissions</h2>
                 <div class="portal-settings-container">
 
-              <div class="portal-setting">
-                <h2 class="label">ACCOUNT</h2>
-                <div class="switch-container">
-                    <div class="switch-container-label">
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">ACCOUNT</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>Email me when someone follows me</span>
-                    </div>
-                <div class="switch-container-label">
+                      </div>
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>Email me when someone answers on my post</span>
-                    </div>
-                <div class="switch-container-label">
+                      </div>
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>Email me when someone mentions me</span>
+                      </div>
                     </div>
-                </div>
-              </div>
+                  </div>
 
-              <div class="portal-setting">
-                <h2 class="label">APPLICATION</h2>
-                <div class="switch-container">
-                    <div class="switch-container-label">
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">APPLICATION</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>New launches and projects</span>
-                    </div>
-                <div class="switch-container-label">
+                      </div>
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>Monthly product updates</span>
-                    </div>
-                <div class="switch-container-label">
+                      </div>
+                      <div class="switch-container-label">
                         <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
                         </label>
                         <span>Subscribe to newsletter</span>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">APPLICATION</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>New launches and projects</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Monthly product updates</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to newsletter</span>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
-            </div>
               </div>
 
               <div class="bottom-btn">
-                <button type="button" class="red"> Cancel </button>
-                <button type="button" class="blue"> Create User </button>
+                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                <button type="button" class="blue" data-bs-toggle="modal" data-bs-target="#Approvepopup"> Create User
+                </button>
               </div>
 
             </div>
@@ -526,14 +483,231 @@
           </div>
         </div>
       </div>
-      </main>
-    </div>
 
-    <!-- Boostrp 5 js -->
-    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
-    <!-- chart js -->
-    <script src="../../js/apexcharts.min.js"></script>
-    <!-- main js -->
-    <script src="../../js/main.js"></script>
-  </body>
+      <!-- Edit user popup  -->
+      <div class="modal fade" id="EditUser" tabindex="-1" aria-labelledby="EditUserLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Edit User</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="Name">Name</label>
+                  <input type="text" id="Name" name="Name" placeholder="Enter Name">
+                </span>
+                <span class="input-set">
+                  <label for="MobileNumber">Mobile</label>
+                  <input type="number" id="MobileNumber" name="MobileNumber" placeholder="Enter Mobile Number">
+                </span>
+                <span class="input-set">
+                  <label for="Email">Email</label>
+                  <input type="email" id="Email" name="Email" placeholder="Enter Email">
+                </span>
+                <span class="input-set">
+                  <label for="GeneratePassword">Generate Password</label>
+                  <input type="password" id="GeneratePassword" name="GeneratePassword" placeholder="Generate Password">
+                </span>
+                <span class="input-set">
+                  <label for="AssignRole">Assign Role</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Role</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="JoiningDate">Joining Date</label>
+                  <input type="date" id="JoiningDate" name="JoiningDate" placeholder="DD/MM/YYYY">
+                </span>
+
+              </div>
+
+              <div class="reason">
+                <label for="Comment">Comment</label>
+                <textarea type="text">As Uber works through a huge amount of internal management turmoil.</textarea>
+              </div>
+
+              <div class="Assign-Permissions">
+                <h2>Assign Permissions</h2>
+                <div class="portal-settings-container">
+
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">ACCOUNT</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone follows me</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone answers on my post</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Email me when someone mentions me</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">APPLICATION</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>New launches and projects</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Monthly product updates</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to newsletter</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="portal-setting">
+                    <!-- <h2 class="label">APPLICATION</h2> -->
+                    <div class="switch-container">
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>New launches and projects</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Monthly product updates</span>
+                      </div>
+                      <div class="switch-container-label">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to newsletter</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                <button type="button" class="blue" data-bs-toggle="modal" data-bs-target="#Approvepopup"> Save Changes
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Approvepopup -->
+      <div class="modal fade" id="Approvepopup" tabindex="-1" aria-labelledby="ApprovepopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-green">Confirm Approve</div>
+              </div>
+
+              <div class="middle-content">
+                <p class="green">Rejecting this will permanently show it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="green"> Create </button>
+                <button type="button" class="blue" data-bs-dismiss="modal" aria-label="Close"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Detetepopup -->
+      <div class="modal fade" id="Rejectpopup" tabindex="-1" aria-labelledby="RejectpopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Confirm Delete</div>
+              </div>
+
+              <div class="middle-content">
+                <p class="red">Deleting this will permanently show it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Delete </button>
+                <button type="button" class="blue" data-bs-dismiss="modal" aria-label="Close"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Boostrp 5 js -->
+  <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+  <!-- main js -->
+  <script src="../../js/main.js"></script>
+</body>
+
 </html>

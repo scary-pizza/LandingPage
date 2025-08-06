@@ -8,7 +8,7 @@
 .header-bar {
   /* background: var(--primary-clr);
    */
-   background-image: url(../../public/User\ Management/user-management-bg.png);
+  background-image: url(../../public/User\ Management/user-management-bg.png);
   background-size: cover;
   background-position: center;
   color: white;
@@ -18,6 +18,14 @@
   justify-content: space-between;
   align-items: start;
   height: 20rem;
+}
+
+.header-bar a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .header-bar img {
@@ -33,17 +41,22 @@
 }
 
 .search-section input {
-  padding: 0.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
+.search-section input:focus {
+  outline: 0;
+}
+
 .search-section img {
-  width: 2rem;
+  width: 5rem;
   cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 0;
+  padding: 1.5rem;
 }
 
 /* Add Member */
@@ -55,12 +68,12 @@
   position: relative;
   top: -4rem;
   border-radius: 1.5rem;
-border: 1.5px solid #FFF;
-background: linear-gradient(113deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.80) 110.84%);
-box-shadow: 0 2px 5.5px 0 rgba(0, 0, 0, 0.02);
-backdrop-filter: blur(10.499999046325684px);
-width: 95%;
-margin: 0 auto;
+  border: 1.5px solid #FFF;
+  background: linear-gradient(113deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.80) 110.84%);
+  box-shadow: 0 2px 5.5px 0 rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10.499999046325684px);
+  width: 95%;
+  margin: 0 auto;
 }
 
 .add-member img {
@@ -71,14 +84,15 @@ margin: 0 auto;
 }
 
 .add-member .info h5 {
+  font-size: 1.5rem;
   margin: 0;
   color: var(--primary-clr);
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .add-member .primary-btn {
   margin-left: auto;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 2rem;
   background: var(--primary-clr);
   color: white;
   border: none;
@@ -88,12 +102,15 @@ margin: 0 auto;
 
 /* Section Title */
 .section-title {
+  margin: 0 5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Cards Grid */
 .cards-grid {
+  margin: 0 5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
@@ -103,12 +120,12 @@ margin: 0 auto;
 .user-card {
   background: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   transition: transform 0.2s;
-    justify-content: center;
+  justify-content: center;
 }
 
 .user-card:hover {
@@ -122,6 +139,7 @@ margin: 0 auto;
 .card-img-wrapper img {
   width: 100%;
   height: 160px;
+  border-radius: 1rem;
   object-fit: cover;
   object-position: top;
 }
@@ -130,10 +148,11 @@ margin: 0 auto;
   position: absolute;
   top: 10px;
   left: 10px;
-  padding: 0.4em 0.6em;
+  padding: 1rem 1.8rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: white;
+  font-family: sans-serif;
 }
 
 .badge.green {
@@ -148,14 +167,14 @@ margin: 0 auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
 .card-body h6 {
   margin: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2D3748;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2D3748;
 }
 
 .card-body .role {
@@ -178,7 +197,7 @@ margin: 0 auto;
 }
 
 .outline-btn {
-  padding: 0.4rem 0.8rem;
+  padding: 1rem 1.8rem;
   border: 1px solid var(--primary-clr);
   color: var(--primary-clr);
   background: transparent;
@@ -196,7 +215,7 @@ margin: 0 auto;
 }
 
 .dropdown-toggle {
-  padding: 0.4rem 0.8rem;
+  padding: 1rem 1.8rem;
   background: var(--primary-clr);
   color: white;
   border: none;
@@ -217,6 +236,21 @@ margin: 0 auto;
   border-radius: 6px
 }
 
+.custom-user-ul {
+  width: 11rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  transform: translate(-12px, 41px) !important;
+}
+
+.custom-user-li {
+  padding: 1rem 1.5rem;
+}
+
 .new-project {
   border-radius: 1.5rem;
   border: 1.5px solid var(--primary-clr);
@@ -228,7 +262,7 @@ margin: 0 auto;
 
 .new-project-div {
   display: flex;
-  margin: 0 auto; 
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
@@ -236,7 +270,15 @@ margin: 0 auto;
 }
 
 .new-project .new-project-div h2 {
-font-size: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.Assign-Permissions {
+  margin-top: 1rem;
+}
+
+.Assign-Permissions h2 {
+  font-size: 1.8rem;
 }
 
 .portal-settings-container {
@@ -261,22 +303,20 @@ font-size: 2.5rem;
 }
 
 .portal-setting .switch-container {
-    flex-direction: column;
-    display: flex
-;
-    gap: 1rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
 }
 
 .portal-setting .switch-container .switch-container-label {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .portal-setting .switch-container .switch-container-label span {
-    font-size: 0.8rem;
-    color: #A0AEC0;
-    text-wrap: nowrap;
+  font-size: 1rem;
+  color: #A0AEC0;
 }
 
 .label {
@@ -305,7 +345,10 @@ font-size: 2.5rem;
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 34px;
@@ -323,11 +366,11 @@ font-size: 2.5rem;
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--primary-clr);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(1.2rem);
 }
 
@@ -335,10 +378,11 @@ input:checked + .slider:before {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .new-project {
     height: 25rem;
   }
-  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -349,7 +393,8 @@ input:checked + .slider:before {
   .new-project {
     height: auto;
   }
-  
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -364,5 +409,13 @@ input:checked + .slider:before {
   .header-bar {
     height: 13rem;
   }
-  
+
+  .search-section {
+    display: none;
+  }
+
+    .section-title, .cards-grid{
+      margin: 2rem;
+    }
+
 }

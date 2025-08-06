@@ -33,6 +33,8 @@
     min-height: 20rem;
 }
 
+
+
 .modal-content .modal-body .full-width-i {
     margin: 2rem 0 0;
     padding: 0 2rem;
@@ -42,6 +44,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .modal-content .modal-body .full-width-i span.input-set label {
     font-size: 1.4rem;
     line-height: 140%;
@@ -50,7 +53,9 @@
     text-align: left;
     margin-bottom: .5rem;
 }
-.modal-content .modal-body .full-width-i span.input-set input, textarea {
+
+.modal-content .modal-body .full-width-i span.input-set input,
+textarea {
     border: none;
     width: 100%;
     border-radius: 6.77px;
@@ -97,6 +102,14 @@
     top: 2rem;
 }
 
+.modal-content .modal-body .middle-upper-card {
+    margin: 7rem 0 0;
+    padding: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
 .modal-content .middle {
     margin: 7rem 0 0;
     display: grid;
@@ -105,23 +118,35 @@
     padding: 0 2rem;
 }
 
-.modal-content .middle-content {
+.modal-content .middle-3 {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.modal-content .margin-zero  {
+    margin-top: 0;
+}
+
+.modal-content .middle-content , .modal-content .middle-3-content {
     margin: 7rem 0 0;
     padding: 0 2rem;
 }
 
-.modal-content .middle-content p.red {
+.modal-content .middle-content , .modal-content .middle-3-content p.red {
     text-align: center;
     font-size: 1.5rem;
     color: var(--primary-red);
 }
 
-.modal-content .middle-content p.green {
+.modal-content .middle-content , .modal-content .middle-3-content p.green {
     text-align: center;
     font-size: 1.5rem;
 }
 
-.modal-content .reason{
+.modal-content .reason {
     display: flex;
     flex-direction: column;
     margin: 2rem;
@@ -153,12 +178,12 @@ select {
 }
 
 
-.modal-content .middle span.input-set {
+.modal-content .middle span.input-set , .modal-content .middle-3 span.input-set {
     display: flex;
     flex-direction: column;
 }
 
-.modal-content .middle span.input-set label {
+.modal-content .middle span.input-set label , .modal-content .middle-3 span.input-set label {
     font-size: 1.4rem;
     line-height: 140%;
     font-family: Helvetica;
@@ -174,7 +199,7 @@ select {
 
 /* Placeholder color */
 
-.modal-content .middle span.input-set input,
+.modal-content .middle span.input-set input, select , .modal-content .middle-3 span.input-set input,
 select {
     border: none;
     width: 100%;
@@ -189,11 +214,10 @@ select {
     padding: 1rem;
 }
 
-.modal-content .middle span.input-set input.status-leave-approve {
+.modal-content .middle span.input-set input.status-leave, .modal-content .middle-3 span.input-set input.status-leave {
     border: none;
     width: 100%;
     border-radius: 6.77px;
-    background-color: var(--nature-green);
     height: 49px;
     overflow: hidden;
     text-align: left;
@@ -202,16 +226,28 @@ select {
     padding: 1rem;
 }
 
-.modal-content .middle span.input-set input.status-leave-approve::placeholder{
+.green {
+    background-color: var(--nature-green) !important;
+}
+
+.red {
+    background-color: var(--primary-red) !important;
+}
+
+.yellow {
+    background-color: var(--salty-orange) !important;
+}
+
+.modal-content .middle span.input-set input.status-leave::placeholder , .modal-content .middle-3 span.input-set input.status-leave::placeholder {
     text-align: center;
     color: var(--white);
 }
 
-.modal-content .middle span.input-set input:focus {
+.modal-content .middle span.input-set input:focus, .modal-content .middle-3 span.input-set input:focus {
     outline: none;
 }
 
-.modal-content .middle span.input-set select {
+.modal-content .middle span.input-set select, .modal-content .middle-3 span.input-set select {
     border: none;
     width: 100%;
     border-radius: 6.77px;
@@ -267,6 +303,12 @@ select {
     font-size: 1.5rem;
 }
 
+.pop-bottom-div p {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 500;
+}
 
 /* Tabs Start*/
 
@@ -351,6 +393,7 @@ select {
     cursor: pointer;
     font-size: 1.5rem;
 }
+
 .modal-content .bottom-btn button.green {
     min-width: 16rem;
     background-color: var(--nature-green);
