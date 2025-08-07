@@ -1,0 +1,9 @@
+.Completed {
+    padding: 5px 10px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff !important;
+    margin-right: 6px;
+    background-color: var(--nature-green);
+    text-align: center;
+}
