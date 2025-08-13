@@ -112,39 +112,172 @@
             </div>
             </header>
 
-            <div class="bed-status-section">
-            <div class="table-controls">
-              <h3 class="table-title">Residents Fine</h3>
-              <div>
-                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AssignFine">Asign Fine +</button>
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Residents Management</a></div>
+              <!-- Popup Btn -->
+              <!-- <span>
+                <button class="add-btn" type="button">Download Excel</button>
+              </span> -->
+            
+            </div>
+
+            <!-- Overview -->
+            <div class="cards">
+              <div class="card">
+                <div class="card-content">
+                  <p>Total Residents</p>
+                  <h3>53,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/student 1.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Checked-In Residents</p>
+                  <h3>49,280</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/walk.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Pending Approvals</p>
+                  <h3>3,720</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/add.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Vacant Beds</p>
+                  <h3>1,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/bunk-bed.png" alt="" />
+                </div>
               </div>
             </div>
-            <div class="table-container">
-              <table class="status-table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Resident Name</th>
-                  <th>Scholar Name</th>
-                  <th>Reason</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="bedTableBody"></tbody>
-            </table>
-            </div>
-            <div class="table-footer">
-              <div>
-                <label>List</label>
-                <select id="rowsPerPageSelect">
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                </select>
-                <span id="totalPagesText"></span>
+
+            <div class="main-content-container">
+            
+              <!-- Pending / Reject Request List -->
+              
+              <div class="table-controls">
+                <h3 class="table-title">Pending / Reject Request List</h3>
+                <div>
+                  <button class="add-btn">Download Excel</button>
+                  <button class="view-btn-top">View All</button>
+                </div>
               </div>
-              <div class="pagination" id="bedPaginationControls"></div>
+              
+              <div class="table-container">
+                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Application ID</th>
+                      <th>Full Name</th>
+                      <th>Contact Number</th>
+                      <th>Application Date</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>20213045</td>
+                      <td>Rajat Pradhan</td>
+                      <td>7024393158</td>
+                      <td>01-Aug-2025</td>
+                      <td style="color: orange;font-weight: 600;">Pending Approval</td>
+                      <td>
+                        <a href="../Hostel Operations/UserProfile.html" class="view-btn">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>80213045</td>
+                      <td>Sangeeta</td>
+                      <td>7024393158</td>
+                      <td>01-Aug-2025</td>
+                      <td style="color: red;font-weight: 600;">Reject</td>
+                      <td>
+                        <a href="../Hostel Operations/UserProfile.html" class="view-btn">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <hr>
+            
+              <!-- Residents List -->
+            
+              <div class="table-controls">
+                <h3 class="table-title">Residents List</h3>
+                <div>
+                  <button class="add-btn">Download Excel</button>
+                  <button class="view-btn-top">View All</button>
+                </div>
+              </div>
+            
+              <div class="table-container">
+                <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                  <thead>
+                    <tr>
+                      <th>S.No</th>
+                      <th>Resident ID / Roll Number</th>
+                      <th>Full Name</th>
+                      <th>Room Number</th>
+                      <th>Bed Number</th>
+                      <th>Contact Number</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>R001</td>
+                      <td>Amit Sharma</td>
+                      <td>101</td>
+                      <td>156</td>
+                      <td>9876543210</td>
+                      <td style="color: green;font-weight: 600;">Active</td>
+                      <td>
+                        <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                        <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                        <a href="../Hostel Operations/UserProfile.html" class="view-btn">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>R001</td>
+                      <td>Amit Sharma</td>
+                      <td>101</td>
+                      <td>156</td>
+                      <td>9876543210</td>
+                      <td style="color: orange;font-weight: 600;">Active</td>
+                      <td>
+                        <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                        <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                        <a href="../Hostel Operations/UserProfile.html" class="view-btn">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            
             </div>
-          </div>
+
+
+            <!-- All Popup -->
 
           <div class="modal fade" id="AssignFine" tabindex="-1" aria-labelledby="AssignFineLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">

@@ -9,7 +9,7 @@
 .header-bar {
   /* background: var(--primary-clr);
    */
-   background-image: url(../../public/User\ Management/user-management-bg.png);
+  background-image: url("../../public/User\ Management/user-management-bg.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -33,8 +33,11 @@
   gap: 0.5rem;
 }
 
-.section-header p {
-    font-size: 0.9rem;
+.section-header p a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
 }
 
 .section-header h3 {
@@ -49,17 +52,22 @@
 }
 
 .search-section input {
-  padding: 0.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
+.search-section input:focus {
+  outline: 0;
+}
+
 .search-section img {
-  width: 2rem;
+  width: 5rem;
   cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 0;
+  padding: 1.5rem;
 }
 
 /* Add Member */
@@ -72,18 +80,18 @@
   position: relative;
   top: -4rem;
   border-radius: 1.5rem;
-border: 1.5px solid #FFF;
-background: linear-gradient(113deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.80) 110.84%);
-box-shadow: 0 2px 5.5px 0 rgba(0, 0, 0, 0.02);
-backdrop-filter: blur(10.499999046325684px);
-width: 95%;
-margin: 0 auto;
+  border: 1.5px solid #FFF;
+  background: linear-gradient(113deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.80) 110.84%);
+  box-shadow: 0 2px 5.5px 0 rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10.499999046325684px);
+  width: 95%;
+  margin: 0 auto;
 }
 
 .add-member .user-details {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .add-member .image-div {
@@ -102,7 +110,7 @@ margin: 0 auto;
 }
 
 .add-member .image-div .icon-div img {
-    width: 1.2rem;
+  width: 1.2rem;
 }
 
 .add-member .profile-photo {
@@ -115,7 +123,8 @@ margin: 0 auto;
 .add-member .info h5 {
   margin: 0;
   color: #2D3748;
-  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .add-member .info p {
@@ -126,13 +135,13 @@ margin: 0 auto;
 }
 
 .add-member .add-member-btn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .add-member .add-member-btn .active-btn {
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
   background: #149D52;
   color: white;
   border: none;
@@ -142,7 +151,7 @@ margin: 0 auto;
 
 .add-member .primary-btn {
   margin-left: auto;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
   background: var(--primary-clr);
   color: white;
   border: none;
@@ -151,7 +160,7 @@ margin: 0 auto;
 }
 
 .add-member .primary-btn span img {
-    width: 1.6rem;
+  width: 1.6rem;
 }
 
 .profile-info-section {
@@ -170,8 +179,9 @@ margin: 0 auto;
   margin-bottom: 2rem;
 }
 
-.profile-info-header h3 {
-  font-size: 1.25rem;
+.profile-info-header h3,
+.info-header h3 {
+  font-size: 2rem;
   font-weight: 600;
   color: #2d3748;
 }
@@ -186,9 +196,10 @@ margin: 0 auto;
   font-size: 0.9rem;
 }
 
-.profile-grid {
+.profile-grid,
+.info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -197,19 +208,29 @@ margin: 0 auto;
   flex-direction: column;
 }
 
-.profile-field label {
-  font-size: 0.85rem;
-  color: #718096;
-  margin-bottom: 0.4rem;
+.profile-field label,
+.field label {
+  font-size: 1.4rem;
+  line-height: 140%;
+  font-family: Helvetica;
+  color: #2d3748;
+  text-align: left;
+  margin-bottom: .5rem;
 }
 
-.profile-field input {
-  padding: 0.75rem 1rem;
+.profile-field input,
+.field input {
   border: none;
-  background-color: #f7fafc;
-  border-radius: 8px;
-  color: #2d3748;
-  font-size: 0.95rem;
+  width: 100%;
+  border-radius: 6.77px;
+  background-color: #F5F7FA;
+  height: 49px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #a0aec0;
+  font-family: Helvetica;
+  padding: 1rem;
 }
 
 .profile-field input:read-only {
@@ -217,9 +238,6 @@ margin: 0 auto;
   cursor: not-allowed;
 }
 
-.address-field {
-  grid-column: span 2;
-}
 
 .info-section {
   background: #fff;
@@ -237,13 +255,9 @@ margin: 0 auto;
   margin-bottom: 1.5rem;
 }
 
-.info-header h3 {
-  font-size: 1.2rem;
-  color: #2d3748;
-}
 
 .info-section h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #4a5568;
   margin-top: 2rem;
   margin-bottom: 0.8rem;
@@ -251,40 +265,22 @@ margin: 0 auto;
 }
 
 .edit-btn {
-  padding: 0.5rem 1.25rem;
-  background-color: #1a202c;
+  padding: 1.5rem 2rem;
+  background-color: var(--primary-clr);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-}
+
 
 .field {
   display: flex;
   flex-direction: column;
 }
 
-.field label {
-  font-size: 0.85rem;
-  color: #718096;
-  margin-bottom: 0.4rem;
-}
-
-.field input {
-  padding: 0.75rem 1rem;
-  border: none;
-  background-color: #f7fafc;
-  border-radius: 8px;
-  color: #2d3748;
-  font-size: 0.95rem;
-}
 
 .field input:read-only {
   background-color: #edf2f7;
@@ -307,6 +303,36 @@ margin: 0 auto;
   font-weight: bold;
 }
 
+.table-container {
+  margin-bottom: 2.5rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.table-header h4 {
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-clr);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
 .table-container {
   margin-bottom: 2.5rem;
 }
@@ -459,18 +485,6 @@ margin: 0 auto;
 }
 
 
-
-@media (max-width: 600px) {
-  .address-field {
-    grid-column: span 1;
-  }
-
-  .edit-btn {
-    font-size: 0.8rem;
-    padding: 0.4rem 1rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
 
   .header-bar {
@@ -491,4 +505,38 @@ margin: 0 auto;
   .attendance-leave-section {
     padding: 1rem;
   }
+}
+
+@media screen and (max-width: 800px) and (min-width: 200px) {
+
+  .profile-grid,
+  .info-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .btn-primary {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .search-section,
+  .active-btn,
+  .add-member-btn, .primary-btn, .add-member-btn{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-bar {
+    height: 13rem;
+  }
+
 }
