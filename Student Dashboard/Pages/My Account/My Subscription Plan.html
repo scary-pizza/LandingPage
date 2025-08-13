@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../css/My Account/subscription.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+      <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-btn-small-screen">&#9776;</button>
+                <h2>Resident Panel</h2>
+                <!-- <button id="toggle-btn">&#9776;</button> -->
+            </div>
+            <input type="text" placeholder="Search" class="search-box" />
+
+            <!-- Overview -->
+            <p>Overview</p>
+            <ul class="nav">
+                <li><a href="../../index.html"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard</a></li>
+            </ul>
+
+            <!-- My Hostel -->
+            <p>My Hostel</p>
+            <ul class="nav">
+                <li ><a href="../My Hostel/ Room Details.html"><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>My Room Details</a></li>
+                <li ><a href="../My Hostel/Check In-out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Check-In / Check-Out</a></li>
+                <li ><a href="../My Hostel/Accessories.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Accessories</a></li>
+            </ul>
+
+            <!-- Attendance & Leave -->
+            <p>Attendance & Leave</p>
+            <ul class="nav">
+                <li ><a href="../Attendance & Leave/MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+                <li ><a href="../Attendance & Leave/leave.html"><span><img src="../../public/dashboard/side menu/leave.png"></span>Leave</a></li>
+            </ul>
+
+            <!-- Support & Services -->
+            <p>Support & Services</p>
+            <ul class="nav">
+                <li><a href="../Support & Services/Grievances Complaints.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances / Complaints</a></li>
+                <li><a href="../Support & Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+            </ul>
+
+            <!-- My Account -->
+            <p>My Account</p>
+            <ul class="nav">
+                <li class="active"><a href="My Subscription Plan.html"><span><img src="../../public/dashboard/side menu/Subscription.png"></span>My Subscription Plan</a></li>
+                <li><a href="Payment History.html"><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payment History</a></li>
+                <li ><a href="Fines & Penalties.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Fines & Penalties</a></li>
+            </ul>
+
+            <!-- Visitors -->
+            <p>Visitors</p>
+            <ul class="nav">
+                <li><a href="../Visitors/Guest.html"><span><img src="../../public/dashboard/side menu/travel.png"></span>Guest Request</a></li>
+            </ul>
+
+            <!-- Notifications -->
+            <p>Notifications</p>
+            <ul class="nav">
+                <li><a href="../Notifications/Notification.html"><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Alerts & Updates</a></li>
+            </ul>
+
+            <!-- Logout Btn -->
+            <ul class="nav">
+                <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button></li>
+            </ul>
+
+      </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rajat Pradhan
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">View Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">My Subscription Plan</a></div>
+
+            </div>
+
+            <section class="plans__container">
+                <div class="plans">
+                    <div class="plansHero">
+                        <h1 class="plansHero__title">Hostel Plans</h1>
+                    </div>
+                    <div class="planItem__container">
+                        <!--free plan starts -->
+                        <div class="planItem planItem--free">
+
+                            <div class="card_subcription">
+                                <div class="card_subcription__header">
+                                    <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                    <h2>Basic Plan</h2>
+                                </div>
+                                <div class="card_subcription__desc">Perfect for residents who need essential services at
+                                    an affordable cost.
+                                </div>
+                            </div>
+
+                            <div class="price">₹499<span>/ month</span></div>
+
+                            <ul class="featureList">
+                                <li>Inclusive Mess Fee</li>
+                                <li>Basic Gym Access</li>
+                                <li>Standard Check-In/Out Timing</li>
+                                <li>Shared Room Facility</li>
+                                <li>Standard Support Priority</li>
+
+                            </ul>
+
+                            <button class="button">Get Started</button>
+                        </div>
+                        <!--free plan ends -->
+
+                        <!--pro plan starts -->
+                        <div class="planItem planItem--pro">
+                            <div class="card_subcription">
+                                <div class="card_subcription__header">
+                                    <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                    <h2>Standard Plan</h2>
+                                    <div class="card_subcription__label label">Active</div>
+                                </div>
+                                <div class="card_subcription__desc">A balanced plan with enhanced facilities for a
+                                    comfortable stay.
+                                    laboris</div>
+                            </div>
+
+                            <div class="price">₹699<span>/ month</span></div>
+
+                            <ul class="featureList">
+                                <li>Inclusive Mess Fee (Premium Menu)</li>
+                                <li>Full Gym Access</li>
+                                <li>Flexible Check-In/Out Timing</li>
+                                <li>Semi-Private Room Facility</li>
+                                <li>High Priority Support</li>
+                            </ul>
+
+                            <button class="button button--pink">Expire on 23 Sep 25</button>
+                        </div>
+                        <!--pro plan ends -->
+
+                        <!--entp plan starts -->
+                        <div class="planItem planItem--free">
+
+                            <div class="card_subcription">
+                                <div class="card_subcription__header">
+                                    <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                    <h2>Premium Plan</h2>
+                                </div>
+                                <div class="card_subcription__desc">Enjoy a premium lifestyle with top-tier facilities
+                                    and priority services.
+                                </div>
+                            </div>
+
+                            <div class="price">₹999<span>/ month</span></div>
+
+                            <ul class="featureList">
+                                <li>Inclusive Mess Fee (Unlimited Meals)</li>
+                                <li>Full Gym + Personal Trainer </li>
+                                <li>24/7 Flexible Check-In/Out </li>
+                                <li>Private Room with Amenities </li>
+                                <li>Top Priority Concierge Service </li>
+                            </ul>
+
+                            <button class="button">Get Started</button>
+                        </div>
+                        <!--entp plan ends -->
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

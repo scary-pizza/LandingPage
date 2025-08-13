@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/table.css">
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <link rel="stylesheet" href="../../css/Finance & Subscription/Payments&Translations.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-btn-small-screen">&#9776;</button>
+                <h2>Resident Panel</h2>
+                <!-- <button id="toggle-btn">&#9776;</button> -->
+            </div>
+            <input type="text" placeholder="Search" class="search-box" />
+
+            <!-- Overview -->
+            <p>Overview</p>
+            <ul class="nav">
+                <li><a href="../../index.html"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard</a></li>
+            </ul>
+
+            <!-- My Hostel -->
+            <p>My Hostel</p>
+            <ul class="nav">
+                <li><a href="My Room Details.html"><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>My Room Details</a></li>
+                <li><a href="Check In-out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Check-In / Check-Out</a></li>
+                <li class="active"><a href="Accessories.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Accessories</a></li>
+            </ul>
+
+            <!-- Attendance & Leave -->
+            <p>Attendance & Leave</p>
+            <ul class="nav">
+                <li><a href="../Attendance & Leave/MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+                <li><a href="../Attendance & Leave/leave.html"><span><img src="../../public/dashboard/side menu/leave.png"></span>Leave</a></li>
+            </ul>
+
+            <!-- Support & Services -->
+            <p>Support & Services</p>
+            <ul class="nav">
+                <li><a href="../Support & Services/Grievances Complaints.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances / Complaints</a><li>
+                <li><a href="../Support & Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+            </ul>
+
+            <!-- My Account -->
+            <p>My Account</p>
+            <ul class="nav">
+                <li><a href="../My Account/My Subscription Plan.html"><span><img src="../../public/dashboard/side menu/Subscription.png"></span>My Subscription Plan</a></li>
+                <li><a href="../My Account/Payment History.html"><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payment History</a></li>
+                <li><a href="../My Account/Fines & Penalties.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Fines & Penalties</a>
+                </li>
+            </ul>
+
+            <!-- Visitors -->
+            <p>Visitors</p>
+            <ul class="nav">
+                <li><a href="../Visitors/Guest.html"><span><img src="../../public/dashboard/side menu/travel.png"></span>Guest Request</a></li>
+            </ul>
+
+            <!-- Notifications -->
+            <p>Notifications</p>
+            <ul class="nav">
+                <li><a href="../Notifications/Notification.html"><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Alerts & Updates</a></li>
+            </ul>
+
+            <!-- Logout Btn -->
+            <ul class="nav">
+                <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button></li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rajat Pradhan
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">View Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">Accessories</a></div>
+                <!-- Popup Btn -->
+                <span>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#RequestAccessories">+
+                        Request Accessories</button>
+                </span>
+
+            </div>
+
+            <!-- Overview -->
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <p>My Accessories</p>
+                        <h3>5</h3>
+                        <p class="subline">Total accessories issued to you</p>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/table.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Pending Requests</p>
+                        <h3>4</h3>
+                        <p class="subline">Awaiting approval from warden</p>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/pending.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Approved Requests</p>
+                        <h3>3</h3>
+                        <p class="subline">Successfully approved and issued</p>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/approved.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Total Payments</p>
+                        <h3>₹1,550</h3>
+                        <p class="subline">Paid for accessories and replacements.</p>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/Subscription.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+
+            <div class="main-content-container">
+
+                <!-- Pending Request -->
+
+                <div class="table-controls">
+                    <h3 class="table-title">Pending Payments</h3>
+                </div>
+
+                <div class="table-container">
+                    <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Date</th>
+                                <th>Transaction ID</th>
+                                <th>Accessory</th>
+                                <th>Request Type</th>
+                                <th>Payment For</th>
+                                <th>Amount (INR)</th>
+                                <th>Duration</th>
+                                <td>Reason</td>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>07-Aug-2025</td>
+                                <td>TXN834521</td>
+                                <td>Mattress</td>
+                                <td>New Issue</td>
+                                <td>Accessory</td>
+                                <td>700</td>
+                                <td>3 months</td>
+                                <td>Available</td>
+                                <td><span style="color: green; font-weight: bold;">Approved</span></td>
+                                <td><button class="green-btn" data-bs-toggle="modal"
+                                        data-bs-target="#ViewStatus">Payment</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>05-Aug-2025</td>
+                                <td>TXN834398</td>
+                                <td>Bucket</td>
+                                <td>Replacement</td>
+                                <td>Damage Fee</td>
+                                <td>150</td>
+                                <td>12 months</td>
+                                <td>Not Available</td>
+                                <td><span style="color: orange; font-weight: bold;">On Hold</span></td>
+                                <td><button class="yellow-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">Not
+                                        Eligible</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>01-Aug-2025</td>
+                                <td>TXN834001</td>
+                                <td>Pillow</td>
+                                <td>New Issue</td>
+                                <td>Accessory</td>
+                                <td>200</td>
+                                <td>24 months</td>
+                                <td>Not Available</td>
+                                <td><span style="color: orange; font-weight: bold;">On Hold</span></td>
+                                <td><button class="yellow-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">Not
+                                        Eligible</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- Request -->
+
+                <div class="table-controls">
+                    <h3 class="table-title">Recent Requests List</h3>
+                </div>
+
+                <div class="table-container">
+                    <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Date</th>
+                                <th>Transaction ID</th>
+                                <th>Accessory</th>
+                                <th>Request Type</th>
+                                <th>Payment For</th>
+                                <th>Amount (INR)</th>
+                                <th>Duration</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>07-Aug-2025</td>
+                                <td>TXN834521</td>
+                                <td>Mattress</td>
+                                <td>New Issue</td>
+                                <td>Accessory</td>
+                                <td>700</td>
+                                <th>33 Months</th>
+                                <td>UPI</td>
+                                <td><span style="color: green; font-weight: bold;">Approved</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View
+                                        Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>05-Aug-2025</td>
+                                <td>TXN834398</td>
+                                <td>Bucket</td>
+                                <td>Replacement</td>
+                                <td>Damage Fee</td>
+                                <td>150</td>
+                                <th>3 Months</th>
+                                <td>Cash</td>
+                                <td><span style="color: orange; font-weight: bold;">Pending</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View
+                                        Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>01-Aug-2025</td>
+                                <td>TXN834001</td>
+                                <td>Pillow</td>
+                                <td>New Issue</td>
+                                <td>Accessory</td>
+                                <td>200</td>
+                                <th>1 Month</th>
+                                <td>Net Banking</td>
+                                <td><span style="color: red; font-weight: bold;">Rejected</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View
+                                        Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Table Close -->
+
+
+
+            <!-- All Popup -->
+
+            <!--  Request List -->
+            <div class="modal fade" id="RequestAccessories" tabindex="-1" aria-labelledby="RequestAccessoriesLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Request New Accessory</div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="SelectHostel">Accessory Type</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Accessory</option>
+                                        <option value="Mattress">Mattress</option>
+                                        <option value="Pillow">Pillow</option>
+                                        <option value="Blanket">Blanket</option>
+                                        <option value="Bucket">Bucket</option>
+                                        <option value="Mug">Mug</option>
+                                        <option value="Chair">Chair</option>
+                                        <option value="Key">Key</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="SelectHostel">Quantity</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Quantity</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="SelectHostel">Request Type</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Request Type</option>
+                                        <option value="New Issue">New Issue</option>
+                                        <option value="Replacement">Replacement</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="SelectDuration">Duration</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Duration</option>
+                                        <option value="1 Month">1 Month</option>
+                                        <option value="3 Months">3 Months</option>
+                                    </select>
+                                </span>
+
+                            </div>
+
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Reason">Reason (optional)</label>
+                                    <input type="text" id="Reason" name="Reason"
+                                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                                        disabled>
+                                </span>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel
+                                </button>
+                                <button type="button" class="green"> Submit
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--  View Status -->
+            <div class="modal fade" id="ViewStatus" tabindex="-1" aria-labelledby="ViewStatusLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Request Accessory Payment</div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="ResidentName">Accessory Type</label>
+                                    <input type="text" id="ResidentName" name="ResidentName" placeholder="Mattress"
+                                        disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="ResidentName">Quantity</label>
+                                    <input type="text" id="ResidentName" name="ResidentName" placeholder="2" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="ResidentName">Request Type</label>
+                                    <input type="text" id="ResidentName" name="ResidentName" placeholder="New Issue"
+                                        disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="SelectDuration">Duration</label>
+                                    <select class="form-select" aria-label="Default select example" disabled>
+                                        <option>Select Duration</option>
+                                        <option value="1 Month" selected>1 Month</option>
+                                        <option value="3 Months">3 Months</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="SelectDuration">Duration</label>
+                                    <select class="form-select" aria-label="Default select example" disabled>
+                                        <option>Select Duration</option>
+                                        <option value="1 Month" selected>1 Month</option>
+                                        <option value="3 Months">3 Months</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Status">Status</label>
+                                    <input type="text" class="status-leave green" id="Status" name="Status"
+                                        placeholder="Approve" disabled="">
+                                </span>
+
+                            </div>
+
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Reason">Reason (optional)</label>
+                                    <input type="text" id="Reason" name="Reason"
+                                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                                        disabled>
+                                </span>
+                            </div>
+
+
+                            <div class="full-width-i">
+
+                                <span class="input-set">
+                                    <label for="Reason">Warden Message</label>
+                                    <input type="text" id="Reason" name="Reason"
+                                        placeholder="We are approve your request. Please contact us for further information "
+                                        disabled>
+                                </span>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Withdrawal
+                                    Request
+                                </button>
+                                <button type="button" class="green"> Proceed to Payment</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

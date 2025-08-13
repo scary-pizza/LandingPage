@@ -1,0 +1,301 @@
+.cards{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.attendance-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.attendance-comparison,
+.weekly-attendance {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-comparison-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.attendance-comparison {
+  flex: 2;
+  width: 100%;
+}
+
+.weekly-attendance {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.attendance-comparison h4,
+.weekly-attendance h4 {
+  font-weight: 600;
+  color: var(--primary-clr);
+}
+
+.attendance-toggle {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.attendance-chart .attendance-chart-bg .days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendance-chart .attendance-chart-bg .Present-day {
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding: 1rem 1.3rem;
+  margin: .2rem;
+  border-radius: .5rem;
+  background-color: green;
+  color: var(--white);
+}
+
+.attendance-chart .attendance-chart-bg .absence-day {
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding: 1rem 1.3rem;
+  margin: .2rem;
+  border-radius: .5rem;
+  background-color: red;
+  color: var(--white);
+}
+
+.attendance-chart .attendance-chart-bg .normal-day {
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding: 1rem 1.3rem;
+  margin: .2rem;
+  border-radius: .5rem;
+  border: 1px solid #dee2e6;
+  color: #333;
+}
+
+.attendance-chart .attendance-chart-bg a {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  margin: .2rem;
+  border-radius: .5rem;
+}
+
+.attendance-chart-bg {
+  background-color: #F8FAFC;
+}
+
+.another-p {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.attendance-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.weekly-attendance .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekly-attendance .date-box {
+  background-color: var(--primary-clr);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.apexcharts-flip-y {
+  transform: scaleY(-1) translateY(-100%);
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+.apexcharts-flip-x {
+  transform: scaleX(-1);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.apexcharts-legend {
+  display: flex;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+.apexcharts-legend.apexcharts-legend-group-horizontal {
+  flex-direction: column;
+}
+
+.apexcharts-legend-group {
+  display: flex;
+}
+
+.apexcharts-legend-group-vertical {
+  flex-direction: column-reverse;
+}
+
+.apexcharts-legend.apx-legend-position-bottom,
+.apexcharts-legend.apx-legend-position-top {
+  flex-wrap: wrap
+}
+
+.apexcharts-legend.apx-legend-position-right,
+.apexcharts-legend.apx-legend-position-left {
+  flex-direction: column;
+  bottom: 0;
+}
+
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left,
+.apexcharts-legend.apx-legend-position-top.apexcharts-align-left,
+.apexcharts-legend.apx-legend-position-right,
+.apexcharts-legend.apx-legend-position-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
+.apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-right,
+.apexcharts-legend.apx-legend-position-top.apexcharts-align-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.apexcharts-legend-series {
+  cursor: pointer;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.apexcharts-legend-text {
+  position: relative;
+  font-size: 14px;
+}
+
+.apexcharts-legend-text *,
+.apexcharts-legend-marker * {
+  pointer-events: none;
+}
+
+.apexcharts-legend-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+.apexcharts-legend-series.apexcharts-no-click {
+  cursor: auto;
+}
+
+.apexcharts-legend .apexcharts-hidden-zero-series,
+.apexcharts-legend .apexcharts-hidden-null-series {
+  display: none !important;
+}
+
+.apexcharts-inactive-legend {
+  opacity: 0.45;
+}
+
+
+/* messAttendance.css */
+
+/* Attendance Chart Section */
+.attendance-chart {
+  margin: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-chart .day-box {
+  display: inline-block;
+  width: 5rem;
+  /* height: 35px; */
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+}
+
+.attendance-chart .legend {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+
+.attendance-chart .legend-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Attendance Status Colors */
+.day-thump {
+  background-color: #28a745;
+}
+
+.day-not-thump {
+  background-color: #dc3545;
+}
+
+.day-holiday {
+  background-color: #fd7e14;
+}
+
+/* Top Controls */
+.attendance-top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.attendance-top-controls .btn {
+  margin-left: 10px;
+}
+
+.attendance-title {
+  font-weight: 600;
+  font-size: 18px;
+}

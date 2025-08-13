@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/table.css">
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <link rel="stylesheet" href="../../css/Finance & Subscription/Payments&Translations.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+      <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-btn-small-screen">&#9776;</button>
+                <h2>Resident Panel</h2>
+                <!-- <button id="toggle-btn">&#9776;</button> -->
+            </div>
+            <input type="text" placeholder="Search" class="search-box" />
+
+            <!-- Overview -->
+            <p>Overview</p>
+            <ul class="nav">
+                <li><a href="../../index.html"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard</a></li>
+            </ul>
+
+            <!-- My Hostel -->
+            <p>My Hostel</p>
+            <ul class="nav">
+                <li ><a href="../My Hostel/ Room Details.html"><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>My Room Details</a></li>
+                <li ><a href="../My Hostel/Check In-out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Check-In / Check-Out</a></li>
+                <li ><a href="../My Hostel/Accessories.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Accessories</a></li>
+            </ul>
+
+            <!-- Attendance & Leave -->
+            <p>Attendance & Leave</p>
+            <ul class="nav">
+                <li ><a href="../Attendance & Leave/MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+                <li ><a href="../Attendance & Leave/leave.html"><span><img src="../../public/dashboard/side menu/leave.png"></span>Leave</a></li>
+            </ul>
+
+            <!-- Support & Services -->
+            <p>Support & Services</p>
+            <ul class="nav">
+                <li ><a href="../Support & Services/Grievances Complaints.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances / Complaints</a></li>
+                <li ><a href="../Support & Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+            </ul>
+
+            <!-- My Account -->
+            <p>My Account</p>
+            <ul class="nav">
+                <li ><a href="../My Account/Subscription Plan.html"><span><img src="../../public/dashboard/side menu/Subscription.png"></span>My Subscription Plan</a></li>
+                <li><a href="../My Account/Payment History.html"><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payment History</a></li>
+                <li ><a href="../My Account/Fines & Penalties.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Fines & Penalties</a></li>
+            </ul>
+
+            <!-- Visitors -->
+            <p>Visitors</p>
+            <ul class="nav">
+                <li class="active"><a href="Guest.html"><span><img src="../../public/dashboard/side menu/travel.png"></span>Guest Request</a></li>
+            </ul>
+
+            <!-- Notifications -->
+            <p>Notifications</p>
+            <ul class="nav">
+                <li><a href="../Notifications/Notification.html"><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Alerts & Updates</a></li>
+            </ul>
+
+            <!-- Logout Btn -->
+            <ul class="nav">
+                <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button></li>
+            </ul>
+
+      </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rajat Pradhan
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">View Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">Room Details</a></div>
+                <!-- Popup Btn -->
+                <span>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#GenerateGatePass">+
+                        Generate Visitors Gate Pass</button>
+                </span>
+
+            </div>
+
+            <!-- Hostel Overview -->
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Total Requests</p>
+                        <h3>300</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/walk.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Approved Guests</p>
+                        <h3>205 </h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/add.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Pending Requests</p>
+                        <h3>2 </h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/floor.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Rejected Requests</p>
+                        <h3>12</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/min.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+
+            <div class="main-content-container">
+
+
+                <!-- Pending Request -->
+
+                <div class="table-controls">
+                    <h3 class="table-title">Recent Visitors</h3>
+                </div>
+
+                <div class="table-container">
+                    <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Guest Name</th>
+                                <th>Relation</th>
+                                <th>Visit Date</th>
+                                <th>Visit Time</th>
+                                <th>Stay Duration</th>
+                                <th>Purpose</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GR-101</td>
+                                <td>Rahul Sharma</td>
+                                <td>Brother</td>
+                                <td>2025-08-15</td>
+                                <td>10:00 AM</td>
+                                <td>2 Hours</td>
+                                <td>Meeting</td>
+                                <td><span style="color: green; font-weight: bold;">Approved</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>GR-102</td>
+                                <td>Priya Verma</td>
+                                <td>Sister</td>
+                                <td>2025-08-12</td>
+                                <td>05:00 PM</td>
+                                <td>1 Night</td>
+                                <td>Family Visit</td>
+                                <td><span style="color: orange; font-weight: bold;">Pending</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>GR-103</td>
+                                <td>Vikram Singh</td>
+                                <td>Friend</td>
+                                <td>2025-08-10</td>
+                                <td>03:00 PM</td>
+                                <td>3 Hours</td>
+                                <td>Work Discussion</td>
+                                <td><span style="color: red; font-weight: bold;">Rejected</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#ViewStatus">View Detail</button></td>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Table Close -->
+
+
+
+            <!-- All Popup -->
+
+            <!--  Generate Visitors Gate Pass -->
+            <div class="modal fade" id="GenerateGatePass" tabindex="-1" aria-labelledby="GenerateGatePassLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Generate Visitors Gate Pass</div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="GuestName">Guest Name</label>
+                                    <input type="text" id="GuestName" name="GuestName" placeholder="Rajat Pradhan"
+                                        >
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="GuestContactNumber">Guest Contact Number</label>
+                                    <input type="text" id="GuestContactNumber" name="GuestContactNumber" placeholder="7024393158">
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="VisitDate">Visit Date</label>
+                                    <input type="date" id="VisitDate" name="VisitDate" >
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="VisitTime">Visit Time</label>
+                                    <input type="time" id="VisitTIme" name="VisitTIme" >
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Realation">Realation of Visitor</label>
+                                    <input type="text" id="Realation" name="Realation" placeholder="Brother">
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="StayDuration">Stay Duration</label>
+                                    <input type="text" id="StayDuration" name="StayDuration" placeholder="1 Day">
+                                </span>
+
+                            </div>
+
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="PurposeofVisit">Purpose of Visit</label>
+                                    <textarea name="PurposeofVisit" id="PurposeofVisit"
+                                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem  lorem"></textarea>
+                                </span>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel
+                                </button>
+                                <button type="button" class="yellow"> Send to Security
+                                </button>
+                                <button type="button" class="green"> Send to Admin
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--  View Status -->
+            <div class="modal fade" id="ViewStatus" tabindex="-1" aria-labelledby="ViewStatusLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Visitors Gate Pass Details</div>
+                            </div>
+
+                            <div class="middle">
+                            
+                                <span class="input-set">
+                                    <label for="GuestName">Guest Name</label>
+                                    <input type="text" id="GuestName" name="GuestName" placeholder="Rajat Pradhan" disabled>
+                                </span>
+                            
+                                <span class="input-set">
+                                    <label for="GuestContactNumber">Guest Contact Number</label>
+                                    <input type="text" id="GuestContactNumber" name="GuestContactNumber" placeholder="7024393158" disabled>
+                                </span>
+                            
+                                <span class="input-set">
+                                    <label for="VisitDate">Visit Date</label>
+                                    <input type="text" id="VisitDate" placeholder="25/05/2025" disabled>
+                                </span>
+                            
+                                <span class="input-set">
+                                    <label for="VisitTime">Visit Time</label>
+                                    <input type="text" id="VisitTIme" placeholder="12:33 PM" disabled>
+                                </span>
+                            
+                                <span class="input-set">
+                                    <label for="Realation">Realation of Visitor</label>
+                                    <input type="text" id="Realation" name="Realation" placeholder="Brother" disabled>
+                                </span>
+                            
+                                <span class="input-set">
+                                    <label for="StayDuration">Stay Duration</label>
+                                    <input type="text" id="StayDuration" name="StayDuration" placeholder="1 Day" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Status">Status</label>
+                                    <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Approve By Admin" disabled="">
+                                </span>
+                            
+                            </div>
+
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="PurposeofVisit">Purpose of Visit</label>
+                                    <textarea name="PurposeofVisit" id="PurposeofVisit"
+                                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem  lorem" disabled></textarea>
+                                </span>
+                            </div>
+
+                            <div class="full-width-i">
+
+                                <span class="input-set">
+                                    <label for="Reason">Warden Message</label>
+                                    <input type="text" id="Reason" name="Reason"
+                                        placeholder="We are approve your request. Please contact us for further information "
+                                        disabled>
+                                </span>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Close
+                                </button>
+                                <button type="button" class="green"> Download Pass (PDF)
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

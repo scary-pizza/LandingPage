@@ -1,0 +1,97 @@
+body {
+  font-size: 1.3rem;
+}
+
+.receipt-container {
+  background: white;
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #000;
+  padding: 20px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+
+header .logo img {
+  width: 45%;
+}
+
+header .school-details {
+  text-align: left;
+  flex: 1;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+header .receipt-tag {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  background-color: var(--primary-clr);
+  color: var(--white);
+  font-weight: 400;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.meta,
+.student-details,
+.summary,
+.remarks {
+  margin-top: 15px;
+}
+
+.meta div,
+.student-details p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.fees-table th,
+.fees-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.summary p {
+  margin: 5px 0;
+}
+
+.remarks .note {
+  font-size: 12px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.remarks .sign {
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .meta div,
+  .student-details p {
+    display: block;
+    margin-bottom: 5px;
+  }
+}

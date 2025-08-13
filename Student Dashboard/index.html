@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boostrp 5 css -->
+  <link rel="stylesheet" href="./css/Boostrap/bootstrap.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/mainStyle.css" />
+  <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
+  <link rel="stylesheet" href="css/popup&tabs.css">
+  <link rel="stylesheet" href="css/error.css">
+  <title>Resident Panel Dashboard</title>
+</head>
+
+<body>
+  <div class="main-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button id="toggle-btn-small-screen">&#9776;</button>
+        <h2>Resident Panel</h2>
+        <!-- <button id="toggle-btn">&#9776;</button> -->
+      </div>
+      <input type="text" placeholder="Search" class="search-box" />
+
+      <!-- Overview -->
+      <p>Overview</p>
+      <ul class="nav">
+        <li class="active"><a href="index.html"><span><img src="public/dashboard/side menu/dashboard.png"></span>
+            Dashboard</a></li>
+      </ul>
+
+      <!-- My Hostel -->
+      <p>My Hostel</p>
+      <ul class="nav">
+        <li><a href="Pages/My Hostel/My Room Details.html"><span><img
+                src="public/dashboard/side menu/Hostel Management.png"></span>My Room Details</a></li>
+        <li><a href="Pages/My Hostel/Check In-out.html"><span><img
+                src="public/dashboard/side menu/Campus Check In-Out.png"></span>Check-In /
+            Check-Out</a></li>
+        <li><a href="Pages/My Hostel/Accessories.html"><span><img
+                src="public/dashboard/side menu/Bed Management.png"></span>Accessories</a></li>
+        </li>
+      </ul>
+
+      <!-- Attendance & Leave -->
+      <p>Attendance & Leave</p>
+      <ul class="nav">
+        <li><a href="Pages/Attendance & Leave/MessAttendance.html"><span><img
+                src="public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+        <li><a href="Pages/Attendance & Leave/leave.html"><span><img
+                src="public/dashboard/side menu/leave.png"></span>Leave</a></li>
+      </ul>
+
+      <!-- Support & Services -->
+      <p>Support & Services</p>
+      <ul class="nav">
+        <li><a href="Pages/Support & Services/Grievances Complaints.html"><span><img
+                src="public/dashboard/side menu/Grievances Management.png"></span>Grievances /
+            Complaints</a></li>
+        <li><a href=""><span><img src="public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+      </ul>
+
+      <!-- My Account -->
+      <p>My Account</p>
+      <ul class="nav">
+        <li><a href="Pages/My Account/My Subscription Plan.html"><span><img
+                src="public/dashboard/side menu/Subscription.png"></span>My Subscription Plan</a></li>
+        <li><a href="Pages/My Account/Payment History.html"><span><img
+                src="public/dashboard/side menu/Payments & Translations.png"></span>Payment
+            History</a></li>
+        <li><a href="Pages/My Account/Fines & Penalties.html"><span><img
+                src="public/dashboard/side menu/Assign Fine.png"></span>Fines & Penalties</a></li>
+      </ul>
+
+      <!-- Visitors -->
+      <p>Visitors</p>
+      <ul class="nav">
+        <li><a href="Pages/Visitors/Guest.html"><span><img src="public/dashboard/side menu/travel.png"></span>Guest Request</a></li>
+      </ul>
+
+      <!-- Notifications -->
+      <p>Notifications</p>
+      <ul class="nav">
+        <li><a href="Pages/Notifications/Notification.html"><span><img src="public/dashboard/side menu/Notification & Alerts.png"></span>Alerts & Updates</a>
+        </li>
+      </ul>
+
+      <!-- Logout Btn -->
+      <ul class="nav">
+        <li><button class="logout" data-bs-toggle="modal" data-bs-target="#RedPopup"> <img src="public/dashboard/side menu/logout.png"> Log Out</button></li>
+      </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="topbar">
+        <button id="toggle-btn">&#9776;</button>
+        <div class="topbar-right">
+          <input type="text" class="search-bar" placeholder="Search" />
+
+          <div class="user-section">
+            <span class="user-initial">A</span>
+          </div>
+
+          <div class="dropdown">
+            <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rajat Pradhan
+            </button>
+            <ul class="dropdown-menu custom-style-ul">
+              <li><a class="dropdown-item custom-style-li" href="Pages/My Account/Resident Profile.html">View
+                  Profile</a></li>
+              <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+              <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </header>
+
+      <!-- Dashboard content -->
+      <section class="dashboard">
+        <div class="dashboard-content-top-wrapper">
+          <div class="hostel-overview">
+
+            <!-- breadcrumbs -->
+            <div class="breadcrumbs"><a href="">Overview</a></div>
+
+            <!-- Hostel Overview -->
+            <div class="cards">
+              <div class="card">
+                <div class="card-content">
+                  <p>Hostel Name</p>
+                  <h3>Hostel One</h3>
+                </div>
+                <div class="card-image">
+                  <img src="./public/dashboard/Hostel Management.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Room Number</p>
+                  <h3>205 </h3>
+                </div>
+                <div class="card-image">
+                  <img src="./public/dashboard/livingroom.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Floor Number</p>
+                  <h3>2nd Floor </h3>
+                </div>
+                <div class="card-image">
+                  <img src="./public/dashboard/floor.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Bed Number</p>
+                  <h3>B-12</h3>
+                </div>
+                <div class="card-image">
+                  <img src="./public/dashboard/bunk-bed.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Graph Placeholder -->
+            <div class="chart">
+              <h4>Resident Attendance Chart</h4>
+              <p>Mess Attendance Overview (Monthly)</p>
+              <div class="graph-placeholder">
+                <div id="student-registration-chart" class="graph-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pending Requests / Status -->
+          <div class="student-info">
+            <div class="pending-requests">
+              <div class="pending-requests-header">
+                <h4>Pending Requests</h4>
+                <button>View</button>
+              </div>
+              <p class="pending-requests-text">Youre All Request</p>
+              <div class="card-box">
+                <table>
+                  <thead class="table-header">
+                    <tr>
+                      <th>Sr No</th>
+                      <th>Request For</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <div class="student-name">Accessory Request</div>
+                      </td>
+                      <td>
+                        <button class="green-btn" disabled>Approved</button>
+                      </td>
+                      <td>
+                        <button class="edit-btn">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        <div class="student-name">Room Cleaning Request</div>
+                      </td>
+                      <td>
+                        <button class="green-btn" disabled>Approved</button>
+                      </td>
+                      <td>
+                        <button class="edit-btn">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="student-updates">
+              <div class="pending-requests-header">
+                <h4>Check In and Out Updates</h4>
+                <button>View</button>
+              </div>
+              <p class="pending-requests-text">
+                Check In and Out Status from Campus
+              </p>
+              <div class="card-box">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sr No</th>
+                      <th>Name</th>
+                      <th>Check Out</th>
+                      <th>Check In</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <div class="student-name">
+                          Rajat
+                        </div>
+                      </td>
+                      <td>Out 12:30</td>
+                      <td>In 08:30 </td>
+                      <td>
+                        <button class="edit-btn">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        <div class="student-name">
+                          Amresh
+                        </div>
+                      </td>
+                      <td>Out 12:30</td>
+                      <td>In 08:30 </td>
+                      <td>
+                        <button class="edit-btn">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hostel-status-section">
+          <h3 class="hostel-status-title">Resident Status Card</h3>
+          <div class="hostel-status-container">
+            <!--  Stay Details -->
+            <div class="hostel-progress-card">
+              <div class="progress-circle">
+                <svg>
+                  <circle cx="60" cy="60" r="50"></circle>
+                  <circle cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="progress-value">70%</div>
+              </div>
+              <div class="hostel-name">Stay Progress</div>
+            </div>
+
+            <!-- Personal Stay Details -->
+            <div class="fee-details">
+              <h4>Personal Stay Details</h4>
+              <ul>
+                <li><span>Join Date</span> 05 Jan 2025</li>
+                <li><span>Contract End Date</span> 31 Dec 2025</li>
+                <li><span>Total Days Stayed</span> 90</li>
+                <li><span>Days Remaining</span> 275</li>
+                <li><span>Leave Taken</span> 05</li>
+              </ul>
+            </div>
+
+            <!-- Mess Attendance -->
+            <div class="assets">
+              <h4>Mess Attendance</h4>
+              <ul>
+                <li><span>Breakfast</span> 85 Days</li>
+                <li><span>Lunch</span> 88 Days</li>
+                <li><span>Dinner</span> 82 Days</li>
+                <li><span>Missed Meals</span> 10 Days</li>
+                <li><span>Events / Special Meals</span> 4</li>
+              </ul>
+            </div>
+
+            <!-- Hostel Stats -->
+            <div class="hostel-stats">
+              <div class="stat-card"> <span>
+                  <p>Total Leave</p> <strong>05</strong>
+                </span></div>
+              <div class="stat-card"> <span>
+                  <p>Mess Attendance %</p> <strong>92%</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Accessory Requests</p> <strong>3 Requests</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Pending Requests</p> <strong>2 Requests</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Approved Requests</p> <strong>5 Requests</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Rejected Requests</p> <strong>1 Requests</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Total Guest visit</p> <strong>90</strong>
+                </span> </div>
+              <div class="stat-card"> <span>
+                  <p>Total Check In-Out</p> <strong>210</strong>
+                </span> </div>
+
+              <!-- Action Buttons -->
+              <div class="hostel-actions">
+                <button class="edit" data-bs-toggle="modal" data-bs-target="#RequestLeave">Request Leave</button>
+              </div>
+
+              <div class="hostel-actions">
+                <button class="delete" data-bs-toggle="modal" data-bs-target="#SubmitComplaintPopup"> Submit
+                  Complaint</button>
+              </div>
+
+              <div class="hostel-actions">
+                <button class="remove" data-bs-toggle="modal" data-bs-target="#RequestAccessories">Request
+                  Accessory</button>
+              </div>
+
+              <div class="hostel-actions">
+                <button class="add" data-bs-toggle="modal" data-bs-target="#ViewAttendance">View Attendance</button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- All Popup -->
+
+      <!-- Request Leave Form -->
+      <div class="modal fade" id="RequestLeave" tabindex="-1" aria-labelledby="RequestLeaveLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Request Leave</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="LeaveType">Leave Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Leave Type</option>
+                    <option value="personal">Personal</option>
+                    <option value="medical">Medical</option>
+                    <option value="emergency">Emergency</option>
+                    <option value="others">Others</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="FromDate">From Date</label>
+                  <input type="date" id="FromDate" name="FromDate" placeholder="Select From Date">
+                </span>
+
+                <span class="input-set">
+                  <label for="ToDate">To Date</label>
+                  <input type="date" id="ToDate" name="ToDate" placeholder="Select From Date">
+                </span>
+
+              </div>
+
+              <div class="reason">
+                <label for="Reason">Reason</label>
+                <textarea type="text" placeholder="Enter your reason..."></textarea>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                <button type="button" class="blue"> Submit Request</button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Complaint Form -->
+      <div class="modal fade" id="SubmitComplaintPopup" tabindex="-1" aria-labelledby="SubmitComplaintPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Raise Complaint</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="ComplaintCategory">Complaint Category</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Category</option>
+                    <option value="room">Room Related</option>
+                    <option value="mess">Mess / Food Quality</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="security">Security</option>
+                    <option value="others">Others</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="FromDate">From Date</label>
+                  <input type="date" id="FromDate" name="FromDate" placeholder="Select From Date">
+                </span>
+
+                <span class="input-set">
+                  <label for="Attachment">Attachment (Optional)</label>
+                  <input type="file" id="Attachment" name="Attachment">
+                </span>
+
+
+              </div>
+
+              <div class="reason">
+                <label for="Subject">Subject</label>
+                <textarea type="text" placeholder="Enter your Short title of your complaint..."></textarea>
+              </div>
+
+              <div class="reason">
+                <label for="Description">Description</label>
+                <textarea type="text" placeholder="Describe the issue..."></textarea>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                <button type="button" class="blue"> Submit Complaint</button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--  Request List -->
+      <div class="modal fade" id="RequestAccessories" tabindex="-1" aria-labelledby="RequestAccessoriesLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Request New Accessory</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="SelectHostel">Accessory Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Accessory</option>
+                    <option value="Mattress">Mattress</option>
+                    <option value="Pillow">Pillow</option>
+                    <option value="Blanket">Blanket</option>
+                    <option value="Bucket">Bucket</option>
+                    <option value="Mug">Mug</option>
+                    <option value="Chair">Chair</option>
+                    <option value="Key">Key</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="SelectHostel">Quantity</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="SelectHostel">Request Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Request Type</option>
+                    <option value="New Issue">New Issue</option>
+                    <option value="Replacement">Replacement</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="full-width-i">
+                <span class="input-set">
+                  <label for="Reason">Reason (optional)</label>
+                  <input type="text" id="Reason" name="Reason"
+                    placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                    disabled>
+                </span>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel
+                </button>
+                <button type="button" class="green"> Submit
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Hostel -->
+      <div class="modal fade" id="AddHostel" tabindex="-1" aria-labelledby="AddHostelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Add Hostel</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="hostelName">Select University</label>
+                  <input type="text" id="SelectUniversity" name="SelectUniversity" placeholder="Select University">
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Hostel Name</label>
+                  <input type="text" id="hostelName" name="hostelName" placeholder="Enter Hostel Name">
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Hostel Code</label>
+                  <input type="text" id="hostelCode" name="hostelCode" placeholder="Enter Hostel Code">
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Numbers of Floors</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="hostelName">Hostel Status</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Status</option>
+                    <option value="Open">Open</option>
+                    <option value="Close">Close</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Add hostel </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SubmitComplaintPopup -->
+      <div class="modal fade" id="SubmitComplaintPopup" tabindex="-1" aria-labelledby="SubmitComplaintPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Confirm Deletion</div>
+              </div>
+
+              <div class="middle-content">
+                <p>Deleting this record will permanently remove it from your system. Proceed with caution.</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Delete </button>
+                <button type="button" class="blue"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Attendance -->
+      <div class="modal fade" id="ViewAttendance" tabindex="-1" aria-labelledby="ViewAttendanceLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title">Attendance</div>
+              </div>
+
+              <div class="middle-content">
+
+
+                <div class="col d-flex">
+                  <div class="flex-fill">
+
+
+                    <div class="card-body">
+                      <div class="attendance-chart">
+                        <p class="mb-3 another-p">No of total attendance days <span class="fw-medium text-dark"> 28
+                            Days</span> </p>
+
+                        <div class="border rounded p-3">
+                          <div class="row">
+                            <div class="col text-center border-end">
+                              <p class="mb-1 another-p">Present</p>
+                              <h5>25</h5>
+                            </div>
+                            <div class="col text-center border-end">
+                              <p class="mb-1 another-p">Absent</p>
+                              <h5>2</h5>
+                            </div>
+                            <div class="col text-center">
+                              <p class="mb-1 another-p">Holidays</p>
+                              <h5>2</h5>
+                            </div>
+                          </div>
+                        </div>
+
+                        <h4>Chart Here</h4>
+
+                        <div class="attendance-chart-bg rounded border p-3 mb-0">
+                          <div class="d-flex align-items-center justify-content-between flex-wrap mb-1">
+                            <h6 class="mb-2">Last 7 Days </h6>
+                            <p class="fs-12 mb-2 another-p">14 May 2025 - 21 May 2025</p>
+                          </div>
+                          <div class="days">
+                            <a href="" class="Present-day">Monday</a>
+                            <a href="" class="Present-day">Tuesday</a>
+                            <a href="" class="Present-day">Wednesday</a>
+                            <a href="" class="Present-day">Thursday</a>
+                            <a href="" class="absence-day">Friday</a>
+                            <a href="" class="normal-day">Saturday</a>
+                            <a href="" class="absence-day">Sunday</a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Remove Room -->
+      <div class="modal fade" id="RequestAccessory" tabindex="-1" aria-labelledby="RequestAccessoryLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Remove Room</div>
+              </div>
+
+              <div class="middle">
+
+                <span class="input-set">
+                  <label for="SelectHostel">Select Hostel</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Hostel</option>
+                    <option value="Hostel 1">Hostel 1</option>
+                    <option value="Hostel 2">Hostel 2</option>
+                    <option value="Hostel 3">Hostel 3</option>
+                    <option value="Hostel 4">Hostel 4</option>
+                    <option value="Hostel 5">Hostel 5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="SelectFloor">Select Floor</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Floor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </span>
+
+                <span class="input-set">
+                  <label for="SelectRoom">Select Room</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Room</option>
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
+                  </select>
+                </span>
+
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> Cancel </button>
+                <button type="button" class="blue"> Remove Room </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- logoutPopup -->
+      <div class="modal fade" id="logoutPopup" tabindex="-1" aria-labelledby="logoutPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <div class="top">
+                <div class="pop-title-remove">Confirm Logout</div>
+              </div>
+
+              <div class="middle-content">
+                <p>Message</p>
+              </div>
+
+              <div class="bottom-btn">
+                <button type="button" class="red"> logout </button>
+                <button type="button" class="blue"> Go Back </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- RedPopup -->
+      <div class="modal fade" id="RedPopup" tabindex="-1" aria-labelledby="RedPopupLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+
+                <div id="error-box">
+                  <div class="dot-ss"></div>
+                  <div class="dot-ss two"></div>
+                  <div class="face2">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth sad"></div>
+                  </div>
+                  <div class="shadow move"></div>
+                  <div class="message">
+                    <h1 class="alert-ss headgt">Error!</h1>
+                    <p class="p-ss">oh no, something went wrong.</p>
+                  </div>
+                  <button class="button-box" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <h1 class="red-ss">Try Again</h1>
+                  </button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- GreenPopup -->
+      <div class="modal fade" id="GreenPopup" tabindex="-1" aria-labelledby="GreenPopupLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+                <div id="success-box">
+                  <div class="dot-ss"></div>
+                  <div class="dot-ss two"></div>
+                  <div class="face">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth happy"></div>
+                  </div>
+                  <div class="shadow scale"></div>
+                  <div class="message">
+                    <h1 class="alert-ss headgt">Success!</h1>
+                    <p class="p-ss">yay, everything is working.</p>
+                  </div>
+                  <button class="button-box" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <h1 class="green-ss">Continue</h1>
+                  </button>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Boostrp 5 js -->
+  <script src="js/Boostrap/bootstrap.bundle.js"></script>
+  <!-- chart js -->
+  <script src="js/apexcharts.min.js"></script>
+  <!-- main js -->
+  <script src="js/main.js"></script>
+  <script src="js/table.js"></script>
+
+</body>
+
+</html>

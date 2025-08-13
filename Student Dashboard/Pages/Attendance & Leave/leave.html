@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/table.css">
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <link rel="stylesheet" href="../../css/Finance & Subscription/Payments&Translations.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-btn-small-screen">&#9776;</button>
+                <h2>Resident Panel</h2>
+                <!-- <button id="toggle-btn">&#9776;</button> -->
+            </div>
+            <input type="text" placeholder="Search" class="search-box" />
+
+            <!-- Overview -->
+            <p>Overview</p>
+            <ul class="nav">
+                <li><a href="../../index.html"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard</a></li>
+            </ul>
+
+            <!-- My Hostel -->
+            <p>My Hostel</p>
+            <ul class="nav">
+                <li ><a href="../My Hostel/ Room Details.html"><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>My Room Details</a></li>
+                <li ><a href="../My Hostel/Check In-out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Check-In / Check-Out</a></li>
+                <li ><a href="../My Hostel/Accessories.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Accessories</a></li>
+            </ul>
+
+            <!-- Attendance & Leave -->
+            <p>Attendance & Leave</p>
+            <ul class="nav">
+                <li><a href="MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+                <li class="active"><a href="leave.html"><span><img src="../../public/dashboard/side menu/leave.png"></span>Leave</a></li>
+            </ul>
+
+            <!-- Support & Services -->
+            <p>Support & Services</p>
+            <ul class="nav">
+                <li><a href="../Support & Services/Grievances Complaints.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances / Complaints</a></li>
+                <li><a href="../Support & Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+            </ul>
+
+            <!-- My Account -->
+            <p>My Account</p>
+            <ul class="nav">
+                <li><a href="../My Account/My Subscription Plan.html"><span><img src="../../public/dashboard/side menu/Subscription.png"></span>My Subscription Plan</a></li>
+                <li><a href="../My Account/Payment History.html"><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payment History</a></li>
+                <li><a href="../My Account/Fines & Penalties.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Fines & Penalties</a>
+                </li>
+            </ul>
+
+            <!-- Visitors -->
+            <p>Visitors</p>
+            <ul class="nav">
+                <li><a href="../Visitors/Guest.html"><span><img src="../../public/dashboard/side menu/travel.png"></span>Guest Request</a></li>
+            </ul>
+
+            <!-- Notifications -->
+            <p>Notifications</p>
+            <ul class="nav">
+                <li><a href="../Notifications/Notification.html"><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Alerts & Updates</a></li>
+            </ul>
+
+            <!-- Logout Btn -->
+            <ul class="nav">
+                <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button></li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rajat Pradhan
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">View Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">Leave Overview</a></div>
+                <!-- Popup Btn -->
+                <span>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#RequestLeave">+
+                        Request Leave</button>
+                </span>
+
+            </div>
+
+            <!-- Overview -->
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Total Leave Days Available</p>
+                        <h3>5</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/date.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Leave Taken</p>
+                        <h3>4</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/approved.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Pending Requests</p>
+                        <h3>3</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/pending.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Rejected Requests</p>
+                        <h3>550</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/dashboard/min.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+
+            <div class="main-content-container">
+
+
+                <!-- Leave Applications Table -->
+
+                <div class="table-controls">
+                    <h3 class="table-title">Leave Applications list</h3>
+                </div>
+
+                <div class="table-container">
+                    <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Leave Type</th>
+                                <th>From Date</th>
+                                <th>To Date</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Medical</td>
+                                <td>2025-08-01</td>
+                                <td>2025-08-03</td>
+                                <td>3</td>
+                                <td>Fever and rest</td>
+                                <td><span style="color: green; font-weight: bold;">Approved</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#RequestLeavedetails">View
+                                        Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Personal</td>
+                                <td>2025-07-20</td>
+                                <td>2025-07-21</td>
+                                <td>2</td>
+                                <td>Family function</td>
+                                <td><span style="color: green; font-weight: bold;">Approved</span></td>
+                                <td><button class="view-btn" data-bs-toggle="modal" data-bs-target="#RequestLeavedetails">View
+                                        Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Table Close -->
+
+
+
+            <!-- All Popup -->
+
+            <!-- Request Leave Form -->
+            <div class="modal fade" id="RequestLeave" tabindex="-1" aria-labelledby="RequestLeaveLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Request Leave</div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="LeaveType">Leave Type</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Leave Type</option>
+                                        <option value="personal">Personal</option>
+                                        <option value="medical">Medical</option>
+                                        <option value="emergency">Emergency</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="FromDate">From Date</label>
+                                    <input type="date" id="FromDate" name="FromDate" placeholder="Select From Date">
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="ToDate">To Date</label>
+                                    <input type="date" id="ToDate" name="ToDate" placeholder="Select From Date">
+                                </span>
+
+                            </div>
+
+                            <div class="reason">
+                                <label for="Reason">Reason</label>
+                                <textarea type="text" placeholder="Enter your reason..."></textarea>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel
+                                </button>
+                                <button type="button" class="blue"> Submit Request</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Leave Form -->
+            <div class="modal fade" id="RequestLeavedetails" tabindex="-1" aria-labelledby="RequestLeavedetailsLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Leave Details </div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="LeaveType">Leave Type</label>
+                                    <input type="text" id="LeaveType" name="LeaveType" placeholder="Medical" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="FromDate">From Date</label>
+                                    <input type="text" id="FromDate" name="FromDate" placeholder="20/05/2025" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="ToDate">To Date</label>
+                                    <input type="text" id="ToDate" name="ToDate" placeholder="30/05/2025" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Status">Status</label>
+                                    <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Approved" disabled>
+                                </span>
+
+                            </div>
+
+                            <div class="reason">
+                                <label for="Reason">Reason</label>
+                                <textarea type="text" placeholder="Enter your reason..." disabled></textarea>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Close
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
