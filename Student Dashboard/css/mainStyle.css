@@ -249,11 +249,6 @@ ol {
   display: none;
 }
 
-
-
-
-
-
 .main-content-container {
   padding: 2rem;
 }
@@ -273,9 +268,6 @@ ol {
   cursor: pointer;
   margin-left: 0.5rem;
 }
-
-
-
 
 /* common css */
 
@@ -377,19 +369,21 @@ ol {
   background-color: var(--primary-clr);
 }
 
+@media screen and (max-width: 1300px) and (min-width: 800px){
+  .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin: 2rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .cards {
     grid-template-columns: repeat(1, 1fr) !important;
-    gap: 1rem;
-    margin: 2rem;
   }
 }
 
