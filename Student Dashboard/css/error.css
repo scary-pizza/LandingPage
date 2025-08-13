@@ -184,6 +184,14 @@ button,
     transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+    #error-box, #success-box {
+        width: 300px;
+        height: 300px;
+        transform: translate(11%, 9%);
+    }
+}
+
 @keyframes bounce {
     50% {
         transform: translateY(-10px);
