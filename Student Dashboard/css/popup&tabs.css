@@ -483,17 +483,17 @@ select {
 @media screen and (max-width: 700px) and (min-width: 200px) {
     .tabset>label {
         font-size: 1rem;
-        padding: 1rem ;
+        padding: 1rem;
         font-weight: 500;
-
-        .modal-content .middle {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .modal-content .bottom-btn {
-            flex-direction: column;
-            gap: 1.5rem;
-            width: 100%;
-        }
     }
+
+    .modal-content .middle {
+        grid-template-columns: repeat(1, 1fr);
     }
+
+    .modal-content .bottom-btn {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+}
