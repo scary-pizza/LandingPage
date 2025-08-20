@@ -35,32 +35,32 @@
         <!-- Hostel Operations -->
         <p>Hostel Operations</p>
         <ul class="nav">
-          <li ><a href="HostelManagement.html" ><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
-          <li><a href="RoomManagement.html"><span><img src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
-          <li><a href="BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
-          <li><a href="BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
-          <li><a href="CampusCheck In-Out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
-          <li><a href="MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
-          <li ><a href="UserManagement.html"><span><img src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
-          <li><a href="StaffManagement.html"><span><img src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
+          <li><a href="../Hostel Operations/HostelManagement.html" ><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
+          <li><a href="../Hostel Operations/RoomManagement.html"><span><img src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
+          <li><a href="../Hostel Operations/BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
+          <li><a href="../Hostel Operations/BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
+          <li><a href="../Hostel Operations/CampusCheck In-Out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
+          <li><a href="../Hostel Operations/MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+          <li><a href="../Hostel Operations/UserManagement.html"><span><img src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
+          <li><a href="../Hostel Operations/StaffManagement.html"><span><img src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
         </ul>
 
         <!-- Resident Services -->
         <p>Resident Services</p>
         <ul class="nav">
-          <li class="active"><a href="ResidentsManagement.html"><span><img src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
-          <li><a href="LeaveManagement.html"><span><img src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
-          <li><a href="GuestManagement.html"><span><img src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
-          <li><a href="GrievancesManagement.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
-          <li><a href="RoomAllocation.html"><span><img src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
-          <li><a href="FinalCheckout.html"><span><img src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
-          <li><a href="Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+          <li><a href="../Resident Services/ResidentsManagement.html"><span><img src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
+          <li><a href="../Resident Services/LeaveManagement.html"><span><img src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
+          <li><a href="../Resident Services/GuestManagement.html"><span><img src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
+          <li><a href="../Resident Services/GrievancesManagement.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
+          <li><a href="../Resident Services/RoomAllocation.html"><span><img src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
+          <li><a href="../Resident Services/FinalCheckout.html"><span><img src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+          <li><a href="../Resident Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
         </ul>
 
         <!-- Inventory & Logistics -->
         <p>Inventory & Logistics</p>
         <ul class="nav">
-          <li><a href=""><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
+          <li  class="active"><a href="InventoryManagement.html"><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
         </ul>
 
         <!-- Finance & Subscription -->
@@ -106,47 +106,241 @@
                     <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
                     <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
                 </ul>
-                </div>
-
+              </div>
 
             </div>
             </header>
 
-            <div class="bed-status-section">
-            <div class="table-controls">
-              <h3 class="table-title">Inventory List</h3>
-              <div>
-                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddAccessory">Add Accessory +</button>
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Inventory Overview</a></div>
+              <!-- Popup Btn -->
+              <span>
+                  <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#additeams"> + Add Item</button>
+              </span> 
+            </div>
+            
+            
+            <!-- Overview -->
+            <div class="cards">
+              <div class="card">
+                <div class="card-content">
+                  <p>Total Items</p>
+                  <h3>53,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/student 1.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>In Stock</p>
+                  <h3>49,280</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/walk.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Low Stock</p>
+                  <h3>3,720</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/add.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Out of Stock</p>
+                  <h3>1,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/bunk-bed.png" alt="" />
+                </div>
               </div>
             </div>
+            
+            <!-- End of Overview -->
+
+            <!-- Pending / Reject Request List -->
+            
+        <div class="main-content-container">
+
+            <div class="table-controls">
+              <h3 class="table-title">Hostel Inventory Items List</h3>
+              <div>
+                <button class="add-btn">Download Excel</button>
+              </div>
+            </div>
+            
             <div class="table-container">
               <table class="status-table">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Accessory Name</th>
-                  <th>Price</th>
-                  <th>Default</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="bedTableBody"></tbody>
-            </table>
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Quantity Available</th>
+                    <th>Reorder Level</th>
+                    <th>Unit</th>
+                    <th>Last Updated</th>
+                    <th>Supplier Name</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ceiling Fan</td>
+                    <td>Fan</td>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>Pcs</td>
+                    <td>18-Aug-2025</td>
+                    <td>Electricals Hub</td>
+                    <td><span style="color: green;font-weight: 600;">In Stock</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#additeams"> + Add More</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Single Bed</td>
+                    <td>Bed</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>Pcs</td>
+                    <td>16-Aug-2025</td>
+                    <td>Comfort Furnitures</td>
+                    <td><span style="color: orange;font-weight: 600;">Low Stock</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#additeams">+ Add More</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Air Cooler</td>
+                    <td>Cooler</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>Pcs</td>
+                    <td>15-Aug-2025</td>
+                    <td>CoolAir Systems</td>
+                    <td><span style="color: red;font-weight: 600;">Out of Stock</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#additeams">+ Add More</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="table-footer">
-              <div>
-                <label>List</label>
-                <select id="rowsPerPageSelect">
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                </select>
-                <span id="totalPagesText"></span>
+
+        </div>
+
+
+        <!-- Pending View-->
+        <div class="modal fade" id="additeams" tabindex="-1" aria-labelledby="additeamsLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+        
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="pagination" id="bedPaginationControls"></div>
+        
+              <div class="modal-body">
+        
+                <div class="top">
+                  <div class="pop-title">Add Item</div>
+                </div>
+        
+                <div class="middle">
+        
+                  <span class="input-set">
+                    <label for="ItemName">Item Name</label>
+                    <input type="text" id="ItemName" name="ItemName" placeholder="Fan">
+                  </span>
+      
+                  <span class="input-set">
+                    <label for="ItemCategory">Item Category</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Select Item Category</option>
+                      <option value="Furniture">Furniture</option>
+                      <option value="Electronics">Electronics</option>
+                      <option value="Medical">Medical</option>
+                      <option value="Stationery">Stationery</option>
+                      <option value="Cleaning">Cleaning</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </span>
+        
+                  <span class="input-set">
+                    <label for="Quantity">Quantity</label>
+                    <input type="number" id="Quantity" name="Quantity" placeholder="5">
+                  </span>
+
+                  <span class="input-set">
+                    <label for="Unit">Unit</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Select Unit</option>
+                      <option value="Pcs">Pcs</option>
+                      <option value="Kg">Kg</option>
+                      <option value="Box">Box</option>
+                      <option value="Set">Set</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </span>
+
+                  <span class="input-set">
+                    <label for="ReorderLevel">Reorder Level (Minimum required stock)</label>
+                    <input type="number" id="ReorderLevel" name="ReorderLevel" placeholder="10">
+                  </span>
+        
+                  <span class="input-set">
+                    <label for="LeaveTakenon">Leave Taken on</label>
+                    <input type="text" id="LeaveTakenon" name="LeaveTakenon" placeholder="25/05/2025">
+                  </span>
+        
+                  <span class="input-set">
+                    <label for="SupplierName">Supplier Name</label>
+                    <input type="text" id="SupplierName" name="SupplierName" placeholder="Rajat Pradhan">
+                  </span>
+        
+                  <span class="input-set">
+                    <label for="SupplierContact">Supplier Contact</label>
+                    <input type="text" id="SupplierContact" name="SupplierContact" placeholder="7024393158">
+                  </span>
+        
+                  <span class="input-set">
+                    <label for="Attachment">Upload Attachment (Optional)</label>
+                    <input type="file" id="Attachment" name="Attachment">
+                  </span>
+        
+                </div>
+        
+                <div class="full-width-i">
+                  <span class="input-set">
+                    <label for="Reason">Reason</label>
+                    <input type="text" id="Reason" name="Reason"
+                      placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"
+                    >
+                  </span>
+                </div>
+        
+                <div class="bottom-btn">
+                  <button type="button" class="red" data-bs-toggle="modal" data-bs-target="#Rejectpopup"> Cancek </button>
+                  <button type="button" class="green" data-bs-toggle="modal" data-bs-target="#Approvepopup"> Add Item </button>
+                </div>
+        
+              </div>
+        
             </div>
           </div>
+        </div>
 
-          <div class="modal fade" id="AddAccessory" tabindex="-1" aria-labelledby="AddAccessory" aria-hidden="true">
+        <div class="modal fade" id="AddAccessory" tabindex="-1" aria-labelledby="AddAccessory" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
 
@@ -204,122 +398,9 @@
 
     </div>
 
-    <script>
-      (function setupBedTable() {
-  const bedData = [
-    { accessoryName: "Hostel One", price: 42, default: 5465 },
-    { accessoryName: "Hostel Two", price: 465, default: 4565 },
-    { accessoryName: "Hostel Three", price: 4, default: 400 },
-    { accessoryName: "Hostel Four", price: 7, default: 789 },
-    { accessoryName: "Hostel Five", price: 10, default: 900 },
-    { accessoryName: "Hostel Six", price: 6, default: 321 },
-    { accessoryName: "Hostel Seven", price: 5, default: 123 },
-    { accessoryName: "Hostel Eight", price: 3, default: 111 },
-    { accessoryName: "Hostel Nine", price: 8, default: 876 },
-    { accessoryName: "Hostel Ten", price: 2, default: 101 },
-  ];
-
-  const tableBody = document.getElementById("bedTableBody");
-  const paginationControls = document.getElementById("bedPaginationControls");
-  const searchInput = document.getElementById("searchInput"); // may be null
-  const totalPagesText = document.getElementById("totalPagesText");
-  const rowsPerPageSelect = document.getElementById("rowsPerPageSelect");
-
-  let activePage = 1;
-  let entriesPerPage = parseInt(rowsPerPageSelect?.value || 5);
-
-  function filterData() {
-    const query = searchInput?.value?.toLowerCase() || "";
-    return bedData.filter((b) =>
-      Object.values(b).some((val) =>
-        val.toString().toLowerCase().includes(query)
-      )
-    );
-  }
-
-  function renderTable(data, page = 1) {
-    const start = (page - 1) * entriesPerPage;
-    const end = start + entriesPerPage;
-    const paginated = data.slice(start, end);
-
-    tableBody.innerHTML = "";
-    paginated.forEach((item, index) => {
-      tableBody.innerHTML += `
-        <tr>
-          <td>${start + index + 1}.</td>
-          <td>${item.accessoryName}</td>
-          <td>${item.price}</td>
-          <td>${item.default}</td>
-          <td class="actions">
-            <button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button>
-          </td>
-        </tr>`;
-    });
-
-    const totalPages = Math.ceil(data.length / entriesPerPage);
-    totalPagesText.innerText = `of ${totalPages}`;
-    renderPagination(data, totalPages);
-  }
-
-  function renderPagination(data, totalPages) {
-    paginationControls.innerHTML = "";
-
-    if (activePage > 1) {
-      const prev = document.createElement("button");
-      prev.textContent = "‹";
-      prev.addEventListener("click", () => changePage(activePage - 1));
-      paginationControls.appendChild(prev);
-    }
-
-    for (let i = 1; i <= totalPages; i++) {
-      const pageBtn = document.createElement("button");
-      pageBtn.textContent = i;
-      if (i === activePage) pageBtn.classList.add("active");
-      pageBtn.addEventListener("click", () => changePage(i));
-      paginationControls.appendChild(pageBtn);
-    }
-
-    if (activePage < totalPages) {
-      const next = document.createElement("button");
-      next.textContent = "›";
-      next.addEventListener("click", () => changePage(activePage + 1));
-      paginationControls.appendChild(next);
-    }
-  }
-
-  function changePage(page) {
-    activePage = page;
-    const filtered = filterData();
-    renderTable(filtered, activePage);
-  }
-
-  // Attach search input listener only if input exists
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      activePage = 1;
-      const filtered = filterData();
-      renderTable(filtered, activePage);
-    });
-  }
-
-  rowsPerPageSelect.addEventListener("change", (e) => {
-    entriesPerPage = parseInt(e.target.value);
-    activePage = 1;
-    const filtered = filterData();
-    renderTable(filtered, activePage);
-  });
-
-  // Initial render
-  const filtered = filterData();
-  renderTable(filtered, activePage);
-})();
-    </script>
 
     <!-- Boostrp 5 js -->
     <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
-    <!-- chart js -->
-    <script src="../../js/apexcharts.min.js"></script>
     <!-- main js -->
     <script src="../../js/main.js"></script>
 </body>

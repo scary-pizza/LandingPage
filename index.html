@@ -10,6 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Bootstrap  v5.2.3 -->
+  <link rel="stylesheet" href="css/Boostrap/bootstrap.css">
   <!-- Common css for navbar and footer -->
   <link rel="stylesheet" href="./css/mainStyle.css" />
   <link rel="stylesheet" href="./css/landing/header.css" />
@@ -21,7 +23,7 @@
   <link rel="stylesheet" href="./css/landing/footer.css" />
   <link rel="stylesheet" href="./css/landing/loginPopup.css" />
   <link rel="stylesheet" href="./public/fonts/stylesheet.css" />
-  <title>Shodh Shikhar</title>
+  <title>RNTU Hostel</title>
 </head>
 
 <body>
@@ -30,10 +32,11 @@
   <header class="main-header">
     <nav class="nav-container">
       <div class="nav-container-left">
-        <div class="navbar-brand">
+        <a href="index.html" class="">
+        <div class="navbar-brand register-header-logo">
           <img src="./public/main-logo.png" alt="RNTU Logo" />
         </div>
-
+        </a>
         <div class="search-bar">
           <input type="text" placeholder="Type Something" />
           <button>
@@ -44,13 +47,13 @@
 
       <div class="nav-container-right">
         <ul class="nav-links">
-          <li><a href="#" class="nav-link">Home</a></li>
-          <li><a href="#" class="nav-link">Services</a></li>
-          <li><a href="#" class="nav-link">Hostels</a></li>
+          <li><a href="#hero-section" class="nav-link">Home</a></li>
+          <li><a href="#support-section" class="nav-link">Services</a></li>
+          <li><a href="#hostel-list-section" class="nav-link">Hostels</a></li>
         </ul>
 
         <div class="nav-btns">
-          <button class="btn-custom btn-register"> <a href="Admin Dashboard/pages/register.html">Register
+          <button class="btn-custom btn-register"> <a href="Register/register.html">Register
               Now</a></button>
           <button class="btn-custom btn-login">Login</button>
         </div>
@@ -63,9 +66,9 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu hidden" id="mobileMenu">
-      <a href="#" class="nav-link">Home</a>
-      <a href="#" class="nav-link">Services</a>
-      <a href="#" class="nav-link">Hostels</a>
+      <a href="#hero-section" class="nav-link">Home</a>
+      <a href="#support-section" class="nav-link">Services</a>
+      <a href="#hostel-list-section" class="nav-link">Hostels</a>
       <button class="btn-custom btn-register">Register Now</button>
       <button class="btn-custom btn-login">Login</button>
     </div>
@@ -108,7 +111,7 @@
                 <!-- <button class="btn-login-submit" type="submit" >
                   Login
                 </button> -->
-                <a  href="Student Dashboard/index.html" class="btn-login-submit" type="submit" >
+                <a href="Student Dashboard/index.html" class="btn-login-submit" type="submit">
                   Login
                 </a>
                 <p class="register-link">
@@ -125,11 +128,12 @@
                 <label for="staffPassword">Password</label>
                 <input type="password" id="staffPassword" placeholder="Enter Password" required />
 
-                <button class="btn-login-submit" type="submit">
+                <!-- <button class="btn-login-submit" type="submit"> Login </button> -->
+                <a href="Admin Dashboard/index.html" class="btn-login-submit" type="submit">
                   Login
-                </button>
-                <p class="register-link">
-                  Forgot password? <a href="../index.html">Reset Here</a>
+                </a>
+
+                <p class="register-link"> Forgot password? <a href="../index.html">Reset Here</a>
                 </p>
               </form>
             </div>
@@ -140,17 +144,17 @@
   </div>
   <!-- hero section -->
 
-  <section class="hero-section">
+  <section class="hero-section" id="hero-section">
     <div class="hero-container swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./public/hero-img-1.jpg" alt="Hostel 1" />
+          <img src="./public/silder-1.jpg" alt="Hostel 1" />
         </div>
         <div class="swiper-slide">
-          <img src="./public/hero-img-1.jpg" alt="Hostel 2" />
+          <img src="./public/slider-2.jpg" alt="Hostel 2" />
         </div>
         <div class="swiper-slide">
-          <img src="./public/hero-img-1.jpg" alt="Hostel 3" />
+          <img src="./public/slider-3.jpg" alt="Hostel 3" />
         </div>
       </div>
 
@@ -175,7 +179,7 @@
 
   <!-- support card section -->
 
-  <section class="support-section">
+  <section class="support-section" id="support-section">
     <div class="support-grid">
       <!-- Card 1 -->
       <div class="support-card">
@@ -242,9 +246,9 @@
             <button class="accordion-header">How to Register ?</button>
             <div class="accordion-body">
               <p>
-                Dolor <strong>almesit amet</strong>, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                You can register by filling out the hostel registration form available at the hostel office or on the
+                official website
+                . Submit the form along with the required documents for Verification.
               </p>
             </div>
           </div>
@@ -284,17 +288,43 @@
         <span>ABOUT US</span>
         <h2>What Make Us The Best Hostel ?</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ipsum
-          suspendisse ultrices gravida risus commodo.
+          Welcome to our hostel — a perfect blend of comfort, safety, and convenience. We understand that choosing the
+          right place
+          to stay is essential for a happy and stress-free life, which is why we focus on providing the best facilities
+          and a
+          homely environment for all our residents.
         </p>
-        <button>Discover More</button>
+
+        <p>
+          We offer spacious, well-furnished rooms designed to ensure maximum comfort, along with 24/7 security and CCTV
+          surveillance to keep you safe. Our healthy and hygienic meals are prepared fresh every day, keeping your
+          well-being our
+          top priority. To support your studies and work, we provide high-speed Wi-Fi and a peaceful atmosphere that
+          helps you
+          stay focused and productive.
+        </p>
+
+        <p>
+          Apart from comfort and safety, we believe in creating a friendly and supportive community where students and
+          professionals can connect, share experiences, and grow together. With affordable pricing, transparent
+          policies, and
+          dedicated hostel staff, we aim to make your stay pleasant and worry-free.
+        </p>
+
+        <p>
+          At our hostel, it’s not just about accommodation — it’s about creating a home away from home where you feel
+          secure,
+          cared for, and motivated every single day.
+        </p>
+
+        <a href="Admin Dashboard/" class="btn-login-submit" type="submit">Register Now</a>
       </div>
     </div>
   </section>
 
   <!-- hostel list section  -->
 
-  <section class="hostel-list-section">
+  <section class="hostel-list-section" id="hostel-list-section">
     <h2 class="section-title">Hostel Lists</h2>
     <div class="hostel-filters-container hide-Scrollbar">
       <div class="hostel-filters">
@@ -308,7 +338,7 @@
     <div class="hostel-grid">
       <!-- Example Card -->
       <div class="hostel-card" data-type="boys">
-        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <img src="./public/hostel.jpg" alt="Hostel Image" />
         <div class="hostel-info">
           <span class="hostel-type">Boys Hostel</span>
           <h3 class="hostel-name">Hostel Name</h3>
@@ -316,7 +346,7 @@
       </div>
 
       <div class="hostel-card" data-type="girls">
-        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <img src="./public/hostel 2.jpg" alt="Hostel Image" />
         <div class="hostel-info">
           <span class="hostel-type">Girls Hostel</span>
           <h3 class="hostel-name">Hostel Name</h3>
@@ -324,7 +354,7 @@
       </div>
 
       <div class="hostel-card" data-type="guest">
-        <img src="./public/hostel-list-img-1.png" alt="Hostel Image" />
+        <img src="./public/hostel 3.jpg" alt="Hostel Image" />
         <div class="hostel-info">
           <span class="hostel-type">Guest Hostel</span>
           <h3 class="hostel-name">Hostel Name</h3>
@@ -446,13 +476,15 @@
     <img src="./public/footer-img.png" class="footer-img" alt="">
   </section>
 
-
+  <!-- Main js -->
   <script src="./js/main.js"></script>
+  <!-- Bootstrap v5.3.7 -->
+  <script src="./js/Boostrap/bootstrap.bundle.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Login Popup functionality
-        const loginBtn = document.getElementById("btn-login");
+      // Login Popup functionality
+      const loginBtn = document.getElementById("btn-login");
       const loginPopup = document.getElementById("loginPopup");
       const closePopupBtn = document.getElementById("closePopup");
       const tabBtns = document.querySelectorAll(".tab-btn");
@@ -465,13 +497,13 @@
         loginBtn.addEventListener("click", () => {
           loginPopup.style.display = "flex";
         });
-        }
+      }
 
-        closePopupBtn.addEventListener("click", () => {
+      closePopupBtn.addEventListener("click", () => {
         loginPopup.style.display = "none";
-        });
+      });
 
-        tabBtns.forEach((btn) => {
+      tabBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           // Remove 'active' from all buttons and add to the clicked one
           tabBtns.forEach((b) => b.classList.remove("active"));
@@ -498,7 +530,7 @@
             formWrapper.style.transform = "translateX(0)";
           }
         });
-        });
+      });
 
       // Initialize by ensuring the student form is visible by default
       document.querySelector(".xfw-student-form").classList.add("xfw-active-form");

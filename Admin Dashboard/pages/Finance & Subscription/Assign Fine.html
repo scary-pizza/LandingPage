@@ -99,10 +99,10 @@
             <ul class="nav">
                 <li><a href="Subscription.html"><span><img
                                 src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
-                <li class="active"><a href="Payments&Translations.html"><span><img
+                <li ><a href="Payments&Translations.html"><span><img
                                 src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments &
                         Translations</a></li>
-                <li><a href="Assign Fine.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a>
+                <li class="active"><a href="Assign Fine.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a>
                 </li>
             </ul>
 
@@ -153,11 +153,11 @@
             <!-- top-breadcrumbs -->
             <div class="top-breadcrumbs">
                 <!-- breadcrumbs -->
-                <div class="breadcrumbs"><a href="">Bed Assignment</a></div>
+                <div class="breadcrumbs"><a href="">Fine Management</a></div>
                 <!-- Popup Btn -->
                 <span>
-                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#BedAssign">+ Assign
-                        Bed</button>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AssignFine">+ Assign
+                        Fine</button>
                 </span>
 
             </div>
@@ -210,7 +210,7 @@
                 <!-- Pending Request -->
 
                 <div class="table-controls">
-                    <h3 class="table-title">Pending Leave Request List</h3>
+                    <h3 class="table-title">Fine List</h3>
                     <div>
                         <button class="add-btn">Download Excel</button>
                         <button class="view-btn-top">View All</button>
@@ -222,43 +222,185 @@
                         <thead>
                             <tr>
                                 <th>S.No</th>
-                                <th>Transaction ID</th>
-                                <th>Student Name</th>
-                                <th>Room No.</th>
-                                <th>Date</th>
-                                <th>Payment For</th>
-                                <th>Amount (INR)</th>
-                                <th>Method</th>
+                                <th>Resident ID</th>
+                                <th>Name</th>
+                                <th>Reason</th>
+                                <th>Fine Amount</th>
                                 <th>Status</th>
+                                <th>Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>TXN7890123</td>
-                                <td>Priya Sharma</td>
-                                <td>204-B</td>
-                                <td>05 Aug 2025</td>
-                                <td>Monthly Rent</td>
-                                <td>₹8,500</td>
-                                <td>UPI</td>
-                                <td>Completed</td>
+                                <td>R101</td>
+                                <td>Amit Sharma</td>
+                                <td>Late Return</td>
+                                <td>₹200</td>
+                                <td style="color: orange; font-weight: bold;">Pending</td>
+                                <td>18-08-2025</td>
+                                <td>
+                                    <button class="green-btn" >Paid Fine</button>
+                                    <button class="delete-btn">Remove Fine</button>
+                                    <button class="view-btn" data-bs-toggle="modal" data-bs-target="#AssignFineDetails">View Fine</button>
+                                </td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>TXN7890123</td>
-                                <td>Rohan Gupta</td>
-                                <td>204-B</td>
-                                <td>05 Aug 2025</td>
-                                <td>Mess Advance</td>
-                                <td>₹4,000</td>
-                                <td>Credit Card</td>
-                                <td class="Completed">Completed</td>
+                                <td>2</td>
+                                <td>R102</td>
+                                <td>Neha Verma</td>
+                                <td>Lost Item</td>
+                                <td>₹500</td>
+                                <td style="color: green; font-weight: bold;">Paid</td>
+                                <td>16-08-2025</td>
+                                <td>
+                                    <button class="green-btn">Paid Fine</button>
+                                    <button class="delete-btn">Remove Fine</button>
+                                    <button class="view-btn" data-bs-toggle="modal" data-bs-target="#AssignFineDetails">View Fine</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
+            </div>
+
+            <!-- All Popup -->
+            
+            <div class="modal fade" id="AssignFine" tabindex="-1" aria-labelledby="AssignFineLabel" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+            
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+            
+                        <div class="modal-body">
+            
+                            <div class="top">
+                                <div class="pop-title">Assign Fine</div>
+                            </div>
+            
+                            <div class="middle">
+            
+                                <span class="input-set">
+                                    <label for="ResidentID/RollNumber">Resident ID / Roll Number</label>
+                                    <input type="text" id="ResidentID/RollNumber" name="ResidentID/RollNumber" placeholder="76464213">
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="FullName">Full Name</label>
+                                    <input type="text" id="FullName" name="FullName" placeholder="Rajat Pradhan">
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="Reason">Select Reason</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Reason</option>
+                                        <option value="late-return">Late Return</option>
+                                        <option value="room-damage">Room Damage</option>
+                                        <option value="lost-item">Lost Item</option>
+                                        <option value="misconduct">Misconduct</option>
+                                    </select>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="FineAmount">Fine Amount (₹)</label>
+                                    <input type="text" id="FineAmount" name="FineAmount" placeholder="4,500">
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Payment Status">Select Payment Status</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Payment Status</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="paid">Paid</option>
+                                    </select>
+                                </span>
+            
+                            </div>
+            
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Discription">Write Discription</label>
+                                    <textarea name="Discription" id="Discription" placeholder="Room Damage "></textarea>
+                                </span>
+                            </div>
+            
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                                <button type="button" class="blue"> Assign Fine </button>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View Details -->
+
+            <div class="modal fade" id="AssignFineDetails" tabindex="-1" aria-labelledby="AssignFineDetailsLabel" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+            
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+            
+                        <div class="modal-body">
+            
+                            <div class="top">
+                                <div class="pop-title">Fine Details (Name of Resident)</div>
+                            </div>
+            
+                            <div class="middle">
+            
+                                <span class="input-set">
+                                    <label for="ResidentID/RollNumber">Resident ID / Roll Number</label>
+                                    <input type="text" id="ResidentID/RollNumber" name="ResidentID/RollNumber" placeholder="76464213" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="FullName">Full Name</label>
+                                    <input type="text" id="FullName" name="FullName" placeholder="Rajat Pradhan" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Reason">Reason</label>
+                                    <input type="text" id="Reason" name="Reason" placeholder="Room Damage" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="FineAmount">Fine Amount (₹)</label>
+                                    <input type="text" id="FineAmount" name="FineAmount" placeholder="4,500" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Status">Status</label>
+                                    <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Paid" disabled>
+                                </span>
+            
+                            </div>
+            
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Discription">Write Discription</label>
+                                    <textarea name="Discription" id="Discription" placeholder="Room Damage " disabled></textarea>
+                                </span>
+                            </div>
+            
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Close </button>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                </div>
             </div>
 
         </main>

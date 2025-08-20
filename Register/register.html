@@ -5,18 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Hostel Registration</title>
-  <link rel="stylesheet" href="../css/register.css" />
-  <link rel="stylesheet" href="../css/mainStyle.css" />
-  <link rel="stylesheet" href="../css/Boostrap/bootstrap.css" />
-  <link rel="stylesheet" href="../css/popup&tabs.css" />
+  <link rel="stylesheet" href="css/Boostrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/register.css" />
+  <link rel="stylesheet" href="css/mainStyle.css" />
+  <link rel="stylesheet" href="css/popup&tabs.css" />
 </head>
 
 <body>
   <section class="register-main-section">
-    <header class="register-header">
-      <div class="register-header-logo">
-        <img src="../public/dashboard/register-logo.png" alt="" />
-      </div>
+
+    <!-- Header Design 1 -->
+
+    <!-- <header class="register-header">
+      <a href="../index.html">
+
+        <div class="register-header-logo">
+          <img src="public/register-logo.png" alt="" />
+        </div>
+
+      </a>
       <div class="register-header-buttons-container">
         <button type="button" class="register-header-button" id="btn-regitser">
           Check Registration Status
@@ -25,121 +32,72 @@
           Login Here
         </button>
       </div>
+    </header> -->
+
+
+    <!-- header design 2 section  -->
+
+    <header class="main-header">
+      <nav class="nav-container">
+        <div class="nav-container-left">
+          <a href="../index.html" class="register-header-logo">
+            <div class="navbar-brand " >
+              <img src="public/register-logo.png" alt="RNTU Logo" />
+            </div>
+          </a>
+          <div class="search-bar">
+            <input type="text" placeholder="Type Something" />
+            <button>
+              <img src="https://img.icons8.com/ios-filled/20/000000/search--v1.png" alt="Search" />
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-container-right">
+          <ul class="nav-links">
+            <!-- <li><a href="#" class="nav-link">Exapmle</a></li> -->
+          </ul>
+
+          <div class="register-header-buttons-container ">
+            <button type="button" class="register-header-button" id="btn-regitser">
+              Check Registration Status
+            </button>
+            <button type="button" class="register-header-button" id="btn-login">
+              Login Here
+            </button>
+          </div>
+
+        </div>
+
+        <!-- <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div> -->
+      </nav>
+
+      <!-- Mobile Menu -->
+      <!-- <div class="mobile-menu hidden" id="mobileMenu">
+        <div class="register-header-buttons-container">
+          <button type="button" class="register-header-button" id="btn-regitser">
+            Check Registration Status
+          </button>
+          <button type="button" class="register-header-button" id="btn-login">
+            Login Here
+          </button>
+        </div>
+      </div> -->
     </header>
 
 
-
-
-
-
-
-    <div class="login-popup-overlay" id="registerPopup">
-      <div class="login-popup">
-        <div class="popup-left">
-          <img src="../public/dashboard/login-popup-img.png" alt="Login Visual" />
-        </div>
-        <div class="popup-right">
-          <button class="close-btn" id="rclosePopup">&times;</button>
-
-          <div class="xfw-form-wrapper-container center-line">
-            <p class="title">Registration Status Check</p>
-            <div class="xfw-form-wrapper-register">
-              <div class="xfw-form-panel xfw-student-form xfw-active-form">
-                <form id="studentLoginForm">
-                  <label for="loginInput">Mobile Number</label>
-                  <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
-
-                  <label for="loginInput">Email Address</label>
-                  <input type="text" id="loginInput" placeholder="Enter Email Address" maxlength="10" required />
-
-
-                  <button class="btn-login-submit" type="submit">
-                    Login
-                  </button>
-                  <p class="register-link">
-                    Don’t have an account? <a href="#">Register Here</a>
-                  </p>
-                </form>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="login-popup-overlay" id="loginPopup">
-      <div class="login-popup">
-        <div class="popup-left">
-          <img src="../public/dashboard/login-popup-img.png" alt="Login Visual" />
-        </div>
-        <div class="popup-right">
-          <button class="close-btn" id="closePopup">&times;</button>
-          <div class="tab-buttons">
-            <button class="tab-btn active" data-tab="student">
-              Student Login
-            </button>
-            <button class="tab-btn" data-tab="staff">Staff Login</button>
-          </div>
-          <div class="xfw-form-wrapper-container">
-            <div class="xfw-form-wrapper">
-              <div class="xfw-form-panel xfw-student-form xfw-active-form">
-                <form id="studentLoginForm">
-                  <label for="loginInput">Mobile Number</label>
-                  <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
-
-                  <div class="otp-container">
-                    <label>OTP</label>
-                    <div class="otp-inputs">
-                      <input type="text" maxlength="1" />
-                      <input type="text" maxlength="1" />
-                      <input type="text" maxlength="1" />
-                      <input type="text" maxlength="1" />
-                      <input type="text" maxlength="1" />
-                      <input type="text" maxlength="1" />
-                    </div>
-                    <small>Didn't receive the OTP?
-                      <a href="#">Resend OTP</a></small>
-                  </div>
-
-                  <button class="btn-login-submit" type="submit">
-                    Login
-                  </button>
-                  <p class="register-link">
-                    Don’t have an account? <a href="#">Register Here</a>
-                  </p>
-                </form>
-              </div>
-
-              <div class="xfw-form-panel xfw-staff-form">
-                <form id="staffLoginForm">
-                  <label for="staffEmail">Email</label>
-                  <input type="email" id="staffEmail" placeholder="Enter Email" required />
-
-                  <label for="staffPassword">Password</label>
-                  <input type="password" id="staffPassword" placeholder="Enter Password" required />
-
-                  <button class="btn-login-submit" type="submit">
-                    Login
-                  </button>
-                  <p class="register-link">
-                    Forgot password? <a href="../index.html">Reset Here</a>
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Righ Image Section -->
 
     <div class="right-blue-section">
       <div class="right-blue-content-section">
-        <img src="../public/dashboard/register-img-1.png" class="right-blue-img-1" alt="" />
-        <img src="../public/dashboard/register-img-2.png" class="right-blue-img-2" alt="" />
+        <img src="public/reg2.png" class="right-blue-img-1" alt="" />
+        <img src="public/reg3.png" class="right-blue-img-2" alt="" />
       </div>
     </div>
-    <div class="container">
+
+    <div class="resigter-container">
       <div class="left-section">
         <h2 class="register-title">Register Here</h2>
         <div class="tabs">
@@ -334,11 +292,177 @@
         </h2>
       </div>
     </div>
+
+    <!-- contact us section  -->
+
+    <section class="main-page-padding">
+      <section class="contact-section">
+        <div class="contact-container">
+          <!-- Left Content -->
+          <div class="contact-info">
+            <p class="contact-subtitle">CONTACT US</p>
+            <h2 class="contact-title">Feel Free To Contact Us Anytime</h2>
+            <p class="contact-description">
+              Thank you for choosing our templates. We provide you best CSS
+              templates at absolutely 100% free of charge. You may support us by
+              sharing our website to your friends.
+            </p>
+            <div class="contact-offer">
+              <div class="offer-circle">
+                <span class="offer-text">OFF<br /><strong>50%</strong></span>
+              </div>
+              <div class="offer-details">
+                <p>
+                  <small>VALID: <strong>24 SEP 2025</strong></small>
+                </p>
+                <p>
+                  <strong>Special Offer <span class="highlight">50%</span> OFF!</strong>
+                </p>
+              </div>
+              <button class="offer-btn">→</button>
+            </div>
+          </div>
+
+          <!-- Right Form -->
+          <div class="contact-form">
+            <img class="contact-form-img-1" src="./public/contact-img-1.png" alt="">
+            <img class="contact-form-img-2" src="./public/contact-img-2.png" alt="">
+            <form id="contactForm">
+              <input type="text" placeholder="Your Name..." required />
+              <input type="email" placeholder="Your E-mail..." required />
+              <textarea placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message Now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="footer-section">
+      <p>Copyright © 2025 RNTU University. All rights reserved.</p>
+      <img src="./public/footer-img.png" class="footer-img" alt="">
+    </section>
+
   </section>
 
-  <!-- <script src="../js/register.js"></script> -->
-  <script src="../js/Boostrap/bootstrap.bundle.js"></script>
-  
+  <!-- All Popup -->
+
+  <!-- Registration Status Check -->
+  <div class="login-popup-overlay" id="registerPopup">
+    <div class="login-popup">
+      <div class="popup-left">
+        <img src="public/reg1.png" alt="Login Visual" />
+      </div>
+      <div class="popup-right">
+        <button class="close-btn" id="rclosePopup">&times;</button>
+
+        <div class="xfw-form-wrapper-container center-line">
+          <p class="title">Registration Status Check</p>
+          <div class="xfw-form-wrapper-register">
+            <div class="xfw-form-panel xfw-form-panel-2 xfw-student-form xfw-active-form">
+              <form id="studentLoginForm">
+                <label for="loginInput">Mobile Number</label>
+                <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" required />
+
+                <label for="loginInput">Email Address</label>
+                <input type="text" id="loginInput" placeholder="Enter Email Address" maxlength="10" required />
+
+
+                <button class="btn-login-submit" type="submit">
+                  Login
+                </button>
+                <p class="register-link">
+                  Don’t have an account? <a href="#">Register Here</a>
+                </p>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Status Check -->
+  <div class="login-popup-overlay" id="loginPopup">
+    <div class="login-popup">
+      <div class="popup-left">
+        <img src="public/reg1.png" alt="Login Visual" />
+      </div>
+      <div class="popup-right">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="student">
+            Student Login
+          </button>
+          <button class="tab-btn" data-tab="staff">Staff Login</button>
+        </div>
+        <div class="xfw-form-wrapper-container">
+          <div class="xfw-form-wrapper">
+            <div class="xfw-form-panel xfw-student-form xfw-active-form">
+              <form id="studentLoginForm">
+                <label for="loginInput">Mobile Number</label>
+                <input type="text" id="loginInput" placeholder="Enter Mobile Number" maxlength="10" />
+
+                <div class="otp-container">
+                  <label>OTP</label>
+                  <div class="otp-inputs">
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                  </div>
+                  <small>Didn't receive the OTP?
+                    <a href="#">Resend OTP</a></small>
+                </div>
+
+                <!-- <button class="btn-login-submit" type="submit"> Login </button> -->
+                <a href="../Student Dashboard/index.html" class="btn-login-submit" type="submit">
+                  Login
+                </a>
+                <p class="register-link">
+                  Don’t have an account? <a href="#">Register Here</a>
+                </p>
+              </form>
+            </div>
+
+            <div class="xfw-form-panel xfw-staff-form">
+              <form id="staffLoginForm">
+                <label for="staffEmail">Email</label>
+                <input type="email" id="staffEmail" placeholder="Enter Email"  />
+
+                <label for="staffPassword">Password</label>
+                <input type="password" id="staffPassword" placeholder="Enter Password"  />
+
+                <!-- <button class="btn-login-submit" type="submit"> Login </button> -->
+                <a href="../Admin Dashboard/index.html" class="btn-login-submit" type="submit">
+                  Login
+                </a>
+                <p class="register-link">
+                  Forgot password? <a href="index.html">Reset Here</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="js/register.js"></script> -->
+  <script src="js/Boostrap/bootstrap.bundle.js"></script>
+
+  <script>
+    // header section javascript
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+
+  </script>
+
   <script>
     // JavaScript for tab functionality (can be merged with register.js)
     document.addEventListener("DOMContentLoaded", () => {

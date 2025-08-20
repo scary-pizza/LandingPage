@@ -111,244 +111,392 @@
 
             </div>
             </header>
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+              <!-- breadcrumbs -->
+              <div class="breadcrumbs"><a href="">Room Allocation Management Overview</a></div>
+              <!-- Popup Btn -->
+              <!-- <span>
+                <button class="add-btn" type="button">Download Excel</button>
+              </span> -->
+            </div>
+            
 
-            <div class="bed-status-section">
+            <!-- Overview -->
+            <div class="cards">
+              <div class="card">
+                <div class="card-content">
+                  <p>Total Requests</p>
+                  <h3>53,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/student 1.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Approved</p>
+                  <h3>49,280</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/walk.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Pending</p>
+                  <h3>3,720</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/add.png" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>Reject</p>
+                  <h3>1,000</h3>
+                </div>
+                <div class="card-image">
+                  <img src="../../public/dashboard/bunk-bed.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- End of Overview -->
+
+            <!-- Pending / Reject Request List -->
+
+            <div class="main-content-container">
+
             <div class="table-controls">
-              <h3 class="table-title">Room Allocation Request List</h3>
+              <h3 class="table-title">Room Allocation Request</h3>
               <div>
-                <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AllocationDetails">Allocation Details</button>
+                <button class="add-btn">Download Excel</button>
+                <button class="view-btn-top">View All</button>
               </div>
             </div>
+
             <div class="table-container">
-              <div class="table-download-button">
-                <button onclick="downloadTableAsExcel('roomAllocation', 'room_allocation.xls')">Download Excel</button>
-              </div>
-              <table class="status-table" id="roomAllocation">
-              <thead>
-                <tr>
-                  <th>S.No</th>
-                  <th>Student Name</th>
-                  <th>Scholar Number</th>
-                  <th>Date</th>
-                  <th>Hostel</th>
-                  <th>Current Room</th>
-                  <th>Change To</th>
-                  <th>Problem or Reason</th>
-                  <th>Priority</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="bedTableBody"></tbody>
-            </table>
+              <table class="status-table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Request ID</th>
+                    <th>Student Name</th>
+                    <th>Scholar Number</th>
+                    <th>Date</th>
+                    <th>Hostel</th>
+                    <th>Current Room</th>
+                    <th>Requested Room</th>
+                    <th>Problem or Reason</th>
+                    <th>Priority</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>REQ-1001</td>
+                    <td>Aman Gupta</td>
+                    <td>20231234</td>
+                    <td>2025-08-20</td>
+                    <td>Hostel A</td>
+                    <td>A-102</td>
+                    <td>B-210</td>
+                    <td>Room too noisy</td>
+                    <td><span style="color: red;font-weight: 600;">High</span></td>
+                      <td>
+                        <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                        <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                        <button class="view-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">View</button>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>REQ-1002</td>
+                    <td>Sanya Verma</td>
+                    <td>20231245</td>
+                    <td>2025-08-22</td>
+                    <td>Hostel B</td>
+                    <td>B-304</td>
+                    <td>C-110</td>
+                    <td>Closer to library</td>
+                    <td><span style="color: orange;font-weight: 600;">Medium</span></td>
+                      <td>
+                        <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                        <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                        <button class="view-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">View</button>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>REQ-1003</td>
+                    <td>Rohit Kumar</td>
+                    <td>20231267</td>
+                    <td>2025-08-25</td>
+                    <td>Hostel C</td>
+                    <td>C-201</td>
+                    <td>D-115</td>
+                    <td>Health issues</td>
+                    <td><span style="color: green;font-weight: 600;">Low</span></td>
+                      <td>
+                        <button class="green-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">Approve</button>
+                        <button class="delete-btn" data-bs-toggle="modal" data-bs-target="#Rejectpopup">Reject</button>
+                        <button class="view-btn" data-bs-toggle="modal" data-bs-target="#Approvepopup">View</button>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="table-footer">
+
+            <hr>
+
+            <div class="table-controls">
+              <h3 class="table-title">Room Allocation List</h3>
               <div>
-                <label>List</label>
-                <select id="rowsPerPageSelect">
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                </select>
-                <span id="totalPagesText"></span>
+                <button class="add-btn">Download Excel</button>
+                <button class="view-btn-top">View All</button>
               </div>
-              <div class="pagination" id="bedPaginationControls"></div>
+            </div>
+            
+            <div class="table-container">
+              <table class="status-table">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Request ID</th>
+                    <th>Student Name</th>
+                    <th>Scholar Number</th>
+                    <th>Date</th>
+                    <th>Hostel</th>
+                    <th>Current Room</th>
+                    <th>Requested Room</th>
+                    <th>Problem or Reason</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>REQ-1001</td>
+                    <td>Aman Gupta</td>
+                    <td>20231234</td>
+                    <td>2025-08-20</td>
+                    <td>Hostel A</td>
+                    <td>A-102</td>
+                    <td>B-210</td>
+                    <td>Room too noisy</td>
+                    <td><span style="color: red;font-weight: 600;">High</span></td>
+                    <td><span style="color: green;font-weight: 600;">Approve</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewpopup">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>REQ-1002</td>
+                    <td>Sanya Verma</td>
+                    <td>20231245</td>
+                    <td>2025-08-22</td>
+                    <td>Hostel B</td>
+                    <td>B-304</td>
+                    <td>C-110</td>
+                    <td>Closer to library</td>
+                    <td><span style="color: orange;font-weight: 600;">Medium</span></td>
+                    <td><span style="color: red;font-weight: 600;">Reject</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewpopup">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>REQ-1003</td>
+                    <td>Rohit Kumar</td>
+                    <td>20231267</td>
+                    <td>2025-08-25</td>
+                    <td>Hostel C</td>
+                    <td>C-201</td>
+                    <td>D-115</td>
+                    <td>Health issues</td>
+                    <td><span style="color: green;font-weight: 600;">Low</span></td>
+                    <td><span style="color: green;font-weight: 600;">Approve</span></td>
+                    <td>
+                      <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewpopup">View</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            </div>
+            
+          </div>
+
+          <!-- All Popup -->
+
+          <div class="modal fade" id="Approvepopup" tabindex="-1" aria-labelledby="ApprovepopupLabel"
+            style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                  <div class="top">
+                    <div class="pop-title">Room Change Request</div>
+                  </div>
+
+                  <div class="middle">
+
+                    <span class="input-set">
+                      <label for="ResidentName">Hostel Name</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="Hostel One" disabled>
+                    </span>
+                    
+                    <span class="input-set">
+                      <label for="ResidentName">Floor No.</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="3" disabled>
+                    </span>
+                    
+                    <span class="input-set">
+                      <label for="ResidentName">Current Room No.</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="201" disabled>
+                    </span>
+                    
+                    <span class="input-set">
+                      <label for="DesiredRoom">Desired Room No.</label>
+                      <input type="text" id="DesiredRoom" name="DesiredRoom" placeholder="205" disabled>
+                    </span>
+                    
+                    <span class="input-set">
+                      <label for="RequestDate">Request Date</label>
+                      <input type="date" id="RequestDate" name="RequestDate" placeholder="20/02/25">
+                    </span>
+
+
+                  </div>
+
+                  <div class="full-width-i">
+                    <span class="input-set">
+                      <label for="Reason">Reason for Change</label>
+                      <textarea name="Reason" id="Reason"
+                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"></textarea>
+                    </span>
+                  </div>
+
+                  <div class="full-width-i">
+                    <span class="input-set">
+                      <label for="Reason">Write Message</label>
+                      <textarea name="Reason" id="Reason"
+                        placeholder="We are approve your request. Please contact us for further information "></textarea>
+                    </span>
+                  </div>
+
+                  <div class="bottom-btn">
+                    <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Reject
+                    </button>
+                    <button type="button" class="green"> Approve
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
           </div>
 
-          <div class="modal fade" id="AllocationDetails" tabindex="-1" aria-labelledby="#AllocationDetails" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
 
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <!-- View Popup -->
+
+          <div class="modal fade" id="viewpopup" tabindex="-1" aria-labelledby="viewpopupLabel"
+            style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                  <div class="top">
+                    <div class="pop-title">Room Change Details</div>
+                  </div>
+
+                  <div class="middle">
+
+                    <span class="input-set">
+                      <label for="ResidentName">Hostel Name</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="Hostel One" disabled>
+                    </span>
+
+                    <span class="input-set">
+                      <label for="ResidentName">Floor No.</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="3" disabled>
+                    </span>
+
+                    <span class="input-set">
+                      <label for="ResidentName">Current Room No.</label>
+                      <input type="text" id="ResidentName" name="ResidentName" placeholder="201" disabled>
+                    </span>
+
+                    <span class="input-set">
+                      <label for="DesiredRoom">Desired Room No.</label>
+                      <input type="text" id="DesiredRoom" name="DesiredRoom" placeholder="205" disabled>
+                    </span>
+
+                    <span class="input-set">
+                      <label for="RequestDate">Request Date</label>
+                      <input type="date" id="RequestDate" name="RequestDate" placeholder="20/02/25">
+                    </span>
+
+                    <span class="input-set">
+                      <label for="Status">Status</label>
+                      <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Approve" disabled="">
+                    </span>
+
+                  </div>
+
+                  <div class="full-width-i">
+                    <span class="input-set">
+                      <label for="Reason">Reason for Change</label>
+                      <textarea name="Reason" id="Reason"
+                        placeholder="Lorem lorem Lorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem loremLorem  lorem"></textarea>
+                    </span>
+                  </div>
+
+                  <div class="full-width-i">
+                    <span class="input-set">
+                      <label for="Reason">Warden Message</label>
+                      <textarea name="Reason" id="Reason"
+                        placeholder="We are approve your request. Please contact us for further information "></textarea>
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
-
-            <div class="modal-body">
-
-              <div class="top">
-                <div class="pop-title">Allocation Details</div>
-              </div>
-
-              <div class="middle">
-
-                <span class="input-set">
-                  <label for="StudentName">Student Name</label>
-                  <input type="text" id="StudentName" name="StudentName">
-                </span>
-                <span class="input-set">
-                  <label for="ScholarNumber">Scholar Number</label>
-                  <input type="number" id="ScholarNumber" name="ScholarNumber">
-                </span>
-                <span class="input-set">
-                  <label for="Date">Date</label>
-                  <input type="date" id="Date" name="Date">
-                </span>
-                <span class="input-set">
-                  <label for="HostelName">Hostel Name</label>
-                  <input type="text" id="HostelName" name="HostelName">
-                </span>
-                <span class="input-set">
-                  <label for="CurrentRoomNumber">Current Room Number</label>
-                  <input type="text" id="CurrentRoomNumber" name="CurrentRoomNumber">
-                </span>
-                <span class="input-set">
-                  <label for="ChangeToRoomNumber">Change To Room Number</label>
-                  <input type="text" id="ChangeToRoomNumber" name="ChangeToRoomNumber">
-                </span>
-                <span class="input-set">
-                  <label for="ProblemOrReason">Problem Or Reason</label>
-                  <input type="text" id="ProblemOrReason" name="ProblemOrReason">
-                </span>
-                <span class="input-set">
-                  <label for="Priority">Priority</label>
-                  <input type="text" id="Priority" name="Priority">
-                </span>
-                <span class="input-set">
-                  <label for="ReasonInDetail">Reason In Detail</label>
-                  <input type="text" id="ReasonInDetail" name="ReasonInDetail">
-                </span>
-
-              </div>
-
-              <div class="bottom-btn">
-                <button type="button" class="red"> Reject Allocation </button>
-                <button type="button" class="green"> Approve Allocation </button>
-                <button type="button" class="blue"> Assign To Staff </button>
-              </div>
-
-            </div>
-
           </div>
-        </div>
-      </div>
+
+
 
         </main>
 
     </div>
 
-    <script>
-      (function setupBedTable() {
-  const bedData = [
-    { hostel: "Hostel One", floor: 42, room: 5465, type: 5, bedNum: 4542, status: "Occupied" },
-    { hostel: "Hostel Two", floor: 465, room: 4565, type: 12, bedNum: 45545, status: "Available" },
-    { hostel: "Hostel Three", floor: 4, room: 400, type: 2, bedNum: 410, status: "Occupied" },
-    { hostel: "Hostel Four", floor: 7, room: 789, type: 1, bedNum: 800, status: "Available" },
-    { hostel: "Hostel Five", floor: 10, room: 900, type: 4, bedNum: 901, status: "Occupied" },
-    { hostel: "Hostel Six", floor: 6, room: 321, type: 3, bedNum: 322, status: "Available" },
-    { hostel: "Hostel Seven", floor: 5, room: 123, type: 6, bedNum: 124, status: "Occupied" },
-    { hostel: "Hostel Eight", floor: 3, room: 111, type: 5, bedNum: 112, status: "Available" },
-    { hostel: "Hostel Nine", floor: 8, room: 876, type: 4, bedNum: 877, status: "Occupied" },
-    { hostel: "Hostel Ten", floor: 2, room: 101, type: 2, bedNum: 102, status: "Available" },
-  ];
-
-  const tableBody = document.getElementById("bedTableBody");
-  const paginationControls = document.getElementById("bedPaginationControls");
-  const searchInput = document.getElementById("searchInput"); // may be null
-  const totalPagesText = document.getElementById("totalPagesText");
-  const rowsPerPageSelect = document.getElementById("rowsPerPageSelect");
-
-  let activePage = 1;
-  let entriesPerPage = parseInt(rowsPerPageSelect?.value || 5);
-
-  function filterData() {
-    const query = searchInput?.value?.toLowerCase() || "";
-    return bedData.filter((b) =>
-      Object.values(b).some((val) =>
-        val.toString().toLowerCase().includes(query)
-      )
-    );
-  }
-
-  function renderTable(data, page = 1) {
-    const start = (page - 1) * entriesPerPage;
-    const end = start + entriesPerPage;
-    const paginated = data.slice(start, end);
-
-    tableBody.innerHTML = "";
-    paginated.forEach((item, index) => {
-      tableBody.innerHTML += `
-        <tr>
-          <td>${start + index + 1}.</td>
-          <td>${item.hostel}</td>
-          <td>${item.floor}</td>
-          <td>${item.room}</td>
-          <td>${item.type}</td>
-          <td>${item.bedNum}</td>
-          <td>${item.status}</td>
-          <td>${item.status}</td>
-          <td>${item.status}</td>
-          <td class="actions">
-            <button class="edit-btn">view</button>
-          </td>
-        </tr>`;
-    });
-
-    const totalPages = Math.ceil(data.length / entriesPerPage);
-    totalPagesText.innerText = `of ${totalPages}`;
-    renderPagination(data, totalPages);
-  }
-
-  function renderPagination(data, totalPages) {
-    paginationControls.innerHTML = "";
-
-    if (activePage > 1) {
-      const prev = document.createElement("button");
-      prev.textContent = "‹";
-      prev.addEventListener("click", () => changePage(activePage - 1));
-      paginationControls.appendChild(prev);
-    }
-
-    for (let i = 1; i <= totalPages; i++) {
-      const pageBtn = document.createElement("button");
-      pageBtn.textContent = i;
-      if (i === activePage) pageBtn.classList.add("active");
-      pageBtn.addEventListener("click", () => changePage(i));
-      paginationControls.appendChild(pageBtn);
-    }
-
-    if (activePage < totalPages) {
-      const next = document.createElement("button");
-      next.textContent = "›";
-      next.addEventListener("click", () => changePage(activePage + 1));
-      paginationControls.appendChild(next);
-    }
-  }
-
-  function changePage(page) {
-    activePage = page;
-    const filtered = filterData();
-    renderTable(filtered, activePage);
-  }
-
-  // Attach search input listener only if input exists
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      activePage = 1;
-      const filtered = filterData();
-      renderTable(filtered, activePage);
-    });
-  }
-
-  rowsPerPageSelect.addEventListener("change", (e) => {
-    entriesPerPage = parseInt(e.target.value);
-    activePage = 1;
-    const filtered = filterData();
-    renderTable(filtered, activePage);
-  });
-
-  // Initial render
-  const filtered = filterData();
-  renderTable(filtered, activePage);
-})();
-    </script>
 
 
     <!-- Boostrp 5 js -->
     <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
-    <!-- chart js -->
-    <script src="../../js/apexcharts.min.js"></script>
     <!-- main js -->
     <script src="../../js/main.js"></script>
-    <script src="../../js/downloadExcel.js"></script>
 </body>
 
 </html>

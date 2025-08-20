@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/Finance & Subscription/subscription.css" />
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <link rel="stylesheet" href="../../css/Finance & Subscription/Payments&Translations.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button id="toggle-btn-small-screen">&#9776;</button>
+                <h2>Hostel Management</h2>
+            </div>
+            <input type="text" placeholder="Search" class="search-box" />
+
+            <!-- Overview -->
+            <p>Overview</p>
+            <ul class="nav">
+                <li><a href="../../index.html" class="nav-animation"><span><img
+                                src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard </a></li>
+            </ul>
+
+            <!-- Hostel Operations -->
+            <p>Hostel Operations</p>
+            <ul class="nav">
+                <li><a href="HostelManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel
+                        Management</a></li>
+                <li><a href="RoomManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a>
+                </li>
+                <li><a href="BedManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
+                <li><a href="BedAssignment.html"><span><img
+                                src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
+                <li><a href="CampusCheck In-Out.html"><span><img
+                                src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check
+                        In-Out</a></li>
+                <li><a href="MessAttendance.html"><span><img
+                                src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a>
+                </li>
+                <li><a href="UserManagement.html"><span><img
+                                src="../../public/dashboard/side menu/User Management.png"></span>User Management</a>
+                </li>
+                <li><a href="StaffManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a>
+                </li>
+            </ul>
+
+            <!-- Resident Services -->
+            <p>Resident Services</p>
+            <ul class="nav">
+                <li><a href="ResidentsManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Residents Management.png"></span>Residents
+                        Management</a></li>
+                <li><a href="LeaveManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a>
+                </li>
+                <li><a href="GuestManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a>
+                </li>
+                <li><a href="GrievancesManagement.html"><span><img
+                                src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances
+                        Management</a></li>
+                <li><a href="RoomAllocation.html"><span><img
+                                src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a>
+                </li>
+                <li><a href="FinalCheckout.html"><span><img
+                                src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+                <li><a href="Feedback.html"><span><img
+                                src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+            </ul>
+
+            <!-- Inventory & Logistics -->
+            <p>Inventory & Logistics</p>
+            <ul class="nav">
+                <li><a href=""><span><img
+                                src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory
+                        Management</a></li>
+            </ul>
+
+            <!-- Finance & Subscription -->
+            <p>Finance & Subscription</p>
+            <ul class="nav">
+                <li class="active"><a href="Subscription.html"><span><img
+                                src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
+                <li><a href="Payments&Translations.html"><span><img
+                                src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments &
+                        Translations</a></li>
+                <li><a href="Assign Fine.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a>
+                </li>
+            </ul>
+
+            <!-- Communication & Alerts -->
+            <p>Communication & Alerts</p>
+            <ul class="nav">
+                <li><a href=""><span><img
+                                src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Notification &
+                        Alerts</a></li>
+            </ul>
+
+            <!-- Logout Btn -->
+            <ul class="nav">
+                <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png"> Log Out</button>
+                </li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">Admin Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">Plans Management</a></div>
+                <!-- Popup Btn -->
+                <span>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#AddPlan">+ Add
+                        Plan</button>
+                </span>
+
+            </div>
+
+            <!-- Overview -->
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Total Plans</p>
+                        <h3>500</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/Room Management/1.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Active</p>
+                        <h3>400</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/Room Management/2.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Non Active</p>
+                        <h3>75%</h3>
+                    </div>
+                    <div class="card-image">
+                        <img src="../../public/Bed/3.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards -->
+
+            <div class="main-content-container">
+
+                <section class="plans__container">
+                    <div class="plans">
+                        <div class="plansHero">
+                            <h1 class="plansHero__title">Hostel Plans</h1>
+                        </div>
+
+                        <div class="planItem__container">
+                            <!--free plan starts -->
+                            <div class="planItem planItem--free">
+
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Basic Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-green" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">Perfect for residents who need essential
+                                        services at
+                                        an affordable cost.
+                                    </div>
+                                </div>
+
+                                <div class="price">₹499<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee</li>
+                                    <li>Basic Gym Access</li>
+                                    <li>Standard Check-In/Out Timing</li>
+                                    <li>Shared Room Facility</li>
+                                    <li>Standard Support Priority</li>
+
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--free plan ends -->
+
+                            <!--pro plan starts -->
+                            <div class="planItem planItem--pro">
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Standard Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-red" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Non Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">A balanced plan with enhanced facilities for a
+                                        comfortable stay.
+                                        laboris</div>
+                                </div>
+
+                                <div class="price">₹699<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee (Premium Menu)</li>
+                                    <li>Full Gym Access</li>
+                                    <li>Flexible Check-In/Out Timing</li>
+                                    <li>Semi-Private Room Facility</li>
+                                    <li>High Priority Support</li>
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--pro plan ends -->
+
+                            <!--entp plan starts -->
+                            <div class="planItem planItem--free">
+
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Tem Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-red" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Non Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">Enjoy a premium lifestyle with top-tier
+                                        facilities
+                                        and priority services.
+                                    </div>
+                                </div>
+
+                                <div class="price">₹999<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee (Unlimited Meals)</li>
+                                    <li>Full Gym + Personal Trainer </li>
+                                    <li>24/7 Flexible Check-In/Out </li>
+                                    <li>Private Room with Amenities </li>
+                                    <li>Top Priority Concierge Service </li>
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--entp plan ends -->
+                        </div>
+
+                        <div class="planItem__container">
+                            <!--free plan starts -->
+                            <div class="planItem planItem--free">
+
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Basic Booster Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-green" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">Perfect for residents who need essential
+                                        services at
+                                        an affordable cost.
+                                    </div>
+                                </div>
+
+                                <div class="price">₹499<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee</li>
+                                    <li>Basic Gym Access</li>
+                                    <li>Standard Check-In/Out Timing</li>
+                                    <li>Shared Room Facility</li>
+                                    <li>Standard Support Priority</li>
+
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--free plan ends -->
+
+                            <!--pro plan starts -->
+                            <div class="planItem planItem--pro">
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Big Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-green" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">A balanced plan with enhanced facilities for a
+                                        comfortable stay.
+                                        laboris</div>
+                                </div>
+
+                                <div class="price">₹699<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee (Premium Menu)</li>
+                                    <li>Full Gym Access</li>
+                                    <li>Flexible Check-In/Out Timing</li>
+                                    <li>Semi-Private Room Facility</li>
+                                    <li>High Priority Support</li>
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--pro plan ends -->
+
+                            <!--entp plan starts -->
+                            <div class="planItem planItem--free">
+
+                                <div class="card_subcription">
+                                    <div class="card_subcription__header">
+                                        <div class="card_subcription__icon symbol symbol--rounded"></div>
+                                        <h2>Big Big Plan</h2>
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle card_subcription__label label-red" type="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Non Active
+                                            </button>
+                                            <ul class="dropdown-menu custom-style-ul">
+                                                <li><a class="dropdown-item custom-style-li" href="#">Active</a></li>
+                                                <li><a class="dropdown-item custom-style-li" href="#">Non Active</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card_subcription__desc">Enjoy a premium lifestyle with top-tier
+                                        facilities
+                                        and priority services.
+                                    </div>
+                                </div>
+
+                                <div class="price">₹999<span>/ month</span></div>
+
+                                <ul class="featureList">
+                                    <li>Inclusive Mess Fee (Unlimited Meals)</li>
+                                    <li>Full Gym + Personal Trainer </li>
+                                    <li>24/7 Flexible Check-In/Out </li>
+                                    <li>Private Room with Amenities </li>
+                                    <li>Top Priority Concierge Service </li>
+                                </ul>
+
+                                <div class="cards-buttons">
+                                    <button class="button organce">Edit Plan</button>
+                                    <button class="button red">Delete Plan</button>
+                                </div>
+
+                            </div>
+                            <!--entp plan ends -->
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <!-- All Popup -->
+
+                <div class="modal fade" id="AddPlan" tabindex="-1" aria-labelledby="AddPlanLabel"
+                    style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="top">
+                                    <div class="pop-title">Add New Plan</div>
+                                </div>
+
+                                <div class="middle">
+
+                                    <span class="input-set">
+                                        <label for="PlanName">Plan Name</label>
+                                        <input type="text" id="PlanName" name="PlanName" placeholder="Platinum">
+                                    </span>
+                                    
+                                    <span class="input-set">
+                                        <label for="Duration">Select Duration</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select Duration</option>
+                                            <option value="1 Years">1 Years</option>
+                                            <option value="2 Years">2 Years</option>
+                                            <option value="3 Years">3 Years</option>
+                                            <option value="4 Years">4 Years</option>
+                                            <option value="5 Years">5 Years</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="Price">Price (Monthly) </label>
+                                        <input type="text" id="Price" name="Price" placeholder="4,500">
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="RoomType">Select Room Type</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select Room Type</option>
+                                            <option value="Single">Single Sharing</option>
+                                            <option value="Double">Double Sharing</option>
+                                            <option value="Triple Sharing">Triple Sharing</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="MealPlan">Select Meal Plan</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select Meal Plan</option>
+                                            <option value="Veg">Veg</option>
+                                            <option value="Non-Veg">Non-Veg</option>
+                                            <option value="Both">Both</option>
+                                            <option value="Without Food">Without Food</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="Discount">Select Discount</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select Discount</option>
+                                            <option value="No">No Discount</option>
+                                            <option value="Early Bird Discount">Early Bird Discount – For residents who book early</option>
+                                            <option value="Long-Term Stay Discount">Long-Term Stay Discount – For 6+ or 12+ months stay</option>
+                                            <option value="Group Booking Discount">Group Booking Discount – If 2 or more residents book together.</option>
+                                            <option value="Referral Discount">Referral Discount – For referring a new resident.</option>
+                                            <option value="Advance Payment Discount">Advance Payment Discount – If full payment is made upfront.</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="StartDate">Start Date</label>
+                                        <input type="date" id="StartDate" name="StartDate" placeholder="20/02/25">
+                                    </span>
+
+                                    <span class="input-set">
+                                        <label for="EndDate">End Date</label>
+                                        <input type="date" id="EndDate" name="EndDate" placeholder="20/02/25">
+                                    </span>
+
+
+                                </div>
+
+                                <div class="full-width-i">
+                                    <span class="input-set">
+                                        <label for="Features">Features</label>
+                                        <input type="text" name="Features" id="Features" placeholder="like Meals Included, AC Room, WiFi, Laundry, Gym Access">
+                                        <input type="text" name="Features" id="Features" placeholder="like Meals Included, AC Room, WiFi, Laundry, Gym Access">
+                                        <input type="text" name="Features" id="Features" placeholder="like Meals Included, AC Room, WiFi, Laundry, Gym Access">
+                                        <input type="text" name="Features" id="Features" placeholder="like Meals Included, AC Room, WiFi, Laundry, Gym Access">
+                                        <input type="text" name="Features" id="Features" placeholder="like Meals Included, AC Room, WiFi, Laundry, Gym Access">
+                                    </span>
+                                </div>
+
+                                <div class="full-width-i">
+                                    <span class="input-set">
+                                        <label for="Discription">Write Discription</label>
+                                        <textarea name="Discription" id="Discription"
+                                            placeholder="We are approve your request. Please contact us for further information "></textarea>
+                                    </span>
+                                </div>
+
+                                <div class="bottom-btn">
+                                    <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel
+                                    </button>
+                                    <button type="button" class="green"> Active </button>
+                                    <button type="button" class="blue"> Add Plan </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

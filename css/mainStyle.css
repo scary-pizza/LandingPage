@@ -6,9 +6,6 @@
 
 html {
   font-size: 62.5%;
-  font-family: var(--ff-poppins);
-  font-weight: 500;
-  color: var(--text-color);
   scroll-behavior: smooth;
 }
 body {

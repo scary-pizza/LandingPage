@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boostrp 5 css -->
+    <link rel="stylesheet" href="../../css/Boostrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/mainStyle.css" />
+    <link rel="stylesheet" href="../../public/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="../../css/table.css">
+    <link rel="stylesheet" href="../../css/popup&tabs.css">
+    <link rel="stylesheet" href="../../css/Finance & Subscription/Payments&Translations.css">
+    <title>Hostel Management Dashboard</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+
+        <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-btn-small-screen">&#9776;</button>
+          <h2>Hostel Management</h2>
+        </div>
+        <input type="text" placeholder="Search" class="search-box" />
+
+        <!-- Overview -->
+        <p>Overview</p>
+        <ul class="nav">
+          <li ><a href="../../index.html" class="nav-animation"><span><img src="../../public/dashboard/side menu/dashboard.png"></span> Dashboard </a></li>
+        </ul>
+
+        <!-- Hostel Operations -->
+        <p>Hostel Operations</p>
+        <ul class="nav">
+          <li><a href="../Hostel Operations/HostelManagement.html" ><span><img src="../../public/dashboard/side menu/Hostel Management.png"></span>Hostel Management</a></li>
+          <li><a href="../Hostel Operations/RoomManagement.html"><span><img src="../../public/dashboard/side menu/Room Management.png"></span>Room Management</a></li>
+          <li><a href="../Hostel Operations/BedManagement.html"><span><img src="../../public/dashboard/side menu/Bed Management.png"></span>Bed Management</a></li>
+          <li><a href="../Hostel Operations/BedAssignment.html"><span><img src="../../public/dashboard/side menu/Bed Assignment.png"></span>Bed Assignment</a></li>
+          <li><a href="../Hostel Operations/CampusCheck In-Out.html"><span><img src="../../public/dashboard/side menu/Campus Check In-Out.png"></span>Campus Check In-Out</a></li>
+          <li><a href="../Hostel Operations/MessAttendance.html"><span><img src="../../public/dashboard/side menu/Mess Attendance.png"></span>Mess Attendance</a></li>
+          <li><a href="../Hostel Operations/UserManagement.html"><span><img src="../../public/dashboard/side menu/User Management.png"></span>User Management</a></li>
+          <li><a href="../Hostel Operations/StaffManagement.html"><span><img src="../../public/dashboard/side menu/Staff Management.png"></span>Staff Management</a></li>
+        </ul>
+
+        <!-- Resident Services -->
+        <p>Resident Services</p>
+        <ul class="nav">
+          <li><a href="../Resident Services/ResidentsManagement.html"><span><img src="../../public/dashboard/side menu/Residents Management.png"></span>Residents Management</a></li>
+          <li><a href="../Resident Services/LeaveManagement.html"><span><img src="../../public/dashboard/side menu/Leave Management.png"></span>Leave Management</a></li>
+          <li><a href="../Resident Services/GuestManagement.html"><span><img src="../../public/dashboard/side menu/Guest Management.png"></span>Guest Management</a></li>
+          <li><a href="../Resident Services/GrievancesManagement.html"><span><img src="../../public/dashboard/side menu/Grievances Management.png"></span>Grievances Management</a></li>
+          <li><a href="../Resident Services/RoomAllocation.html"><span><img src="../../public/dashboard/side menu/Room Allocation.png"></span>Room Allocation</a></li>
+          <li><a href="../Resident Services/FinalCheckout.html"><span><img src="../../public/dashboard/side menu/Final Checkout.png"></span>Final Checkout</a></li>
+          <li><a href="../Resident Services/Feedback.html"><span><img src="../../public/dashboard/side menu/Feedback.png"></span>Feedback</a></li>
+        </ul>
+
+        <!-- Inventory & Logistics -->
+        <p>Inventory & Logistics</p>
+        <ul class="nav">
+          <li><a href="../Inventory and Logistics/InventoryManagement.html"><span><img src="../../public/dashboard/side menu/Inventory Management.png"></span>Inventory Management</a></li>
+        </ul>
+
+        <!-- Finance & Subscription -->
+        <p>Finance & Subscription</p>
+        <ul class="nav">
+          <li><a href="../Finance & Subscription/Subscription.html"><span><img src="../../public/dashboard/side menu/Subscription.png"></span>Subscription</a></li>
+          <li><a href="../Finance & Subscription/Payments&Translations.html"><span><img src="../../public/dashboard/side menu/Payments & Translations.png"></span>Payments & Translations</a></li>
+          <li><a href="../Finance & Subscription/Assign Fine.html"><span><img src="../../public/dashboard/side menu/Assign Fine.png"></span>Assign Fine</a></li>
+        </ul>
+
+        <!-- Communication & Alerts -->
+        <p>Communication & Alerts</p>
+        <ul class="nav">
+          <li class="active"><a href="Notification.html"><span><img src="../../public/dashboard/side menu/Notification & Alerts.png"></span>Notification & Alerts</a></li>
+        </ul>
+
+        <!-- Logout Btn -->
+        <ul class="nav">
+          <li><button class="logout"> <img src="../../public/dashboard/side menu/logout.png" > Log Out</button></li>
+        </ul>
+
+      </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Header -->
+            <header class="topbar">
+                <button id="toggle-btn">&#9776;</button>
+                <div class="topbar-right">
+                    <input type="text" class="search-bar" placeholder="Search" />
+
+                    <div class="user-section">
+                        <span class="user-initial">A</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Rajat Pradhan
+                        </button>
+                        <ul class="dropdown-menu custom-style-ul">
+                            <li><a class="dropdown-item custom-style-li" href="#">View Profile</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Notification</a></li>
+                            <li><a class="dropdown-item custom-style-li" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </header>
+
+            <!-- top-breadcrumbs -->
+            <div class="top-breadcrumbs">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs"><a href="">Alerts & Updates</a></div>
+                <!-- Popup Btn -->
+                <span>
+                    <button class="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#Addnotification">+ Add
+                        Alert / Notification</button>
+                </span>
+            </div>
+
+
+            <!-- Table -->
+
+            <div class="main-content-container">
+
+                <!-- List -->
+
+                <div class="table-controls">
+                    <h3 class="table-title">Recent Updates</h3>
+                </div>
+
+                <div class="table-container">
+                    <table class="status-table" cellspacing="0" cellpadding="8" width="100%">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Alert Title</th>
+                                <th>Message / Description</th>
+                                <th>Type of Alert</th>
+                                <th>Target Audience</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Priority Level</th>
+                                <th>Attachment</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Water Supply Maintenance</td>
+                                <td>Water will be unavailable from 10:00 AM to 2:00 PM due to maintenance.</td>
+                                <td>Maintenance / General</td>
+                                <td>All Students</td>
+                                <td>18-08-2025</td>
+                                <td>18-08-2025</td>
+                                <td>Medium</td>
+                                <td><a href="#">maintenance_notice.pdf</a></td>
+                                <td style="color: green; font-weight: bold;">Active</td>
+                                <td>
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewnotification">View</button>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>2</td>
+                                <td>Fee Payment Reminder</td>
+                                <td>Mess fee for August is due by 15 Aug. Late fee applies after due date.</td>
+                                <td>Reminder</td>
+                                <td>Specific Hostel (A-Block)</td>
+                                <td>12-08-2025</td>
+                                <td>15-08-2025</td>
+                                <td>High</td>
+                                <td>—</td>
+                                <td style="color: green; font-weight: bold;">Active</td>
+                                <td>
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewnotification">View</button>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>3</td>
+                                <td>Fire Drill</td>
+                                <td>Mandatory mock fire drill at 5:00 PM. Assemble at the main courtyard.</td>
+                                <td>Urgent / Emergency</td>
+                                <td>All Students & Staff</td>
+                                <td>10-08-2025</td>
+                                <td>10-08-2025</td>
+                                <td>High</td>
+                                <td><a href="#">evacuation_map.png</a></td>
+                                <td style="color: red; font-weight: bold;">Expired</td>
+                                <td >
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#viewnotification">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Table Close -->
+
+
+
+            <!-- All Popup -->
+
+            <!--  popup List -->
+            <div class="modal fade" id="RequestAccessories" tabindex="-1" aria-labelledby="RequestAccessoriesLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Payement</div>
+                            </div>
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Close
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--  Create Status -->
+            <div class="modal fade" id="Addnotification" tabindex="-1" aria-labelledby="AddnotificationLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="top">
+                                <div class="pop-title">Create Alert / Notification</div>
+                            </div>
+
+                            <div class="middle">
+
+                                <span class="input-set">
+                                    <label for="DesiredRoom">Type of Alert / Notification</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="Important" selected>Important </option>
+                                        <option value="Payments">Payments </option>
+                                        <option value="Fee">Fee </option>
+                                        <option value="Subscription">Subscription </option>
+                                        <option value="Urgent">Urgent </option>
+                                        <option value="Hostel">Hostel </option>
+                                        <option value="Holidays">Holidays </option>
+                                        <option value="Events">Events </option>
+                                        <option value="Reminder">Reminder </option>
+                                        <option value="Information">Information </option>
+                                        <option value="General">General </option>
+                                        <option value="Room Update">Room Update </option>
+                                        <option value="Other">Other </option>
+                                        
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="AlertTitle">Alert Title</label>
+                                    <input type="text" id="AlertTitle" name="AlertTitle" placeholder="Enter Title">
+                                </span>
+
+                            </div>
+
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Message/Description">Message / Description</label>
+                                    <textarea id="Message/Description" name="Message/Description" placeholder="Detailed content of the alert/notification."></textarea>
+                                </span>
+                            </div>
+
+
+                            <div class="middle mt-3">
+
+                                <span class="input-set">
+                                    <label for="TargetAudience">Target Audience</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="All" selected>All </option>
+                                        <option value="Students">Residents </option>
+                                        <option value="Staff">Staff </option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="TargetAudience">Target Hostel</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="All" selected>All Hostel</option>
+                                        <option value="Hostel 1">Hostel  1</option>
+                                        <option value="Hostel 2">Hostel  2</option>
+                                        <option value="Hostel 3">Hostel  3</option>
+                                        <option value="Hostel 4">Hostel  4</option>
+                                    </select>
+                                </span>
+                                
+                                <span class="input-set">
+                                    <label for="PriorityLevel">Priority Level</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="All" selected>Select Priority</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                    </select>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Attachment">Attachment (Optional)</label>
+                                    <input type="file" id="Attachment" name="Attachment" >
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="StartDate">Start Date</label>
+                                    <input type="date" id="StartDate" name="StartDate" >
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="EndDate">End Date</label>
+                                    <input type="date" id="EndDate" name="EndDate" >
+                                </span>
+
+
+                            </div>
+
+
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Cancel </button>
+                                <button type="button" class="orange"> Save as Draff </button>
+                                <button type="button" class="green"> Publish </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--  View Alert Details -->
+            <div class="modal fade" id="viewnotification" tabindex="-1" aria-labelledby="viewnotificationLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+            
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+            
+                        <div class="modal-body">
+            
+                            <div class="top">
+                                <div class="pop-title">Alert / Notification Details</div>
+                            </div>
+            
+                            <div class="middle">
+            
+                                <span class="input-set">
+                                    <label for="Typeof">Type of Alert / Notification</label>
+                                    <input type="text" id="Typeof" name="Typeof" placeholder="Subscription" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="AlertTitle">Alert Title</label>
+                                    <input type="text" id="AlertTitle" name="AlertTitle" placeholder="Water Supply Maintenance" disabled>
+                                </span>
+            
+                            </div>
+            
+                            <div class="full-width-i">
+                                <span class="input-set">
+                                    <label for="Message/Description">Message / Description</label>
+                                    <textarea id="Message/Description" name="Message/Description" placeholder="Detailed content of the alert/notification." disabled></textarea>
+                                </span>
+                            </div>
+            
+                            <div class="middle mt-3">
+            
+                                <span class="input-set">
+                                    <label for="TargetAudience">Target Audience</label>
+                                    <input type="text" id="TargetAudience" name="TargetAudience" placeholder="Residents" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="TargetHostel">Target Hostel</label>
+                                    <input type="text" id="TargetHostel" name="TargetHostel" placeholder="All Hostel" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="Status">Status</label>
+                                    <input type="text" class="status-leave green" id="Status" name="Status" placeholder="Active" disabled>
+                                </span>
+
+                                <span class="input-set">
+                                    <label for="Status">Priority Level</label>
+                                    <input type="text" class="status-leave red" id="Status" name="Status" placeholder="High" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="Attachment">Attachment (Optional)</label>
+                                    <input type="text" id="Attachment" name="Attachment" placeholder="pdf.pdf" >
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="StartDate">Start Date</label>
+                                    <input type="text" id="StartDate" name="StartDate" placeholder="20/02/25" disabled>
+                                </span>
+            
+                                <span class="input-set">
+                                    <label for="EndDate">End Date</label>
+                                    <input type="text" id="EndDate" name="EndDate" placeholder="20/02/25" disabled>
+                                </span>
+            
+                            </div>
+            
+            
+                            <div class="bottom-btn">
+                                <button type="button" class="red" data-bs-dismiss="modal" aria-label="Close"> Close </button>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Boostrp 5 js -->
+    <script src="../../js/Boostrap/bootstrap.bundle.js"></script>
+    <!-- main js -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
